@@ -1,0 +1,97 @@
+﻿<style type="text/css" media="all">
+.selected { background: #666; }
+.content {
+    padding: 0;
+    margin: 0;
+    font-family: 'Microsoft YaHei',Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    color: #222;
+    line-height:180%;
+    background-color:#fff;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a, a:link, a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+ a:hover, a:active {
+   color: #de3d96;
+   text-decoration: none;
+}
+
+.popular-brand-bar {
+    background-color:#f3f4f6;
+    border-top:#ccc 1px solid;
+    padding: 0.2em 3%;
+    width: 94%;
+}
+.brand-list-box {
+    border-bottom:1px #f1f1f1 solid;
+    padding: 0.3em 3%;
+    width: 94%;
+    font-size:0.25rem;
+}
+.brand-name-English {
+    color:#999;
+}
+.key-list-bar {
+    background-color:#f3f4f6;
+    padding: 0.2em 3%;
+    width: 94%;
+}
+.key-letter-box {
+    position:relative;
+}
+.letter-list {
+    position:fixed;
+    right:3%;
+    top:15%;
+    font-size:1.1em;
+}
+.letter-list a{
+	font-family: 'Microsoft YaHei',Helvetica, Arial, sans-serif;
+}
+.letter-list LI {
+    line-height:140%;
+}
+.auto{
+text-align: center;
+margin: 50px 15px 20px 15px;
+border-radius: 3px;
+font-size: 0.3rem;
+border: 1px #e7e7e7 solid;       
+margin: 0px 15px 10px 15px;
+background-color: #efefef;
+color: black;		
+box-shadow: 1px 2px 1px 1px #A8A1A1;
+<!--  position:fixed; 
+ top:5%; -->
+}
+</style>
+
+
+<script id="model_choice_inf" type="text/x-underscore-template">
+
+</script>
+
+<header id="homelist_header" class="navbar header_font_color">
+</header>
+
+<div class="content">
+<div class="auto"></div>
+<script id="template" type="text/x-jquery-tmpl">
+<div><%=name%></div>
+</script>
+  <div id="list">
+  </div>
+</div>

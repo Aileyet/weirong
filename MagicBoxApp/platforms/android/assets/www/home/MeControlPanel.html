@@ -1,0 +1,261 @@
+<style type="text/css" media="all">
+	.bg-img{
+		background-image: url("../images/c-3.jpg");
+		background-position:center;
+		background-repeat: no-repeat;
+		background-size:220% 107%;
+		overflow: hidden;
+	}
+	.nav-tap{
+		padding: 20px 20px 5px 20px;
+		overflow: hidden;
+	}
+	.set-btn{
+		float: right;
+		width: 55px;
+		height:25px;
+		line-height:25px;
+		border-radius:20px;
+		background-color: #3d425a;
+		color: #ebeced;
+		text-align: center;
+	}
+	
+	.slider-btn{
+		float:left;
+		width: 55px;
+		border-radius:20px;
+		background-color: #33c24e;
+	}
+	.slider-btn>div{
+		width: 17px;
+		height: 17px;
+		border-radius:100%;
+		background-color: #fff;
+		margin: 4px;
+	}
+	.text-mag{
+		padding: 0px 30px;
+		font-size: 0.8em;
+		color: #fff;
+	}
+	.control-panel{
+		position: absolute;
+		display:inline-block;
+		bottom:-20%;
+		/* top:40%; */
+		left:5px; 
+		/* width: 170%; */
+		width:160%;
+		border-radius:100%;
+		background-color: #3d425a;
+		vertical-align: middle;
+	}
+	.control-panel:BEFORE {
+		content: "";
+		display: inline-block;
+		padding-top: 100%;
+		vertical-align: middle;
+	}
+	.control-panel .name-panel{
+		position: absolute;
+		display:inline-block;
+		top:20%;
+		left:20%;
+		width: 60%;
+		border-radius:100%;
+		background-color: #fefefe;
+		vertical-align: middle;
+		margin: auto;
+		overflow: hidden;
+	}
+	.control-panel .name-panel:BEFORE {
+		content: "";
+		display: inline-block;
+		padding-top: 100%;
+		vertical-align: middle;
+	}
+	
+	.icon-panel{
+		position:absolute;
+		display: inline-block;
+		vertical-align: middle;
+		width: 12%;
+		border-radius:100%;
+		border:1px #ffffff solid;
+		color: #ffffff;
+		top: 44%;
+		left: 44%;
+		text-align: center;
+	}
+	.icon-panel:BEFORE {
+		content: "";
+		display: inline-block;
+		padding-top: 100%;
+		vertical-align: middle;
+	}
+	.point{
+		position:absolute;
+		width: 10px;
+		height: 10px;
+		border-radius:100%;
+		background-color: #de3d96;
+		top: calc(50% - 5px);
+		left: calc(50% - 5px);
+		-webkit-transform: rotate(45deg) translate(-370%);
+	}
+	.icon-panel .icon-text{
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+	}
+	.icon-panel .icon-text i{
+		font-size: 2.5em;
+	}
+	.icon-panel .icon-text span{
+		display: block;
+	}
+	
+	.icon-panel:nth-child(1){-webkit-transform: rotate(-10deg) translate(-325%);}
+	.icon-panel:nth-child(2){-webkit-transform: rotate(15deg) translate(-325%);}
+	.icon-panel:nth-child(3){-webkit-transform: rotate(40deg) translate(-325%);}
+	.icon-panel:nth-child(4){-webkit-transform: rotate(65deg) translate(-325%);}
+	.icon-panel:nth-child(5){-webkit-transform: rotate(90deg) translate(-325%);}
+	
+	.icon-text-1{-webkit-transform: rotate(10deg);}
+	.icon-text-2{-webkit-transform: rotate(-15deg);}
+	.icon-text-3{-webkit-transform: rotate(-40deg);}
+	.icon-text-4{-webkit-transform: rotate(-65deg);}
+	.icon-text-5{-webkit-transform: rotate(-90deg);}
+	
+	.icon-panel-bg{background-color: #de3d96;border: 1px #de3d96 solid;}
+	.icon-panel-bg>div:nth-child(1){background-color: #ffffff;}
+	
+	.name-panel>div:not([class=operation-board]){
+		position: absolute;
+		display: inline-block;
+		vertical-align: middle;
+		color: #222222;
+		top: 50%;
+		left: 50%;
+		font-size: 1.5em;
+	}
+	
+	.name-panel>div:nth-child(1){-webkit-transform: rotate(-20deg) translate(-350%);}
+	.name-panel>div:nth-child(1) span{-webkit-transform: rotate(-100deg);display: inline-block;}
+	.name-panel>div:nth-child(2){-webkit-transform: rotate(10deg) translate(-260%);}
+	.name-panel>div:nth-child(2) span{-webkit-transform: rotate(-90deg);display: inline-block;}
+	.name-panel>div:nth-child(3){-webkit-transform: rotate(40deg) translate(-360%);}
+	.name-panel>div:nth-child(3) span{-webkit-transform: rotate(-90deg);display: inline-block;}
+	.name-panel>div:nth-child(4){-webkit-transform: rotate(65deg) translate(-350%);}
+	.name-panel>div:nth-child(4) span{-webkit-transform: rotate(-95deg);display: inline-block;}
+	.name-panel>div:nth-child(5){-webkit-transform: rotate(95deg) translate(-340%);}
+	.name-panel>div:nth-child(5) span{-webkit-transform: rotate(-85deg);display: inline-block;}
+	
+	.operation-board{
+		position: absolute;
+		display: inline-block;
+		vertical-align: middle;
+		width: 35%;
+		border-radius:100%;
+		background-color: #d4d4d4;
+		top: 30%;
+		left: 30%;
+		border: 5px #e9e9e9 solid;
+		border-bottom: none;
+		box-shadow: inset 0px 2px 3px 2px #afafaf;
+	}
+	.operation-board:BEFORE,.operation-board>div:BEFORE {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		padding-bottom: 100%;
+	}
+	.operation-board>div{
+		position: absolute;
+		display: inline-block;
+		vertical-align: middle;
+		width: 75%;
+		border-radius:100%;
+		background-color: #efefef;
+		top: 11%;
+		left: 12%;
+		border-top: 2px #fff solid;
+		border-left: 2px #fff solid;
+		border-bottom:2px #d7d7d7 solid;
+		border-right:2px #d7d7d7 solid;
+		box-shadow: 2px 5px 5px 5px #7f7f7f;
+	}
+	
+	.operation-board .point{
+		width: 15px;
+		height: 15px;
+		top: calc(50% - 7.5px);
+		left: calc(50% - 7.5px);
+		-webkit-transform: rotate(45deg) translate(-260%);}
+</style>
+
+<script type="text/x-underscore-template" id="home_MeControlPanel_Template">
+	<div class="nav-tap">
+		<div class="slider-btn"><div></div></div>
+		<div class="set-btn"><%=setUp%></div>
+	</div>
+	<div class="text-mag"><%=open%></div>
+	<div class="control-panel">
+		<div class="icon-panel"><div class="point"></div><div class="icon-text icon-text-1"><i class="icon iconfont i-color">&#xe622;</i><span>电视</span></div></div>
+		<div class="icon-panel icon-panel-bg"><div class="point"></div><div class="icon-text icon-text-2"><i class="icon iconfont i-color">&#xe608;</i><span>空调</span></div></div>
+		<div class="icon-panel"><div class="point"></div><div class="icon-text icon-text-3"><i class="icon iconfont i-color">&#xe61e;</i><span>灯光</span></div></div>
+		<div class="icon-panel"><div class="point"></div><div class="icon-text icon-text-4"><i class="icon iconfont i-color">&#xe620;</i><span>窗帘</span></div></div>
+		<div class="icon-panel"><div class="point"></div><div class="icon-text icon-text-5"><i class="icon iconfont i-color">&#xe625;</i><span>监控</span></div></div>
+		<div class="name-panel">
+			<div><span><%=study%></span></div>
+			<div><span><%=bathroom%></span></div>
+			<div><span><%=livingroom%></span></div>
+			<div><span><%=kitchen%></span></div>
+			<div><span><%=bedroom%></span></div>
+			<div class="operation-board"><div><div class="point"></div></div>
+		</div>
+	</div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 20px;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1"><%=controlPanel%></span>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content bg-img" id="content">
+	<div class="nav-tap">
+		<div class="slider-btn"><div></div></div>
+		<div class="set-btn">设置</div>
+	</div>
+	<div class="text-mag">打开</div>
+	<div class="control-panel">
+		<div class="icon-panel"><div class="point"></div><div class="icon-text icon-text-1"><i class="icon iconfont i-color">&#xe622;</i><span>电视</span></div></div>
+		<div class="icon-panel icon-panel-bg"><div class="point"></div><div class="icon-text icon-text-2"><i class="icon iconfont i-color">&#xe608;</i><span>空调</span></div></div>
+		<div class="icon-panel"><div class="point"></div><div class="icon-text icon-text-3"><i class="icon iconfont i-color">&#xe61e;</i><span>灯光</span></div></div>
+		<div class="icon-panel"><div class="point"></div><div class="icon-text icon-text-4"><i class="icon iconfont i-color">&#xe620;</i><span>窗帘</span></div></div>
+		<div class="icon-panel"><div class="point"></div><div class="icon-text icon-text-5"><i class="icon iconfont i-color">&#xe625;</i><span>监控</span></div></div>
+		<div class="name-panel">
+			<div><span>书房</span></div>
+			<div><span>卫生间</span></div>
+			<div><span>客厅</span></div>
+			<div><span>厨房</span></div>
+			<div><span>卧室</span></div>
+			<div class="operation-board"><div><div class="point"></div></div>
+		</div>
+	</div>
+</div>

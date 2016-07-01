@@ -1,0 +1,363 @@
+<style type="text/css" media="all">
+	.div-top{
+		position: relative;
+		padding: 0px 20px;
+		top: 50px;
+		overflow: hidden;
+		padding-bottom: 5px;
+	}
+	.div-top div:nth-child(1){
+		float: left;
+	}
+	.div-top div:nth-child(2){
+		float: right;
+	}
+	
+	.div-btn{
+		
+	}
+	.div-btn i{
+		font-size: 0.5rem;
+ 
+	}
+	.div-btn span{
+		font-size: 18px;
+		color: #585c64;
+	}
+	
+	.div-center{
+		position: relative;
+		overflow:hidden;
+		top: 30px;
+	}
+	.div-control{
+		position: relative;
+		width: 260px;
+		height: 260px;
+		background-color: #e1e1e1;
+		border-radius:100%;
+		margin: auto;
+	}
+	.div-control:AFTER {
+		content: "";
+		position:relative;
+		display: inline-block;
+		width: 230px;
+		height: 230px;
+		border-radius:100%;
+		background:  -webkit-gradient(linear,90% 100%,0 60%,from(#e3017f),to(#555e6e));
+		top:15px;
+		left: 15px;
+	}
+	.center-1{
+		position: absolute;
+		width: 180px;
+		height: 180px;
+		background-color: #f7f7f7;
+		border-radius:100%;
+		z-index: 100;
+		top: 30px;
+		left:30px;
+		border: 10px #fdfdfd solid;
+	}
+	.gear-1{
+		position:relative;
+		width: 10px;
+		height: 1px;
+		border-bottom: 1px #e1e1e1 solid;
+		top: 50%;
+		left: 10px;		
+	}
+	.gear-2{
+		position:relative;
+		width: 10px;
+		height: 1px;
+		border-bottom: 1px #e1e1e1 solid;
+		top: 50%;
+		right: 10px;	
+		float: right;	
+	}
+	.gear-3{
+		position:relative;
+		width: 1px;
+		height: 10px;
+		border-left: 1px #e1e1e1 solid;
+		top: 10px;
+		left: 50%;
+	}
+	.gear-4{
+		position:relative;
+		width: 1px;
+		height: 10px;
+		border-left: 1px #e1e1e1 solid;
+		top: calc(100% - 30px);
+		left: 50%;
+	}
+	.gear-5{
+		position:relative;
+		width: 15px;
+		height: 15px;
+		border-radius:100%;
+		background-color:#e0258d;
+		top: 30px;
+		left: 20px;
+		display:none;
+	}
+	.gear-6{
+		position:relative;
+		width: 100px;
+		height: 100px;
+		border-radius:100%;
+		background-color:#efefef;
+		margin: auto;
+		border-top: 3px #fff solid;
+		border-left: 3px #fff solid;
+		box-shadow: 5px 10px 8px 3px #999797;
+		text-align: center;
+		line-height: 103px; 
+		
+	
+	}
+	.gear-6 span:nth-child(1){
+		font-size: 60px;
+		font-weight: bold;
+		color: #34bc3b;
+	}
+	.gear-6 span:nth-child(2){
+		font-size: 20px;
+		color: #999999;
+	}
+	.coprojector-text-d,.coprojector-text-h{
+		position:absolute;
+		font-size: 25px;
+	}
+	.coprojector-text-d{
+		top: calc(50% - 37px / 2);
+		left: 5%;
+	}
+	.coprojector-text-h{
+		top: calc(50% - 37px / 2);
+		right: 5%;
+	}
+	
+	.bottom-btn{
+		position:absolute;
+		display: -webkit-box;
+		display: box;
+		-webkit-box-orient: horizontal;
+		box-orient: horizontal;
+		width: 100%;
+		bottom: 20%;
+	}
+	.box-flex{
+		position: relative;
+		box-flex: 1;
+		-webkit-box-flex: 1;
+	}
+	
+	@media screen and (max-device-width: 350px) {
+		.div-control{width: 200px;height: 200px;}
+		.div-control:AFTER{width: 170px;height: 170px;}
+		.center-1{width: 120px;height: 120px;}
+		.gear-6{width: 50px;height: 50px;box-shadow: 2px 5px 3px #999797;overflow: hidden;text-align: center;line-height: 53px;}
+		.gear-6 span:nth-child(1){font-size: 30px;}
+		.gear-6 span:nth-child(2){font-size: 15px;}
+		.gear-5{top:10px;left:15px;}
+		.knob .top{	position:absolute;top:0;left:0;width:120px;height:120px;background:url('knob.png') no-repeat;z-index:10;cursor:default !important;}
+	}
+	
+	.text-chassis{
+		position: relative;
+		width: 150px;
+		height: 150px;
+		border-radius:100%;
+		background-color: #efefef;
+		margin: auto;
+		top: 15px;
+		box-shadow: 1px 2px 10px 7px #7f064b;
+		
+	}
+	.knob .top{
+	position:absolute;
+	top:0;
+	left:0;
+	width:180px;
+	height:180px;
+	background:url('knob.png') no-repeat;
+	z-index:10;
+	cursor:default !important;
+    }
+</style>
+<style type="text/css" media="all">
+	.main-box1{
+		height:50%;
+		width:50%;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient:vertical;
+		color: #585c64;
+		overflow-y:scroll;
+	}
+	.table-rg{
+		background-color: #eff0f4;
+		padding:0px 10px 0px 15px;
+		overflow: hidden;
+	}
+	.table-rg div{
+		background-color: #fff;
+	}
+    .table-rg .div-menu{
+		margin-top:12px;
+		margin-bottom:12px;
+		background-color: #eff0f4;
+		overflow: hidden;
+		 border-radius: 10px;
+	}
+	.div-menu div:nth-child(1){
+		float: left;
+		width: 50%;
+		padding:0px 0px;
+		background-color: #eff0f4;
+	}
+	.div-menu div:nth-child(2){
+		float: left;
+		width: 50%;
+		text-align:right;
+		padding:0px 0px;
+		background-color: #eff0f4;
+		color: #df489c;
+	}
+	.table-rg .div-menu i{
+		float: right;
+	}
+	.div-list{
+		border: 1px #e7e7e7 solid;
+		overflow: hidden,
+		 padding-left:7px;
+		 padding-right:7px;
+		 margin-top:5px;
+		 height: 50px;
+	}
+	.div-list div:nth-child(1){
+		float: left;
+		width: 50%;
+		line-height: 50px;
+	}
+	.div-list div:nth-child(2){
+		float: left;
+		width: 50%;
+		text-align:right;
+		line-height: 50px;
+	}
+	@media screen and (max-device-width: 350px) {
+		.div-list{
+		border: 1px #e7e7e7 solid;
+		overflow: hidden;
+		 border-radius: 10px;
+		 padding-left:7px;
+		 padding-right:7px;
+		 margin-top:5px;
+		 height: 40px;
+	}
+	.div-list div:nth-child(1){
+		float: left;
+		width: 50%;
+		line-height: 40px;
+	}
+	.div-list div:nth-child(2){
+		float: left;
+		width: 50%;
+		text-align:right;
+		line-height: 40px;
+	}
+	 .table-rg .div-menu{
+		margin-top:8px;
+		margin-bottom:8px;
+	}
+	}
+	.item{
+	  font-size:1.25em;
+	}
+	.coloritem{
+	  margin:10px;height:20px;border:solid 1px #303030;
+	}
+	.color{
+		display:block;
+		width: 20px;
+		height: 20px;
+		float: right;
+	}
+	.main-conterner{position: relative;}
+	.cont-edit{
+		position:absolute;
+		height: 100%;
+		top: 0px;
+		right: -100px;
+		font-size: 0;
+		transition: right 500ms ease-out 0s; 
+		-webkit-transition: right 500ms ease-out 0s; 
+	}
+	.cont-edit>div{
+		display: table;
+		height: 100%;
+	}
+	.cont-edit-1{
+		display:table-cell;
+		height:100%;
+		width: 80px;
+		color: #ffffff;
+		font-size: 0.5rem;
+		text-align: center;
+		font-weight: bold;
+		vertical-align: middle;
+	}
+	.cont-edit-1{background-color: #ff3a30;width: 100px;}
+</style>
+
+
+<script id="ehome_CoFanSetup_Template" type="text/x-underscore-template">
+	<div class="main-box">
+		<div class="div-top">
+			<div class="div-btn cofansetup-div-btn" id="power"><i class="icon iconfont i-color"  ><%=power_icon%></i></div>
+			<div class="div-btn cofansetup-div-btn" id="oscillate"><span></span><i class="icon iconfont" style="font-size:18px;"><%=head%></i></div>
+		</div>
+		<div class="div-center">
+			<div class="coprojector-text-d"><%=low%></div>
+			<div class="div-control">
+				<div class="center-1">
+					<div class="gear-1"></div>
+					<div class="gear-2"></div>
+					<div class="gear-3"></div>
+					<div class="gear-4"></div>
+					<div class="gear-5"></div>
+					<div style="margin-top:10px">
+					<div class="gear-6" id="speed">
+						<span id="temp">0</span><span><%=files%></span>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="coprojector-text-h"><%=height%></div>
+		</div>
+	</div>
+	<div class="bottom-btn">
+		<div class="box-flex">
+		<div class="div-btn cofansetup-div-btn"   id="time">
+			<i  class="icon iconfont i-color"  ><%=time_icon%></i>
+		</div>
+		</div>
+	</div>
+</script>
+
+
+<header id="homelist_header" class="navbar header_font_color">
+</header>
+
+
+<div class="content">
+<div class="main-box1" id="hourList" style="display:none">
+<div class="table-rg">
+</div>
+</div>
+</div>

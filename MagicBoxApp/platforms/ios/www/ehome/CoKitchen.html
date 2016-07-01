@@ -1,0 +1,109 @@
+<style type="text/css" media="all">
+	.div-main{
+		display: box;
+		display: -webkit-box;
+		height: 100%;
+		box-orient: vertical;
+		-webkit-box-orient: vertical;
+	}
+	.div-top{
+		position:relative;
+		display:block;
+		box-flex:3;
+		-webkit-box-flex:3;
+		background-image:url("../images/kitchen-img.jpg"); 
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+	.cokitchen-div-bottom{
+		position:relative;
+		box-flex:4;
+		-webkit-box-flex:4;
+		border-top: 1px #e7e7e7 solid;
+		padding-left: 15px;
+	}
+	.cokitclen-div-list{
+		display:box;
+		display:-webkit-box;
+		box-orient: horizontal;
+		-webkit-box-orient: horizontal;
+		border-bottom: 1px #e7e7e7 solid;
+		height: 50px;
+	}
+	.cokitclen-div-list div:nth-child(1){
+		line-height:50px;
+		box-flex:1;
+		-webkit-box-flex:1;
+	}
+	.cokitclen-div-list div:nth-child(2){
+		line-height:50px;
+		box-flex:1;
+		-webkit-box-flex:1;
+		text-align: right;
+		padding-right: 20px;
+		color: #a0a0a0;
+	}
+	.cokitclen-div-list i{
+		margin-right: 5px;
+		font-size: 0.5rem;
+	}
+</style>
+
+<script id="ehome_Kitchen_Template" type="text/x-underscore-template">
+	<div class="cokitclen-div-list">
+		<div><i class="icon iconfont"><%=icon%></i><%=name%></div>
+		<div><%if(open==""){
+				%><span><%=notBound%></span><%
+			}else{
+			%><span class="cokitclen-text-color"><%=open%></span><%
+			}%></div>
+	</div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 20px;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">智能厨房</span>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content">
+	<div class="div-main">
+		<div class="div-top"></div>
+		<div class="cokitchen-div-bottom">
+			<div class="div-list">
+				<div><i class="icon iconfont">&#xe63f;</i>微波炉</div>
+				<div><span>未绑定</span></div>
+			</div>
+			<div class="div-list">
+				<div><i class="icon iconfont">&#xe64b;</i>冰箱</div>
+				<div><span class="text-color">开启</span></div>
+			</div>
+			<div class="div-list">
+				<div><i class="icon iconfont">&#xe648;</i>烤箱</div>
+				<div><span class="">未绑定</span></div>
+			</div>
+			<div class="div-list">
+				<div><i class="icon iconfont">&#xe64c;</i>吸油烟机</div>
+				<div><span class="">未绑定</span></div>
+			</div>
+			<div class="div-list">
+				<div><i class="icon iconfont">&#xe63d;</i>电饭煲</div>
+				<div><span class="">未绑定</span></div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="footer-menu" bgcolor="gray" data-value="ehome" data-page=""></footer>

@@ -1,0 +1,161 @@
+<style type="text/css" media="all">
+	.title-label{
+		font-size: 0.2rem;
+		color: #797D88;
+		padding: 5px 20px;
+	}
+	.choose{
+		display: box;
+		display: -webkit-box;
+		box-orient:horizontal;
+		-webkit-box-orient:horizontal;
+		padding: 5px 25px;
+		border-bottom: 1px #e7e7e7 solid;
+	}
+	.choose div:nth-child(2){
+		text-align: right;
+	}
+	.choose i{
+		font-size: 0.3rem;
+	}
+	.b-flex{
+		box-flex:1;
+		-webkit-box-flex:1;
+	}
+	.i-color{
+		color: #df3c97;
+	}
+</style>
+
+<script type="text/x-underscore-template" id="seSubscribeTemplate">
+	<div class="title-label" style="font-size:24px;">
+	<span id="th_select">
+<i class="icon iconfont"><%=ldDetectionIcon%></i></span>
+	<%=thDetection%></div>
+		<div class="choose" style="border-bottom:0;">
+	
+
+		<div class="b-flex"><%=repeatedAlarm%>  
+			<select id="sd_type">
+		  		<option value="1"><%=no%></option>
+		  		<option value="0"><%=yes%></option>
+		  	</select>
+		</div>
+		
+</div>
+<div class="choose" style="border-bottom:0;">
+     <div class="b-flex"><%=thMax%>(%RH) <input id="th_max" type="text" value="5000" style=" text-align:right;" /></div>
+	 <div class="b-flex" style=" text-align:left;" ><%=thMin%>(%RH) <input id="th_min" type="text" value="5000" style=" text-align:right;" /></div>
+</div>
+<div class="choose" style="padding-top:0;border-top:0;">
+	
+		<div class="b-flex"><%=alarmInterval%> <input id="th_time" type="text" value="5000" style=" text-align:right;" /></div>
+		</div>
+		
+		
+		
+		
+	<div class="title-label"  style="font-size:24px;">
+	<span id="temp_select">
+<i class="icon iconfont"><%=ldDetectionIcon%></i></span>
+	<%=tempDetection%></div>
+		<div class="choose" style="border-bottom:0;">
+	
+
+		<div class="b-flex"><%=repeatedAlarm%>  
+			<select id="wd_type">
+		  		<option value="1"><%=no%></option>
+		  		<option value="0"><%=yes%></option>
+		  	</select>
+		</div>
+		
+</div>
+<div class="choose" style="border-bottom:0;">
+     <div class="b-flex"><%=tempMax%>(℃) <input id="temp_max" type="text" value="5000" style=" text-align:right;"/></div>
+	 <div class="b-flex" style=" text-align:left;"><%=tempMin%>(℃) <input id="temp_min" type="text" value="5000" style=" text-align:right;" /></div>
+</div>
+<div class="choose" style="padding-top:0;border-top:0;">
+	
+		<div class="b-flex"><%=alarmInterval%> <input id="temp_time" type="text" value="5000" style=" text-align:right;" /></div>
+		</div>
+		
+		
+		
+		
+	<div class="title-label"  style="font-size:24px;">
+	<span id="dc_select">
+<i class="icon iconfont"><%=ldDetectionIcon%></i></span>
+	<%=ldDetection%></div>
+		<div class="choose" style="border-bottom:0;">
+	
+
+		<div class="b-flex"><%=repeatedAlarm%>  
+			<select id="dc_type">
+		    	<option value="1"><%=no%></option>
+		    	<option value="0"><%=yes%></option>
+		    </select>
+		</div>
+		
+</div><div class="choose" style="padding-top:0;border-top:0;">
+	
+		<div class="b-flex"><%=alarmInterval%> <input id="dc_time" type="text" value="5000"   style=" text-align:right;"/></div>
+		</div>
+		
+		
+	
+			<div class="title-label"  style="font-size:24px;">
+	<span id="kq_select">
+<i class="icon iconfont"><%=aqDetectionIcon%></i></span>
+	<%=aqDetection%></div>
+	
+	<div class="choose" style="border-bottom:0;">
+	
+
+		<div class="b-flex"><%=repeatedAlarm%>   
+			<select id="kq_type">
+		  		<option value="1"><%=no%></option>
+		  		<option value="0"><%=yes%></option>
+		  	</select>
+		</div>
+		
+</div><div class="choose" style="padding-top:0;border-top:0;">
+	
+		<div class="b-flex"><%=alarmInterval%><input id="kq_time" type="text" value="5000"  style=" text-align:right;"/></div>
+		</div>
+		
+		
+	
+		<div class="title-label"  style="font-size:24px;">
+	<span id="hw_select">
+<i class="icon iconfont"><%=ihDetectionIcon%></i></span>
+	<%=ihDetection%></div>
+
+	<div class="choose" style="border-bottom:0;">
+	
+
+		<div class="b-flex"><%=repeatedAlarm%>   
+			<select id="hw_type">
+		    	<option value="1"><%=no%></option>
+		    	<option value="0"><%=yes%></option>
+		    </select>
+		</div>
+		
+</div><div class="choose" style="padding-top:0;border-top:0;">
+	
+		<div class="b-flex"><%=alarmInterval%><input id="hw_time" type="text" value="5000"  style=" text-align:right;"/></div>
+		</div>
+	</div>
+	
+	<div style="height:50px;"></div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+
+</header>
+
+<!-- content -->
+
+
+<div class="content fontColor" id="content">
+</div>

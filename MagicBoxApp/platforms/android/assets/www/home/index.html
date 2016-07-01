@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-eval' 'unsafe-inline';img-src * data:" />
+
+  <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
+  <meta http-equiv="X-Frame-Options" content="ALLOW-FROM">
+  <meta http-equiv="pragma" content="no-cache" />
+  <link href="../piece/css/piece.css" rel="stylesheet"/>
+  <link href="../base/common.css" rel="stylesheet"/>
+    
+  <link href="../base/iconfont/iconfont.css" rel="stylesheet"/>
+  <link href="../piece/js/vendor/mobiscoller/css/mobiscroll.core.css" rel="stylesheet"/>
+  <link href="../piece/js/vendor/mobiscoller/css/mobiscroll.android-ics.css" rel="stylesheet"/>
+  
+  <!--control-->
+  <link rel="stylesheet" href="../knobKnob/knobKnob.css" />
+		
+		
+<!--controls-->
+<script type="text/javascript" src="../base/overall.js"></script>		
+<script type="text/javascript" src="../base/bluetooth.js"></script>
+<script type="text/javascript" src="../piece/js/vendor/stomp-websocket/js/stomp.js"></script>
+
+  <script type="text/javascript">
+	  app.initialize();//初始化蓝牙
+      // 轮循变量
+      window.intRound = null ;
+      // 打开进入APP参数
+      window.sessionStorage["AppFrist"] = 0;
+
+      var require = {
+          urlArgs: "bust=" +  (new Date()).getTime()
+      };
+
+      var pieceConfig ={
+          defaultModule:"home",
+          defaultView:"MeIndex",
+          loadMode:"module",
+          enablePhoneGap:true
+      };
+		
+
+      var AppVersion = "0.0.1";
+
+    //创建js、css文件
+    var createjscssfile = function(filename, filetype,id) {
+      var fileref;
+      if (filetype === "js") {
+          fileref = document.createElement('script');
+          fileref.setAttribute("type", "text/javascript");
+          fileref.setAttribute("src", "http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js");
+          document.documentElement.appendChild(fileref);
+
+      } else if (filetype === "css") {
+          fileref = document.createElement("link");
+          fileref.setAttribute("rel", "stylesheet");
+          fileref.setAttribute("type", "text/css");
+          fileref.setAttribute("href", filename);
+          fileref.setAttribute("id", id);
+          document.documentElement.appendChild(fileref);
+      }
+    };
+
+
+	// 判断版本，然后清除上个版本的缓存
+	var AppVersionOld = window.localStorage["AppVersion"];
+	var userInformationToken =window.localStorage['user_token'];
+	var userInformationMessage = window.localStorage['user_message'];
+	var userInformationInfo= window.localStorage['user_info'];
+	if (AppVersionOld === undefined|| AppVersionOld === null || AppVersion != AppVersionOld  ) {
+		window.localStorage.clear();
+		window.localStorage["AppVersion"] = AppVersion;
+		if(userInformationToken!=null || userInformationToken != undefined){
+			
+			window.localStorage["user_token"]= userInformationToken;
+			window.localStorage["user_message"]= userInformationMessage;
+			window.localStorage["user_info"]= userInformationInfo;
+		}
+	};
+
+	var platformVersion = navigator.userAgent;
+	if (platformVersion.indexOf("Android")>-1 && platformVersion.indexOf("2.3")>-1) {
+		createjscssfile("../base/android2.3.css","css");
+	};
+	//动态加载模板样式
+	var templateID = localStorage.getItem("templateID");
+	var path = "";
+	if(templateID){
+		path = "../base/templates/templateCss_"+templateID+".css";
+	}else{
+	  path = "../base/templates/templateCss_1.css";
+	}
+	createjscssfile(path,"css","tempID");
+	
+	// 打开APP时，判断expires是否超时
+	var user_info = window.localStorage["user_token"];
+	if(user_info!= null){
+		var user_timeout = user_info.expires_in;
+		var user_systime = user_info.addTime;
+	}
+	var timeNow = new Date().getTime();
+	var calc = timeNow - user_systime;
+	if ((calc / 1000) < user_timeout) {
+		window.localStorage.removeItem("user_token");
+		window.localStorage.removeItem("user_message");
+		window.localStorage.removeItem("user_info");
+	}
+	//小屏幕，改变登陆框样式
+	if(window.screen.height<500){
+		createjscssfile("../base/smallScreen.css","css");
+	}
+
+	// Websocket变更
+	var stompClient = null;
+	var subscribeIds = {};
+	
+	//全局调用函数
+	var socketRspnCallBack={};
+	
+	//新定义的socket变量
+	var sendIdf=0;
+	var sendData=new Array();
+</script>
+
+<script type="text/javascript" src="../piece/js/piece-debug.js"></script>
+<script type="text/javascript">
+	function onKeyBoardShow(bottom) {
+		var obj = $('input[type=text]:focus');
+		var stop = $('.content').scrollTop();
+		if(obj.offset().top > bottom/2) {
+			$('.content').scrollTop(stop+(bottom - obj.offset().top));
+		}
+	}
+</script>
+<!-- <script type="text/javascript" src="http://192.168.0.105:8081/target/target-script-min.js#anonymous"></script>
+  -->
+</head>
+<body>
+<div class="dummyBody">
+<div>
+</body>
+
+</html>

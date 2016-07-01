@@ -1,0 +1,57 @@
+
+/*=================android 2.3=====================*/
+/*2.3 content*/
+.bar-header-secondary ~ .content{
+	padding-top:99px
+}
+/*2.3 footer*/
+.footer-menu,.bar-tab {
+	margin-bottom: -10px;
+}
+.footer-ehome-menu,.bar-tab {
+	margin-bottom: -10px;
+} 
+.footer-menu-detail{
+	margin-bottom: -16px;
+}
+.comment{
+	height:57px;
+}
+.commentFoot{
+	padding-bottom:5px
+}
+/*2.3 nav*/
+.segmented-controller{
+	margin-top:5px !important;
+}
+nav.bar-standard {
+height: 44px;
+}
+.bar-header-secondary {
+top: 44px;
+padding: 5px 5px 5px 6px !important;
+}
+/*2.3 footer z-index*/
+footer {
+	z-index: 1 !important;
+}
+footer ul li{
+	z-index:1;
+}
+/*2.3 footer button*/
+#commentNew{
+ border: 1px solid black;
+}
+#commentTweet{
+ border: 1px solid black;
+}
+
+/*2.3 footer commentCount*/
+.promptInformation{
+	border-radius: 20px;
+	padding-top: 1px;
+}
+.promptInformationNav{
+	border-radius: 20px;
+	padding-top: 1px;
+}

@@ -1,0 +1,159 @@
+<style type="text/css" media="all">
+	.main-box{
+		width:100%;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient:vertical;
+	}
+	.top-box{
+		height:45%;
+		text-align: -webkit-center;
+		padding: 30px 0px;
+	}
+	.view-box{
+		width: 250px;
+		height: 250px;
+		border-radius:100%;
+	}
+	.view-box .div-circle{
+		position: relative;
+		display: inline-block;
+		width: 230px;
+		height: 230px;
+		border-radius: 100%;
+		
+		top: calc(50% - 230px / 2);
+	}
+	.view-box .div-circle .div-list{
+		height: 73px;
+		text-align:center;
+		line-height:73px;   
+	}
+	.view-box .div-circle div:nth-child(1){
+		font-size:18px;  
+	}
+	.view-box .div-circle div:nth-child(2){
+		font-size:89px;
+		color:#34bd3c; 
+		font-weight:bold;
+		font-weight: bold;
+	}
+	.view-box .div-circle div:nth-child(2) span:nth-child(1){
+		font-size:84.5px;
+		font-weight:bold;
+		margin-left: 5px;
+	}
+	.view-box .div-circle div:nth-child(2) span:nth-child(2){
+		font-size:44.5px;
+		font-weight:bold;
+		margin-left: 5px;
+	}
+	.view-box .div-circle div:nth-child(3){
+		font-size:26px;
+		color:#e5007e; 
+	}
+	.bottom-box{
+		height:50%;
+		color: #585c64;
+	}
+	.table-rg{
+		background-color: #fff;
+		padding:0px 20px;
+		overflow: hidden;
+	}
+	.table-rg .div-list{
+		width:100%;
+		border-bottom: 1px #e7e7e7 solid;
+		overflow: hidden;
+		height: 52px;
+	}
+	.table-rg .div-list div:nth-child(1){
+		float: left;
+		width: 50%;
+		line-height: 52px;
+	}
+	.table-rg .div-list div:nth-child(2){
+		float: left;
+		width: 50%;
+		text-align:right;
+		line-height: 52px;
+	}
+	.div-middle{
+		padding:20px 0px;
+		text-align: center;
+		color: #dd3d97;
+	}
+	@media screen and (max-device-width: 350px) {
+		.view-box{
+		width: 170px;
+		height: 170px;
+		}
+		.view-box .div-circle{
+			width: 150px;
+			height: 150px;
+			top: calc(50% - 150px / 2);
+		}
+
+		.table-rg .div-list{
+			height: 40px;
+		}
+		.table-rg .div-list div:nth-child(2),.table-rg .div-list div:nth-child(1) {
+			line-height: 40px;
+		}
+		.view-box .div-circle .div-list{
+			height: 45px;
+			text-align:center;
+			line-height:45px;   
+		}
+		.view-box .div-circle div:nth-child(1){
+			font-size:14px;  
+		}
+		.view-box .div-circle div:nth-child(2){
+			font-size:48px;
+			color:#34bd3c; 
+			font-weight:bold;
+			font-weight: bold;
+		}
+		.top-box{
+			padding:8px 0px 0px 0px;
+		}
+		.view-box .div-circle div:nth-child(2) span{
+			font-size:22.5px;
+			font-weight:bold;
+			margin-left: 5px;
+			color: #222222;
+	}
+	}
+</style>
+
+<script type="text/x-underscore-template" id="stChargerTemplate">
+	<div class="main-box">
+		<div class="top-box">
+			<div class="view-box circleBorderColor">
+				<div class="div-circle <%=circleBackground%>">
+					<div class="div-list"><span><%=situation%></span></div>
+					<div class="div-list"><span id="frequency" class="circleFontColor">
+					<%=frequency%></span><span class="fontColor"><%=frequencyText%></span></div>
+					<div class="div-list"></div>
+				</div>
+			</div>
+		</div>
+		<div class="div-middle"><span id="presentSituation"><%=presentSituation%></span></div>
+		<div class="bottom-box">
+			<div class="table-rg">
+				
+			</div>
+		</div>
+	</div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	
+</header>
+
+<!-- content -->
+<div class="content" id="content">
+	
+</div>

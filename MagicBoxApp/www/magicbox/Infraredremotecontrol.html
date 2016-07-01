@@ -1,0 +1,88 @@
+<style type="text/css" media="all">
+.menu-box {
+	width: 49.5%;
+}
+
+.menu-box:BEFORE {
+	padding-bottom: 70%;
+}
+</style>
+
+<script type="text/x-underscore-template" id="iNTemplate">
+	<div class="menu-box">
+		<div class="menu-view" order="<%=order%>" draggable="true" <% if(data_module!=''){%>data-module="<%=data_module%>" data-view="<%=data_view%>"<%}%>>
+			<div class="<%=bgcolor%> events">
+				<div class="valign">
+					<i class="icon iconfont"><%=icon%></i>
+					<div><%=name%></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left">
+		<a class="react" gaevent="imt/hd/home"> <i class="icon iconfont"
+			style="font-size: 20px;">&#xe601;</i>
+		</a>
+	</div>
+	<span class="nav-header h1">红外遥控</span>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content" id="content">
+	<div class="menu-box">
+		<div class="menu-view" draggable="true" data-module="ehome"
+			data-view="CoKitchen">
+			<div class="events">
+				<div class="valign">
+					<i class="icon iconfont">&#xe612;</i>
+					<div>智能厨房</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="menu-box">
+		<div class="menu-view" draggable="true" data-module="ehome"
+			data-view="CoKitchen">
+			<div class="events">
+				<div class="valign">
+					<i class="icon iconfont">&#xe612;</i>
+					<div>智能厨房</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="menu-box">
+		<div class="menu-view" draggable="true" data-module="ehome"
+			data-view="CoKitchen">
+			<div class="events">
+				<div class="valign">
+					<i class="icon iconfont">&#xe612;</i>
+					<div>智能厨房</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="menu-box">
+		<div class="menu-view" draggable="true" data-module="ehome"
+			data-view="CoKitchen">
+			<div class="events">
+				<div class="valign">
+					<i class="icon iconfont">&#xe612;</i>
+					<div>智能厨房</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="footer-menu" bgcolor="gray" data-value="ehome" data-page=""></footer>

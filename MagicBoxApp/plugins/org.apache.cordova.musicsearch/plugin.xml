@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="org.apache.cordova.musicsearch" version="0.1.0">
+    <name>musicsearch</name>
+    <description>musicsearch Plugin for Phonegap</description>
+    <license>MIT</license>
+    <keywords>musicsearch, phonegap</keywords>
+ 
+    <!-- android -->
+    <platform name="android">
+        <js-module src="www/MusicSearch.js" name="MusicSearch">
+            <clobbers target="window.MusicSearch" />
+        </js-module>
+ 
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="MusicSearch">
+                <param name="android-package" value="org.apache.cordova.musicsearch.MusicSearch"/>
+            </feature>
+        </config-file> 
+        
+        <config-file target="AndroidManifest.xml" parent="/*">
+        
+		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+		</config-file>
+        
+        <source-file src="src/android/MusicInfo.java" target-dir="src/org/apache/cordova/musicsearch" />   
+        <source-file src="src/android/MusicLoader.java" target-dir="src/org/apache/cordova/musicsearch" />   
+        <source-file src="src/android/MusicSearch.java" target-dir="src/org/apache/cordova/musicsearch" />   
+        <source-file src="src/android/MyApplication.java" target-dir="src/cn/weirong/magicbox/app" />   
+    </platform>         
+</plugin>

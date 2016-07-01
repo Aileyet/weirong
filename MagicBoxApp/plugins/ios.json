@@ -1,0 +1,37 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cn.net.wenzhixin.cordova": {
+            "PACKAGE_NAME": "cn.weirong.vbank.app.subs"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "cn.weirong.vbank.app.subs"
+        },
+        "edu.uic.travelmidwest.cordova.udptransmit": {
+            "PACKAGE_NAME": "cn.weirong.vbank.app.subs"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "cn.weirong.vbank.app.subs"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "cn.weirong.magicbox.app"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-chrome-apps-common": {
+            "PACKAGE_NAME": "cn.weirong.vbank.app.subs"
+        },
+        "cordova-plugin-chrome-apps-iossocketscommon": {
+            "PACKAGE_NAME": "cn.weirong.vbank.app.subs"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "cn.weirong.vbank.app.subs"
+        }
+    }
+}

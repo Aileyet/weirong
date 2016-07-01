@@ -1,0 +1,105 @@
+<style type="text/css" media="all">
+.label-name {
+	font-size: 1em;
+	padding-left: 20px;
+	padding-bottom: 5px;
+}
+ 
+.network-model, .wifi-settings, .network-settings {
+	margin-top: 10px;
+}
+
+.network-model>div:nth-child(2), .wifi-settings>div:nth-child(2),
+	.network-settings>div:nth-child(2) {
+	padding-left: 25px;
+}
+
+.network-model>div:nth-child(2) div, .wifi-settings>div:nth-child(2) div,
+	.network-settings>div:nth-child(2) div {
+	height: 50px;
+	line-height: 50px;
+}
+
+.network-model>div:nth-child(2) div:nth-child(1), .wifi-settings>div:nth-child(2) div,
+	.network-settings>div:nth-child(2) div {
+	border-bottom: 1px #e7e7e7 solid;
+}
+
+.network-model i {
+	font-size: 1.5em;
+	color: #818282;
+}
+
+
+.wifi-settings>div:nth-child(2) div, .network-settings>div:nth-child(2) div
+	{
+	text-align: right;
+	padding-right: 20px;
+}
+
+.wifi-settings>div:nth-child(2) div span:nth-child(1), .network-settings>div:nth-child(2) div span:nth-child(1)
+	{
+	float: left;
+}
+.react1{
+	display: block;
+	color: inherit;
+	height: 100%;
+}
+</style>
+
+<script type="text/x-underscore-template" id="inNetSetupTemplate">
+	<div class="network-model">
+		<div class="label-name fontColor"><%=networkMode%></div>
+		<div class="fontColor">
+			<div>
+				<i class="icon iconfont checked-i" ><%=routerIcom%></i><%=router%>
+				<input type="hidden" value=<%=router%>>
+			</div>
+			<div>
+				<i class="icon iconfont" ><%=relayIcon%></i><%=relay%>
+				<input type="hidden" value=<%=relay%>>
+			</div>
+		</div>
+	</div>
+	<div class="wifi-settings" style="display:none;">
+		<div class="label-name fontColor"><%=wifiSettings%></div>
+		<div class="fontColor">          
+              <table width="85%">
+                	<tr>
+					  <td  align="left" width="50px"><%=ssid%></td><td width="130px" align="right"><input id="ssid" class="form-field" type="text"  maxlength="20" value="<%=ssidDefultValue%>"/></td>
+                    </tr>
+                	<tr>
+					  <td  align="left" width="50px"><%=password%></td><td width="130px" align="right"><input id="password" class="form-field" type="password"  maxlength="20" /></td>
+                    </tr>
+              </table>
+       </div>
+	</div>
+	<div class="network-settings" >
+		<div class="label-name fontColor"><%=networkSettings%></div>
+		<div class="fontColor">
+                <table width="86%">
+                	<tr>
+					  <td  align="left" ><%=ipAddress%></td><td align="right"><input id="ipAddress" class="form-field" type="text"  maxlength="15" /></td>
+                    </tr>
+                	<tr>
+					  <td  align="left" ><%=netMask%></td><td align="right"><input id="netMask" class="form-field" type="text"  maxlength="15" /></td>
+                    </tr>
+                	<tr>
+					  <td  align="left" ><%=gateway%></td><td align="right"><input id="gateway" class="form-field" type="text"  maxlength="15" /></td>
+                    </tr>
+                	<tr>
+					  <td  align="left" ><%=dns%></td><td align="right"><input id="dns1" class="form-field" type="text"  maxlength="15" /></td>
+                    </tr>
+                </table>
+       </div>
+	</div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+</header>
+
+<!-- content -->
+<div class="content" id="content">
+</div>

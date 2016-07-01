@@ -1,0 +1,209 @@
+<style type="text/css" media="all">
+	.cotoilet-main-box{
+		height:100%;
+		width:100%;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient:vertical;
+	}
+	.top-box{
+		text-align: -webkit-center;
+		border-bottom: 1px #e7e7e7 solid;
+		padding: 40px 0px;
+	}
+	
+	.cotoilet-view-box{
+		position:relative;
+		display:table;
+		width: 250px;
+		height: 250px;
+		border-radius:100%;
+		overflow: hidden;
+		color: #de3d96;
+	}
+	.tacell{
+		display: table-cell;
+		vertical-align: middle;
+		color: #585c64;
+		font-size: 0.4rem;
+	}
+	.cotoilet-view-box i{
+		font-size: 3rem;
+	}
+	.cotoilet-bottom-box{
+		height:50%;
+		color: #585c64;
+	}
+	.table-rg{
+		position:relative;
+		background-color: #fff;
+		padding:0px 20px;
+		overflow: hidden;
+	}
+	.div-list{
+		position:relative;
+		display:-webkit-box;
+		display:box;
+		-webkit-box-orient: vertical;
+		box-orient: vertical;
+		border-bottom: 1px #e7e7e7 solid;
+		overflow: hidden;
+		color: #585c64;
+	}
+	.div-list div:nth-child(1){
+		height: 40px;
+		line-height: 40px;
+	}
+	
+	.cotoilet-div-sliders{
+		padding: 8px 10px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+	}
+	.cotoilet-div-sliders div:nth-child(1){
+		height: 3px;
+		background-color: #737373;
+		border-radius: 3px;
+	}
+	.cotoilet-div-sliders div:nth-child(1):AFTER {
+		content:"";
+		height: 3px;
+		width: 50%;
+		position: relative;
+		display: block;
+	}
+	.cotoilet-div-sliders div:nth-child(2){
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		border-radius: 100%;
+		background-color: #fff;
+		left: calc(50% - 15px / 2 );
+		bottom: 2px;
+		box-shadow: 0px 3px 10px 1px #C3C1C1;
+	}
+	
+	.div-label{
+		display: box;
+		display: -webkit-box;
+		-webkit-box-orient: horizontal;
+		box-orient: horizontal;
+		padding: 5px 10px 15px 10px;
+	}
+	.div-label span{
+		position: relative;
+		display:block;
+		box-sizing: border-box;
+		-webkit-box-flex: 1;
+		box-flex: 1;
+		font-size: 12px;
+		color: #a0a0a0;
+	}
+	.div-label-2{
+		text-align: center;
+	}
+	.div-label-3{
+		text-align: center;
+	}
+	.div-label-4{
+		text-align: right;
+	}
+	
+	
+	@media screen and (max-device-width: 350px) {
+		.cotoilet-view-box{width: 180px;height: 180px;}
+		.cotoilet-view-box i{font-size: 2rem;}
+	}
+</style>
+
+<script id="ehome_CoToilet_Template" type="text/x-underscore-template">
+	<div class="cotoilet-main-box">
+		<div class="top-box">
+			<div class="cotoilet-view-box">
+				<div class="tacell">
+					<i class="icon iconfont"><%=icon%></i>
+					<div><%=notSomeone%></div>
+				</div>
+			</div>
+		</div>
+		<div class="cotoilet-bottom-box">
+			<div class="table-rg">
+				<div class="div-list">
+					<div><%=temperature%></div>
+					<div class="cotoilet-div-sliders"><div></div><div></div></div>
+					<div class="div-label">
+						<span class="div-label-1"><%=close%></span>
+						<span class="div-label-2"><%=low%></span>
+						<span class="div-label-3"><%=middle%></span>
+						<span class="div-label-4"><%=height%></span>
+					</div>
+				</div>
+				<div class="div-list">
+					<div><%=water%></div>
+					<div class="cotoilet-div-sliders"><div></div><div></div></div>
+					<div class="div-label">
+						<span class="div-label-1"><%=small%></span>
+						<span class="div-label-2"><%=middle%></span>
+						<span class="div-label-4"><%=large%></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 20px;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">智能卫生间</span>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content">
+	<div class="cotoilet-main-box">
+		<div class="top-box">
+			<div class="cotoilet-view-box">
+				<div class="tacell">
+					<i class="icon iconfont">&#xe617;</i>
+					<div>无人</div>
+				</div>
+			</div>
+		</div>
+		<div class="cotoilet-bottom-box">
+			<div class="table-rg">
+				<div class="div-list">
+					<div>便圈温度</div>
+					<div class="cotoilet-div-sliders"><div></div><div></div></div>
+					<div class="div-label">
+						<span class="div-label-1">关</span>
+						<span class="div-label-2">底</span>
+						<span class="div-label-3">中</span>
+						<span class="div-label-4">高</span>
+					</div>
+				</div>
+				<div class="div-list">
+					<div>水量</div>
+					<div class="cotoilet-div-sliders"><div></div><div></div></div>
+					<div class="div-label">
+						<span class="div-label-1">小</span>
+						<span class="div-label-2">中</span>
+						<span class="div-label-4">大</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

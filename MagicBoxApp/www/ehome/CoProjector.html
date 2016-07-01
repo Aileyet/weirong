@@ -1,0 +1,250 @@
+<style type="text/css" media="all">
+	.content-padding{
+		padding: 20px;
+	}
+	
+	.div-btn{
+		
+	}
+	
+	.coprojector-power{
+		text-align: center;
+		overflow: hidden;
+		padding: 20px 10px 10px 10px; 
+	}
+	.coprojector-power>div:nth-child(1){float: left;}
+	.coprojector-power>div i{font-size: 0.5rem;}
+	.coprojector-power>div:nth-child(2){float: right;}
+	
+	.channel,.operation,.coprojector-volume{
+		display: box;
+		display: -webkit-box;
+		box-orient:horizontal;
+		-webkit-box-orient: horizontal;
+		overflow: hidden;
+		padding: 10px;
+	}
+	.box-flex{
+		box-flex:1;
+		-webkit-box-flex:1;
+	}
+	.coprojector-channel-btn{
+		width: 60px;
+		height: 30px;
+		line-height:30px;
+		border-radius:5px;
+		text-align: center;
+	}
+	.channel-btn-2{margin: auto;}
+	.channel-btn-3{float: right;}
+	
+	.coprojector-floor{
+		display:inline-block;
+		padding:4px;
+		border-radius:30px;
+	}
+	
+	.coprojector-floor>div{
+		width: 55px;
+		height: 160px;
+		border-radius:30px;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient: vertical;
+	}
+	
+	.operation .box-flex:nth-child(3) .coprojector-floor{float: right;}
+	.coprojector-floor .box-flex{
+		text-align: center;
+		line-height: 53px;
+	}
+	
+	.operation .box-flex:nth-child(2){text-align: center;}
+	.coprojector-floor-radius{
+		display:inline-block;
+		padding:4px;
+		border-radius:100%;
+		margin-top: calc(50% - 70px);
+	}
+	.coprojector-floor-radius>div{
+		position:relative;
+		display:inline-block;
+		vertical-align:middle;
+		width: 140px;
+		border-radius:100%; 
+		overflow: hidden;
+		text-align: center;
+	}
+	.coprojector-floor-radius>div:BEFORE {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		padding-bottom: 100%;
+	}
+	
+	.coproject-key{
+		position: absolute;
+		top: calc(50% - 13px / 2);
+		left: calc(50% - 12px / 2);
+	}
+	.coproject-key i{font-size: 0.8em;}
+	.coproject-key:nth-child(1){-webkit-transform: rotate(0deg) translate(-480%);}
+	.coproject-key:nth-child(2){-webkit-transform: rotate(90deg) translate(-480%);}
+	.coproject-key:nth-child(3){-webkit-transform: rotate(180deg) translate(-480%);}
+	.coproject-key:nth-child(4){-webkit-transform: rotate(270deg) translate(-480%);}
+	
+	.coprojector-sure{
+		position:relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 45%;
+		border-radius:100%;
+		top: 25%;
+		left: -3%;
+	}
+	.coprojector-sure:BEFORE {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		padding-bottom: 100%;
+	}
+	.coprojector-volume .box-flex:nth-child(2){text-align: center;}
+	.coprojector-volume .box-flex:nth-child(3){text-align: right;}
+	.coprojector-volume .box-flex:nth-child(1) i{font-size: 0.7rem;}
+	.coprojector-volume .box-flex:nth-child(2) i{font-size: 0.6rem;}
+	.coprojector-volume .box-flex:nth-child(3) i{font-size: 0.7rem;}
+	
+	.channel{margin-top:10% }
+	.operation{margin-top: 10%;}
+	.coprojector-volume{margin-top:10% }
+	
+	@media screen and (max-device-width: 350px) {
+		.coprojector-floor-radius{margin-top: calc(50% - 35px);}
+		.coprojector-floor-radius>div{width: 110px;}
+		.coproject-key{top: calc(50% - 13px / 2);left: calc(50% - 12px / 2);}
+		.coproject-key:nth-child(1){-webkit-transform: rotate(0deg) translate(-370%);}
+		.coproject-key:nth-child(2){-webkit-transform: rotate(90deg) translate(-370%);}
+		.coproject-key:nth-child(3){-webkit-transform: rotate(180deg) translate(-370%);}
+		.coproject-key:nth-child(4){-webkit-transform: rotate(270deg) translate(-370%);}
+		
+		.channel{margin-top:2% }
+		.operation{margin-top: 2%;}
+		.coprojector-volume{margin-top:2% }
+	}
+	
+</style>
+
+<script id="ehome_CoProjector_Template" type="text/x-underscore-template">
+	<div class="coprojector-power">
+		<div class="div-btn coprojector-div-btn"><i class="icon iconfont"><%=power_icon%></i></div>
+		<div class="div-btn coprojector-div-btn"><i class="icon iconfont"><%=signout_icon%></i></div>
+	</div>
+	<div class="channel">
+		<div class="box-flex"><div class="coprojector-channel-btn"><%=computer%></div></div>
+		<div class="box-flex"><div class="coprojector-channel-btn channel-btn-2"><%=video%></div></div>
+		<div class="box-flex"><div class="coprojector-channel-btn channel-btn-3"><%=signalSource%></div></div>
+	</div>
+	<div class="operation">
+		<div class="box-flex">
+			<div class="coprojector-floor">
+				<div>
+					<div class="box-flex"><i class="icon iconfont"><%=up_icon%></i></div>
+					<div class="box-flex"><%=zoom%></div>
+					<div class="box-flex"><i class="icon iconfont"><%=down_icon%></i></div>
+				</div>
+			</div>
+		</div>
+		<div class="box-flex">
+			<div class="coprojector-floor-radius">
+				<div>
+					<div class="coproject-key"><i class="icon iconfont"><%=chang_icon%></i></div>
+					<div class="coproject-key"><i class="icon iconfont"><%=chang_icon%></i></div>
+					<div class="coproject-key"><i class="icon iconfont"><%=chang_icon%></i></div>
+					<div class="coproject-key"><i class="icon iconfont"><%=chang_icon%></i></div>
+					<div class="coprojector-sure"><%=confirm%></div>
+				</div>
+			</div>
+		</div>
+		<div class="box-flex">
+			<div class="coprojector-floor">
+				<div>
+					<div class="box-flex"><i class="icon iconfont"><%=up_icon%></i></div>
+					<div class="box-flex"><%=frame%></div>
+					<div class="box-flex"><i class="icon iconfont"><%=down_icon%></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="coprojector-volume">
+		<div class="box-flex"><div class="div-btn coprojector-div-btn"><i class="icon iconfont"><%=voice_up_icon%></i></div></div>
+		<div class="box-flex"><div class="div-btn coprojector-div-btn"><i class="icon iconfont"><%=voice_mute_icon%></i></div></div>
+		<div class="box-flex"><div class="div-btn coprojector-div-btn"><i class="icon iconfont"><%=voice_down_icon%></i></div></div>
+	</div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 20px;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">投影仪</span>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content content-padding">
+	<div class="coprojector-power">
+		<div class="div-btn coprojector-div-btn"><i class="icon iconfont">&#xe646;</i></div>
+		<div class="div-btn coprojector-div-btn"><i class="icon iconfont">&#xe604;</i></div>
+	</div>
+	<div class="channel">
+		<div class="box-flex"><div class="coprojector-channel-btn">电视</div></div>
+		<div class="box-flex"><div class="coprojector-channel-btn channel-btn-2">视频</div></div>
+		<div class="box-flex"><div class="coprojector-channel-btn channel-btn-3">信号源</div></div>
+	</div>
+	<div class="operation">
+		<div class="box-flex">
+			<div class="coprojector-floor">
+				<div>
+					<div class="box-flex"><i class="icon iconfont">&#xe647;</i></div>
+					<div class="box-flex">变焦</div>
+					<div class="box-flex"><i class="icon iconfont">&#xe640;</i></div>
+				</div>
+			</div>
+		</div>
+		<div class="box-flex">
+			<div class="coprojector-floor-radius">
+				<div>
+					<div class="coproject-key"><i class="icon iconfont">&#xe666;</i></div>
+					<div class="coproject-key"><i class="icon iconfont">&#xe666;</i></div>
+					<div class="coproject-key"><i class="icon iconfont">&#xe666;</i></div>
+					<div class="coproject-key"><i class="icon iconfont">&#xe666;</i></div>
+					<div class="coprojector-sure">确定</div>
+				</div>
+			</div>
+		</div>
+		<div class="box-flex">
+			<div class="coprojector-floor">
+				<div>
+					<div class="box-flex"><i class="icon iconfont">&#xe647;</i></div>
+					<div class="box-flex">画面</div>
+					<div class="box-flex"><i class="icon iconfont">&#xe640;</i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="coprojector-volume">
+		<div class="box-flex"><div class="div-btn coprojector-div-btn"><i class="icon iconfont">&#xe642;</i><i class="icon iconfont">&#xe647;</i></div></div>
+		<div class="box-flex"><div class="div-btn coprojector-div-btn"><i class="icon iconfont">&#xe630;</i></div></div>
+		<div class="box-flex"><div class="div-btn coprojector-div-btn"><i class="icon iconfont">&#xe642;</i><i class="icon iconfont">&#xe640;</i></div></div>
+	</div>
+</div>

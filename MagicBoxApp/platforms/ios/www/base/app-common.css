@@ -1,0 +1,47 @@
+/*此文件存放APP通用样式，名称前加app_*/
+
+/*app顶部菜单*/
+.app_top_menu {
+	margin-top:0px;
+	padding:0px;
+	font-size: 10px;
+	background-color: #f0f0f0;
+}
+.app_top_menu li{
+	list-style-image: none;
+	list-style-type: none;
+	float: left;
+	text-align:center;
+}
+.app_top_menu li a{
+	color: #000000;
+	text-decoration: none;
+	margin-left: 10%;
+	margin-right: 10%;
+	display: block; 
+	padding-right: 0px;
+	padding-left: px;
+}
+.app_top_menu li a:hover{
+	background-color: #bbd7ff;
+}
+
+/*APP顶部栏*/
+.app_top_bar{
+	background-color:#3498DB;
+	text-algin:center;
+	padding:2% 5%;
+	margin:0px;
+	width:100%;
+	position:relative;
+}
+
+/*输入框*/
+.app_icon_input:focus {
+	background: #fff;
+	color: #000;
+}
+.app_icon_input {
+	height: 24px;
+	padding:2px 0px 2px 20px;
+}

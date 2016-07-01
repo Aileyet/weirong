@@ -1,0 +1,340 @@
+<style type="text/css" media="all">
+	
+	.div-btn{
+		
+	}
+	
+	.coprojector-power{
+		text-align: center;
+		overflow: hidden;
+		padding: 5px 0px;
+		margin-top: 40px;
+	}
+	.coprojector-container{
+		width: 33.33%;
+		float: left;
+		min-height: 50px;
+	}
+	.coprojector-power .coprojector-container i{font-size: 0.5rem;}
+	
+	
+	.operation{
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		margin-top: 120px;
+	}
+	.coprojector-channel-btn{
+		width: 65px;
+		height: 35px;
+		line-height: 35px;
+		border-radius:5px;
+		text-align: center;
+		margin: auto;
+	}
+	
+	.coprojector-floor{
+		border-radius:30px;
+	}
+	
+	.coprojector-floor>div{
+		width: 55px;
+		height: 160px;
+		border-radius:30px;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient: vertical;
+		margin: auto;
+		text-align: center;
+	}
+	
+	.box-flex{
+		box-flex:1;
+	 	-webkit-box-flex:1;
+	 	line-height: 54px;
+	}
+	
+	.coprojector-floor-radius{
+		position:absolute;
+		display:inline-block;
+		padding:4px;
+		border-radius:100%;
+	}
+	.coprojector-floor-radius>div{
+		position:relative;
+		display:inline-block;
+		vertical-align:middle;
+		width: 150px;
+		border-radius:100%; 
+		overflow: hidden;
+		text-align: center;
+	}
+	.coprojector-floor-radius>div:BEFORE {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		padding-bottom: 100%; 
+	}
+	
+	.coproject-key{
+		position: absolute;
+		top: calc(50% - 13px / 2);
+		left: calc(50% - 12px / 2);
+	}
+	.coproject-key i{font-size: 0.8em;}
+	.coproject-key:nth-child(1){-webkit-transform: rotate(0deg) translate(-480%);}
+	.coproject-key:nth-child(2){-webkit-transform: rotate(90deg) translate(-480%);}
+	.coproject-key:nth-child(3){-webkit-transform: rotate(180deg) translate(-480%);}
+	.coproject-key:nth-child(4){-webkit-transform: rotate(270deg) translate(-480%);}
+	
+	.coprojector-sure{
+		position:relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 45%;
+		border-radius:100%;
+		top: 25%;
+		left: -3%;
+	}
+	.coprojector-sure:BEFORE {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		padding-bottom: 100%;
+	}
+	
+	.channel{margin-top:40px; }
+	.coprojector-volume{
+		position:relative;
+		overflow:hidden;
+		margin-top:40px; 
+	}
+	
+	.coprojector-volume .coprojector-container:nth-child(1) i,
+	.coprojector-volume .coprojector-container:nth-child(3) i{font-size: 0.7rem;}
+	.coprojector-volume .coprojector-container:nth-child(2) i{font-size: 0.5rem;}
+	
+	@media screen and (max-device-width: 350px) {
+		.coprojector-floor-radius>div{width: 130px;}
+		.coproject-key{top: calc(50% - 13px / 2);left: calc(50% - 12px / 2);}
+		.coproject-key:nth-child(1){-webkit-transform: rotate(0deg) translate(-370%);}
+		.coproject-key:nth-child(2){-webkit-transform: rotate(90deg) translate(-370%);}
+		.coproject-key:nth-child(3){-webkit-transform: rotate(180deg) translate(-370%);}
+		.coproject-key:nth-child(4){-webkit-transform: rotate(270deg) translate(-370%);}
+		
+		
+		.coprojector-power{margin-top:20px;}
+		.channel{margin-top:20px; }
+		.operation{margin-top:85px;}
+		.coprojector-volume{margin-top:20px; }
+	}
+	/* 右上角下拉菜单 */
+	.nav-wrap-right ul{
+		display:none;
+		position:absolute;
+		list-style: none;
+		right: 0px;
+		box-shadow:1px 2px 2px 2px #dddddd;
+	}
+	.nav-wrap-right ul li{
+		width:120px;
+		background-color: #ffffff;
+		padding:0px 10px;
+		border-bottom: 1px #e7e7e7 solid;
+		font-size: 0.3rem;
+		color: #222222;
+        z-index:100;
+	}
+	.nav-wrap-right .disp{
+		display: block;
+	}
+     /* 自定义按钮 */
+	.control-btn{
+		position:absolute;
+		display: -webkit-box;
+		display: box;
+		-webkit-box-orient: vertical;
+		box-orient: vertical;
+		width: 100%;
+	 }
+	.custom-btn-div {
+		width: 80px;
+		height: 50px;
+		background-color: #efefef;
+		box-shadow: 1px 2px 3px 2px #dddddd;
+		border-radius: 10px;
+		color: #818181;
+		text-align: center;
+		display: table;
+		margin: auto;
+		border-left: 1px #ffffff solid;
+	}
+	 .control-btn-container-custom{
+			display: -webkit-box;
+			display: box;
+			-webkit-box-orient: horizontal;
+			box-orient: horizontal;
+			width: 100%;
+			margin-top: 20px;
+			
+		 }
+	.btnName {
+		display:inline-block;
+		width:100%;
+		text-align:center;
+		font-size:17px;
+	  }
+</style>
+
+<script id="ehome_CoProjector_Template" type="text/x-underscore-template">
+	<div class="coprojector-power">
+    	<div class="coprojector-container">
+    		<div class="div-btn coprojector-div-btn" id="power"><i class="icon iconfont"><%=power_icon%></i></div>
+    	</div>
+    	<div class="coprojector-container"></div>
+    	<div class="coprojector-container">
+    		<div class="div-btn coprojector-div-btn" id="exit"><i class="icon iconfont"><%=signout_icon%></i></div>
+    	</div>
+    </div>
+    <div class="channel">
+    	<div class="coprojector-container">
+            <div class="coprojector-channel-btn" id="pc"><%=pc%></div>
+    	</div>
+    	<div class="coprojector-container">
+    		<div class="coprojector-channel-btn" id="video"><%=video%></div>
+    	</div>
+    	<div class="coprojector-container">
+    		<div class="coprojector-channel-btn" id="source"><%=signalSource%></div>
+    	</div>
+    </div>
+    <div class="operation">
+        <div class="coprojector-container">
+            <div class="coprojector-floor">
+                <div>
+                    <div class="box-flex" id="zoomin"><i class="icon iconfont"><%=up_icon%></i></div>
+                    <div class="box-flex"><%=zoom%></div>
+                    <div class="box-flex" id="zoomout"><i class="icon iconfont"><%=down_icon%></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="coprojector-container">
+            <div class="coprojector-floor-radius">
+                <div>
+                    <div class="coproject-key" id="left"><i class="icon iconfont"><%=chang_icon%></i></div>
+                    <div class="coproject-key" id="up"><i class="icon iconfont"><%=chang_icon%></i></div>
+                    <div class="coproject-key" id="right"><i class="icon iconfont"><%=chang_icon%></i></div>
+                    <div class="coproject-key" id="down"><i class="icon iconfont"><%=chang_icon%></i></div>
+                    <div class="coprojector-sure" id="ok"><%=confirm%></div>
+                </div>
+            </div>
+        </div>
+        <div class="coprojector-container">
+            <div class="coprojector-floor">
+                <div>
+                    <div class="box-flex" id="picAdd"><i class="icon iconfont"><%=up_icon%></i></div>
+                    <div class="box-flex"><%=frame%></div>
+                    <div class="box-flex" id="picDec"><i class="icon iconfont"><%=down_icon%></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="coprojector-volume">
+    	<div class="coprojector-container">
+    		<div class="div-btn coprojector-div-btn" id="volUp"><i class="icon iconfont"><%=voice_up_icon%></i></div>
+    	</div>
+    	<div class="coprojector-container">
+    		<div class="div-btn coprojector-div-btn" id="mute"><i class="icon iconfont"><%=voice_mute_icon%></i></div>
+    	</div>
+    	<div class="coprojector-container">
+    		<div class="div-btn coprojector-div-btn" id="volDown"><i class="icon iconfont"><%=voice_down_icon%></i></div>
+    	</div>
+    </div>
+    <div class="control-btn">
+    </div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 20px;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">投影仪</span>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content">
+    <div class="coprojector-power">
+    	<div class="coprojector-container">
+    		<div class="div-btn coprojector-div-btn" id="power"><i class="icon iconfont">&#xe63f;</i></div>
+    	</div>
+    	<div class="coprojector-container"></div>
+    	<div class="coprojector-container">
+    		<div class="div-btn coprojector-div-btn" id="exit"><i class="icon iconfont">&#xe618;</i></div>
+    	</div>
+    </div>
+    <div class="channel">
+    	<div class="coprojector-container">
+    		<div class="coprojector-channel-btn" id="compture">电视</div>
+    	</div>
+    	<div class="coprojector-container">
+    		<div class="coprojector-channel-btn" id="video">视频</div>
+    	</div>
+    	<div class="coprojector-container">
+    		<div class="coprojector-channel-btn" id="source">信号源</div>
+    	</div>
+    </div>
+    <div class="operation">
+        <div class="coprojector-container">
+            <div class="coprojector-floor">
+                <div>
+                    <div class="box-flex" id="zoomin"><i class="icon iconfont">&#xe643;</i></div>
+                    <div class="box-flex">变焦</div>
+                    <div class="box-flex" id="zoomout"><i class="icon iconfont">&#xe649;</i></div>
+                </div>
+            </div>
+        </div>
+        <div class="coprojector-container">
+            <div class="coprojector-floor-radius">
+                <div>
+                    <div class="coproject-key" id="left"><i class="icon iconfont">&#xe685;</i></div>
+                    <div class="coproject-key" id="up"><i class="icon iconfont">&#xe685;</i></div>
+                    <div class="coproject-key" id="right"><i class="icon iconfont">&#xe685;</i></div>
+                    <div class="coproject-key" id="down"><i class="icon iconfont">&#xe685;</i></div>
+                    <div class="coprojector-sure" id="ok">确定</div>
+                </div>
+            </div>
+        </div>
+        <div class="coprojector-container">
+            <div class="coprojector-floor">
+                <div>
+                    <div class="box-flex" id="picAdd"><i class="icon iconfont">&#xe643;</i></div>
+                    <div class="box-flex">画面</div>
+                    <div class="box-flex" id="picDec"><i class="icon iconfont">&#xe649;</i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="coprojector-volume">
+    	<div class="coprojector-container">
+    		<div class="div-btn coprojector-div-btn" id="volUp"><i class="icon iconfont">&#xe61f;</i></div>
+    	</div>
+    	<div class="coprojector-container">
+    		<div class="div-btn coprojector-div-btn" id="mute"><i class="icon iconfont">&#xe640;</i></div>
+    	</div>
+    	<div class="coprojector-container">
+    		<div class="div-btn coprojector-div-btn" id="volDown"><i class="icon iconfont">&#xe61e;</i></div>
+    	</div>
+    </div>
+    <div class="control-btn">
+    </div>
+</div>

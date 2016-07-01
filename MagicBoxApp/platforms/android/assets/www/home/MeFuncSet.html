@@ -1,0 +1,107 @@
+<style type="text/css" media="all">
+	.title-label{
+		font-size: 0.8em;
+		padding: 15px 0px 5px 20px;
+	}
+	.div-menu{
+		padding-left: 20px;
+	}
+	.div-menu>div{
+		height: 50px;
+		line-height: 50px;
+		border-bottom: 1px #e7e7e7 solid;
+		text-align: right;
+		
+		font-size: 1em;
+		padding-right: 10px;
+	}
+	.div-menu>div span:nth-child(1){float: left;}
+	.get-back{
+		padding: 5px 12px;
+		color: #ffffff;
+	}
+</style>
+			
+<script type="text/x-underscore-template" id="home_MeFuncSet_Body_Template">
+	<div class="title-label home_MeFuncSet_title-label"><%=myMenue%></div>
+	<div id="Back-menu"></div>
+	<div id="Normal-use"></div>
+	<div class="title-label home_MeFuncSet_title-label"><%=extentionFunc%></div>
+	<div class="div-menu home_MeFuncSet_div-menu">
+		<div id="oneKeySetting"><span><%=oneKeySetting%></span></div>
+		<div><span><%=newFunc%></span></div>
+	</div>
+</script>
+
+<script type="text/x-underscore-template" id="home_MeFuncSet_Menu_Template">
+	<div class="div-menu home_MeFuncSet_div-menu">
+		<div><span><%=title%></span>
+		<%if(find == ""){%>
+			<span class="home_MeFuncSet_normal"><%=mormalUse%></span>
+		<%}else{%>
+			<span class="get-back home_MeFuncSet_get-back" order="<%=order%>"><%=find%></span>
+		<%}%></div>
+	</div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 1.5em;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1"><%=funcSetup%></span>
+	<div id="homelist_city_name_div" class="nav-wrap-right header_right" >
+		<a class="react" gaevent="imt/hd/home">
+       	</a>
+	</div>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content" id="content">
+	<div class="title-label">我的菜单</div>
+	<div id="Back-menu">
+		<div class="div-menu">
+			<div><span>智慧金融</span><span class="get-back">找回</span></div>
+		</div>
+		<div class="div-menu">
+			<div><span>建康管理</span><span class="get-back">找回</span></div>
+		</div>
+	</div>
+	<div id="Normal-use">
+		<div class="div-menu">
+			<div><span>我的E家</span><span class="normal">正常使用</span></div>
+		</div>
+		<div class="div-menu">
+			<div><span>家居安防</span><span class="normal">正常使用</span></div>
+		</div>
+		<div class="div-menu">
+			<div><span>小尤鱼魔方</span><span class="normal">正常使用</span></div>
+		</div>
+		<div class="div-menu">
+			<div><span>布置场景</span><span class="normal">正常使用</span></div>
+		</div>
+		<div class="div-menu">
+			<div><span>修哒哒</span><span class="normal">正常使用</span></div>
+		</div>
+		<div class="div-menu">
+			<div><span>鲤财鱼</span><span class="normal">正常使用</span></div>
+		</div>
+		<div class="div-menu">
+			<div><span>云易诊</span><span class="normal">正常使用</span></div>
+		</div>
+	</div>
+	<div class="title-label">扩展功能</div>
+	<div class="div-menu">
+		<div><span>一键设置</span></div>
+		<div><span>增加新功能</span></div>
+	</div>
+</div>

@@ -1,0 +1,227 @@
+<style type="text/css" media="all">
+	.navigation-tab{
+		height: 50px;
+		background-color: #272c35;
+		display: box;
+		display: -webkit-box;
+		box-orient:horizontal;
+		-webkit-box-orient: horizontal;
+		color: #c9c9c9;
+		text-align: center;
+	}
+	.b-flex{
+		box-flex:1;
+		-webkit-box-flex:1;
+	}
+	.nat-tab-text{
+		display:inline-block;
+		font-size: 1.2em;
+		width:auto;
+		height:47px;
+		line-height: 47px;
+		padding: 0px 5px;
+	}
+	.coclean-bor-bottom{
+		color: #ffffff;
+	}
+	.dis-none{display: none;}
+	/* 当前状态 */
+	.current-state{
+		padding: 10px 10px 10px 10px; 
+	}
+	.coclean-content-view{
+		border-radius:10px;
+		padding: 20px;
+	}
+	.coclean-content-view>div:nth-child(1){
+		font-size: 1.1em;
+	}
+	.coclean-content-view>div:nth-child(2){
+		display: box;
+		display:-webkit-box;
+		box-orient:horizontal;
+		-webkit-box-orient:horizontal;
+		margin-top: 7px;
+	}
+	.coclean-content-view .b-flex:nth-child(1){
+		font-size: 2.5em;
+		font-weight: bold;
+	}
+	.coclean-content-view .b-flex:nth-child(2){
+		font-size: 1.1em;
+		text-align: right;
+	}
+	.coclean-content-view .b-flex:nth-child(2) span{
+		width: 80px;
+		text-align: left;
+		display: inline-block;
+	}
+	
+	.message-view{
+		background-color: #f2e6ef;
+		border:1px #f4a9d3 solid;
+		color: #585c64;
+		padding: 5px 0px;
+		border-radius:5px;
+		font-size: 1em;
+		text-align: center;
+		margin-top: 8px;
+	}
+	.power-view{
+		text-align: center;
+		padding: 30px 0px;
+	}
+	.coclean-power{
+		display: inline-block;
+		width: 40%;
+		border-radius:50%;
+		vertical-align: middle;
+		text-align: center;
+	}
+	.coclean-power:BEFORE {
+		content:"";
+		display: inline-block;
+		padding-bottom: 100%;
+		vertical-align: middle;
+		text-align: center;
+		margin-right: -7.5px;
+	}
+	.coclean-text-icon{
+		display:inline-block;
+		vertical-align: middle;
+		text-align: center;
+	}
+	.coclean-text-icon i{
+		font-size: 1.2rem;
+	}
+	.coclean-text-icon div{
+		font-size: 1em;
+	}
+	.coclean-text-icon div span{
+		font-size: 1em;
+	}
+	
+	.operation-view{
+		vertical-align: middle;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.coclean-operation{
+		display: box;
+		display: -webkit-box;
+		box-orient:horizontal;
+		-webkit-box-orient:horizontal;
+		width: 60%;
+		height:50px;
+		border-radius:60px;
+		vertical-align: middle;
+		padding: 8px;
+		margin: 0px auto;
+	}
+	.coclean-operation .b-flex:nth-child(1){
+		border-right: 2px #ffffff solid;
+	}
+	.coclean-operation .b-flex i{
+		display:inline-block;
+		font-size: 3em;	
+		vertical-align: middle;	
+	}
+</style>
+
+<script id="ehome_CoClean_Template" type="text/x-underscore-template">
+	<div class="navigation-tab">
+		<div class="b-flex">
+			<span class="nat-tab-text coclean-bor-bottom" data-module="current-state"><%=currentState_tab%></span>
+		</div>
+		<div class="b-flex">
+			<span class="nat-tab-text" data-module="history"><%=historyRecord_tab%></span>
+		</div>
+		<div class="b-flex">
+			<span class="nat-tab-text" data-module="time-switch"><%=timingSwitch_tab%></span>
+		</div>
+	</div>
+	<div class="current-state">
+		<div class="coclean-content-view">
+			<div><%=text_1%></div>
+			<div>
+				<div class="b-flex"><%=text_2%></div>
+				<div class="b-flex">
+					<div><%=text_3%>:<span>28℃</span></div>
+					<div><%=text_4%>:<span>47%</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="message-view"><%=text_5%></div>
+		<div class="power-view">
+			<div class="coclean-power">
+				<div class="coclean-text-icon">
+					<i class="icon iconfont"><%=power_icon%></i>
+					<div><%=text_6%>:<span>2</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="operation-view">
+			<div class="coclean-operation">
+				<div class="b-flex"><i class="icon iconfont"><%=up_icon%></i></div>
+				<div class="b-flex"><i class="icon iconfont"><%=down_icon%></i></div>
+			</div>
+		</div>
+	</div>
+	<div class="history dis-none"><%=historyRecord_tab%></div>
+	<div class="time-switch dis-none"><%=timingSwitch_tab%></div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 20px;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">净化器</span>
+</header>
+
+
+<!-- content -->
+<div class="content">
+	<div class="navigation-tab">
+		<div class="b-flex">
+			<span class="nat-tab-text coclean-bor-bottom" data-module="current-state">当前状态</span>
+		</div>
+		<div class="b-flex">
+			<span class="nat-tab-text" data-module="history">历史记录</span>
+		</div>
+		<div class="b-flex">
+			<span class="nat-tab-text" data-module="time-switch">定时开关</span>
+		</div>
+	</div>
+	<div class="current-state">
+		<div class="coclean-content-view">
+			<div>当前室内空气情况</div>
+			<div>
+				<div class="b-flex">良好</div>
+				<div class="b-flex">
+					<div><span>温度：28℃</span></div>
+					<div><span>温度：47%</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="message-view">放心呼吸吧，我的主人☺</div>
+		<div class="power-view">
+			<div class="coclean-power">
+				<div class="coclean-text-icon">
+					<i class="icon iconfont">&#xe646;</i>
+					<div>风速:<span>2</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="operation-view">
+			<div class="coclean-operation">
+				<div class="b-flex"><i class="icon iconfont">&#xe643;</i></div>
+				<div class="b-flex"><i class="icon iconfont">&#xe63e;</i></div>
+			</div>
+		</div>
+	</div>
+	<div class="history dis-none">历史记录</div>
+	<div class="time-switch dis-none">定时开关</div>
+</div>

@@ -1,0 +1,245 @@
+<style type="text/css" media="all">
+	.content-main{
+		position:absolute;
+		overflow: hidden;
+	}
+	.content-bg-img{
+		width:100%;
+		height:100%;
+		background-image: url("../images/ehome-swich-bg.jpg");
+		background-position:center center;
+		background-repeat: no-repeat;
+    	-webkit-filter: blur(3px); /* Chrome, Opera */
+       	-moz-filter   : blur(3px);
+        -ms-filter    : blur(3px);    
+            filter    : blur(3px);
+	}
+	.main{
+		position:absolute;
+		width: 100%;
+		height: 100%;
+		top: 50px;
+	}
+	.swich-main{
+		position:absolute;
+		width: 150px;
+		height: 150px;
+		transform:rotateZ(45deg);
+		-webkit-transform:rotateZ(45deg);
+		left:calc((100% - 150px) / 2);
+		top:calc(50% - 190px);
+	}
+	.swich-main div:nth-child(1){
+		content:"";
+		position:absolute;
+		display:inline-block;
+		width: 75px;
+		height: 75px;
+	}
+	.swich-main div:nth-child(2){
+		position:absolute;
+		display:inline-block;
+		width: 75px;
+		height: 75px;
+		left: 75px;
+		background-color: #a7a7a7;
+		border:none;
+		border-radius:0px 75px 0px 0px;
+	}
+    .swich-main div:nth-child(3){
+		content:"";
+		position:absolute;
+		display:inline-block;
+		width: 75px;
+		height: 75px;
+		background-color: #a7a7a7;
+		top: 75px;
+		border:none;
+		border-radius:0px 0px 0px 75px;
+	}
+	.swich-main div:nth-child(4){
+		content:"";
+		position:absolute;
+		display:inline-block;
+		width: 75px;
+		height: 75px;
+		background-color: #a7a7a7;
+		top: 75px;
+		left: 75px;
+		border:none;
+		border-radius:0px 0px 75px 0px;
+	}
+	.swich-main div:nth-child(5){
+		position:relative;
+		display:inline-block;
+		width: 130px;
+		height: 130px;
+		border-radius:65px;
+		background-color: #f4f3f3;
+		top: 10px;
+		left: 10px;
+		transform:rotateZ(315deg);
+		-webkit-transform:rotateZ(315deg);
+		overflow: hidden;
+		text-align: center;
+		box-shadow: 1px 1px 5px 1px #B5B1B1;
+		-webkit-box-shadow: 1px 1px 5px 1px #B5B1B1;
+	}
+	.swich-main i{
+		position:relative;
+		top: 29px;
+		font-size: 1.2rem;
+		color: #a7a7a7;
+	}
+	
+	.swich-main span{
+		position:relative;
+		display:block;
+		font-size:20px;
+		color: #222222;
+		top: 25px;
+	}
+	
+	.devs{
+		position:relative;
+		text-align: center;
+		top:calc(50% - 230px);
+	}
+	.devs i{
+		font-size: 0.7rem;	
+		margin-left: 20px;
+	}
+	.devs i:nth-child(1), .devs i:nth-child(3){
+		color: #de3d96;
+	}
+	
+	.btns{
+		position: relative;
+		display: box;
+		display: -webkit-box;
+		box-orient: horizontal;
+		-webkit-box-orient: horizontal;
+		top: calc(50% + 50px);
+	}
+	
+	.btns div{
+		box-flex:1;
+		-webkit-box-flex:1;
+		text-align: center;
+	}
+	
+	.btns button{
+		/* width:89px;
+		height:36px; */
+		padding: 8px 18px;
+		border-radius:30px;
+		border: none;
+		background-color: #efefef;
+		color: #585c64;
+		box-shadow: 1px 2px 2px 1px #6C6B6B;
+		display: table;
+		margin: auto;
+		text-align: center;
+	}
+	.btns .btnTime i{
+		font-size: 0.35rem;
+		color: #de3d96;
+		margin-right: 5px;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.btns .btnHome i{
+		font-size: 0.3rem;
+		color: #de3d96;
+		margin-right: 5px;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.btns span{
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 7px;
+	}
+	.line-1{
+		position: absolute;
+		width: 50px;
+		height: 1px;
+		top:calc(50% - 160px);
+		left:calc(50% - 70px);
+		border-top: 1px #a7a7a7 dashed;
+		transform:rotateZ(60deg);
+		-webkit-transform:rotateZ(70deg);
+	}
+	.line-2{
+		position: absolute;
+		width: 40px;
+		height: 1px;
+		top:calc(50% - 165px);
+		left:calc(50% - 11px);
+		border-top: 1px #a7a7a7 dashed;
+		transform:rotateZ(60deg);
+		-webkit-transform:rotateZ(90deg);
+	}
+	.line-3{
+		position: absolute;
+		width: 60px;
+		height: 1px;
+		top:calc(50% - 160px);
+		left:calc(50% + 20px);
+		border-top: 1px #a7a7a7 dashed;
+		transform:rotateZ(60deg);
+		-webkit-transform:rotateZ(115deg);
+	}
+</style>
+
+<script id="ehome_CoSwitch_Template" type="text/x-underscore-template">
+	<div>
+		<button class="btnTime"><i class="icon iconfont"><%=icon2%></i><span><%=timing%></span></button>
+	</div>
+	<div>
+		<button class="btnHome"><i class="icon iconfont"><%=icon3%></i><span><%=room%></span></button>
+	</div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react back" gaevent="imt/hd/home">
+			<i class="icon iconfont">&#xe661;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">开关</span>
+	<div id="homelist_city_name_div" class="nav-wrap-right header_right" >
+		<a class="react back" gaevent="imt/hd/home">
+       	</a>
+	</div>
+</header>
+
+ 
+
+<!-- content -->
+<div class="content content-main">
+		<div class="content-bg-img"></div>
+		 <div class="main">
+			<div class="swich-main">
+				<div></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div>
+					<i id="swich-img-id" class="icon iconfont">&#xe62e;</i>
+					<span>OFF</span>
+				</div>
+			</div>
+
+			<div class="btns">
+				<div>
+					<button class="btnTime"><i class="icon iconfont">&#xe670;</i><span>定时</span></button>
+				</div>
+				<div>
+					<button class="btnHome"><i class="icon iconfont">&#xe660;</i><span>房间</span></button>
+				</div>
+			</div>
+
+		</div>
+</div>

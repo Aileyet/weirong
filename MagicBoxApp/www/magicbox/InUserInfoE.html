@@ -1,0 +1,159 @@
+<style type="text/css" media="all">
+	.main-box{
+		height:100%;
+		width:100%;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient:vertical;
+	}
+	.table-rg{
+		background-color: #eff0f4;
+		overflow: hidden;
+		padding-top: 20px;
+	}
+	.table-rg div{
+		background-color: #fff;
+	}
+	.div-list{
+		border-bottom: 1px #e7e7e7 solid;
+		overflow: hidden;
+		padding:0px 20px;
+		height: 52px;
+	}
+	.div-list div:nth-child(1){
+		float: left;
+		width: 30%;
+		line-height: 52px;
+	}
+	.div-list div:nth-child(2){
+		float: left;
+		width: 70%;
+		text-align:right;
+		line-height: 52px;
+	}
+	.table-rg .div-list:nth-child(7){
+		margin-top:15px;
+	}
+	#sphoto{
+		width: 45px;
+		height: 45px;
+		border-radius: 100%;
+		margin-top: 0.08rem;
+		overflow: hidden;
+		float:right;
+		padding: 0px;
+		line-height: 45px;
+	}
+	.div-input input{
+		width: calc(100% - 50px);
+		border: none;
+	}
+
+	.div-cont{
+		height:52px;
+		width: 100%;
+		background-color: #ffffff;
+		padding-left: 20px;
+	}
+	.div-label{
+		line-height:52px;
+		width:70px;
+		float: left;
+	}
+	.div-input{
+		line-height:52px;
+		width:calc(100% - 70px); 
+		float: left;
+	}
+	.div-marg20{
+		margin-top: 15px;
+	}
+	@media screen and (max-device-width: 350px) {
+		.div-list,.div-cont{
+			height: 40px;
+		}
+		.div-list div:nth-child(1),.div-list div:nth-child(2),.div-label,.div-input{
+			line-height:40px;
+		}
+		#sphoto{
+			width: 35px;
+			height: 35px;
+			margin-top: 0.05rem;
+		}
+	}
+</style>
+
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 20px;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">个人资料</span>
+	<div id="homelist_city_name_div" class="nav-wrap-right header_right">
+		<a class="save" gaevent="imt/hd/home" style="color:#222">
+			保存
+       	</a>
+	</div>
+</header>
+
+
+<!-- content -->
+<div class="content">
+	<div class="main-box">
+			<div class="table-rg">
+				<div class="div-list"><div>个人资料</div>
+					<div id="sphoto">
+						<img alt="" src="../images/ehome-temp.jpg" width="50px">
+					</div>
+				</div>
+				<div class="div-cont border-bottom">
+					<div class="div-label">昵称</div>
+					<div class="div-input"><input id="name" ></div>
+				</div>
+				<div class="div-list">
+					<div>性别</div>
+					<div>
+						<span>女</span><input type="radio" style="font-size:20px;" value="W" id="woman" name="sex"/>
+						<span>男</span><input name="sex" style="font-size:20px;" value="M" id="mam" type="radio" />
+					</div>
+				</div>
+				<div class="div-cont border-bottom">
+					<div class="div-label">生日</div>
+					<div class="div-input">
+					<input
+						id="test_id"
+						class="cube-datepicker"
+						data-yearChangeable="true"
+						data-monthChangeable="true"
+						data-selectYearBefore="10"
+						data-selectYearAfter="20" 
+						data-minDate= '1900-01-01' 
+						data-parentEl="body"
+						data-selectYearAfter="20"data-­‐minDate
+						readonly="readonly" id="birthday"/>
+					</div>
+				</div>
+				<div class="div-cont border-bottom">
+					<div class="div-label">身高</div>
+					<div class="div-input"><input value="165" id="height" >CM</div>
+				</div>
+				<div class="div-cont border-bottom">
+					<div class="div-label">体重</div>
+					<div class="div-input"><input value="50" id="weight" >kg</div>
+				</div>
+				<div class="div-cont div-marg20 border-bottom">
+					<div class="div-label">收货地址</div>
+					<div class="div-input"><input value="浙江省苍南县苍南工业园区" id="location" ></div>
+				</div>
+
+				<div class="div-list"><div>绑定手机</div><div><span id="mobilePhone"></span></div></div>
+			</div>
+	</div>
+</div>

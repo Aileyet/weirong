@@ -1,0 +1,142 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cn.net.wenzhixin.cordova": {
+        "source": {
+            "type": "local",
+            "path": "e:\\extrainfo"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.spout.phonegap.plugins.baidulocation": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/DoubleSpout/phonegap_baidu_sdk_location.git",
+            "subdir": "."
+        }
+    },
+    "org.bcsphere.bluetooth": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bcsphere/bluetooth.git",
+            "subdir": "."
+        }
+    },
+    "phonegap-plugin-barcodescanner": {
+        "source": {
+            "type": "registry",
+            "id": "phonegap-plugin-barcodescanner"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-datepicker": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-datepicker"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-chrome-apps-common": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-chrome-apps-common@1"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-chrome-apps-iossocketscommon": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-chrome-apps-iossocketscommon@1"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "edu.uic.travelmidwest.cordova.udptransmit": {
+        "source": {
+            "type": "local",
+            "path": "e:\\phonegap-udp-api-master"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "example.cordova.qqLogin": {
+        "source": {
+            "type": "local",
+            "path": "plugins\\example.cordova.qqLogin"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "wbample.cordova.weiboLogin": {
+        "source": {
+            "type": "local",
+            "path": "plugins\\wbample.cordova.weiboLogin"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-media": {
+        //"source": {
+        //   "type": "git",
+        //  "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git",
+        //    "subdir": "."
+        //},
+        
+        "source": {
+            "type": "local",
+            "path": "plugins\\cordova-plugin-media"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-media-capture" : {
+    	"source": {
+            "type": "local",
+            "path": "plugins\\cordova-plugin-media-capture"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "org.apache.cordova.musicsearch" : {
+    	"source": {
+            "type": "local",
+            "path": "plugins\\org.apache.cordova.musicsearch"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-file": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-file"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "com.eyu.cordova.weather": {
+        "source": {
+            "type": "local",
+            "path": "plugins\\com.eyu.cordova.weather"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-statusbar": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-statusbar"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

@@ -1,0 +1,251 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*
+DEMO 4
+*/
+.vbank-btn {
+	font-weight: bold;
+	background-color: #3bb3e0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	color: #fff;
+	position: relative;
+	padding: 8px 15px 7px;
+	background-image: linear-gradient(bottom, rgb(44, 160, 202) 0%,
+		rgb(62, 184, 229) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(44, 160, 202) 0%,
+		rgb(62, 184, 229) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(44, 160, 202) 0%,
+		rgb(62, 184, 229) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(44, 160, 202) 0%,
+		rgb(62, 184, 229) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(44, 160, 202) 0%,
+		rgb(62, 184, 229) 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(44,
+		160, 202)), color-stop(1, rgb(62, 184, 229)));
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 4px 0px 0px #156785,
+		0px 7px 5px #999;
+	-moz-box-shadow: inset 0 1px 0 #2ab7ec inset, 0 4px 0 0 #156785, 0 7px
+		2px #999;
+	-o-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 4px 0px 0px #156785, 0px
+		7px 5px #999;
+	box-shadow: inset 0px 1px 0px #2ab7ec, 0px 4px 0px 0px #156785, 0px 7px
+		5px #999;
+}
+
+.vbank-btn:active {
+	top: 3px;
+	background-image: linear-gradient(bottom, rgb(62, 184, 229) 0%,
+		rgb(44, 160, 202) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(62, 184, 229) 0%,
+		rgb(44, 160, 202) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(62, 184, 229) 0%,
+		rgb(44, 160, 202) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(62, 184, 229) 0%,
+		rgb(44, 160, 202) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(62, 184, 229) 0%,
+		rgb(44, 160, 202) 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(62,
+		184, 229)), color-stop(1, rgb(44, 160, 202)));
+	-webkit-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785,
+		0px 5px 3px #999;
+	-moz-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px
+		5px 3px #999;
+	-o-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px
+		5px 3px #999;
+	box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px
+		3px #999;
+}
+
+.vbank-btn::before {
+	background-color: #2591b4;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	margin-top: -9px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
+	-moz-box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
+	-o-box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
+	box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
+}
+
+.vbank-btn:active::before {
+	top: 50%;
+	margin-top: -12px;
+	-webkit-box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px
+		6px 3px #1a80a6;
+	-moz-box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px 6px
+		3px #1a80a6;
+	-o-box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px 6px
+		3px #1a80a6;
+	box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px 6px 3px
+		#1a80a6;
+}
+
+.box div.star {
+	height: 24px;
+	margin: 25px auto;
+	position: relative;
+	text-align: center;
+}
+
+.star ul{
+	 margin: 0 10px;
+}
+.star ul{
+    display: inline;
+    float: left;
+    height: 19px;
+    line-height: 19px;
+    margin-left: 33%;
+}
+
+.star span{
+    display: inline;
+    float: left;
+    height: 19px;
+    line-height: 19px;	
+}
+
+.small-star span {
+    color: #a0a0a0;
+    display: inline;
+    float: left;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.star li.on {
+    background-position: 0 -28px;
+}
+
+.small-star li.on {
+    background-position: 0 0;
+}
+.small-star{
+	height:15px;
+	margin-top:7px;
+}
+.small-star ul {
+    display: inline;
+    float: left;
+    height: 19px;
+    line-height: 19px;
+}
+
+.star li {
+    background: rgba(0, 0, 0, 0) url("../images/star.png") no-repeat scroll 0 0;
+    cursor: pointer;
+    float: left;
+    text-indent: -9999px;
+    width: 24px;
+    height:20px;
+}
+
+.small-star li {
+    background: rgba(0, 0, 0, 0) url("../images/small-star.png") no-repeat scroll -17px 0;
+    cursor: pointer;
+    float: left;
+    text-indent: -9999px;
+    width: 17px;
+    height:17px;
+}
+.star strong{
+	color: #f60;
+    padding-left: 10px;
+}
+.star-detail{
+	width:480px;
+	color: rgb(173, 187, 195);
+	font-size:15px;
+  	margin-top: 18px;
+}
+
+.element-textarea{
+    position: relative;
+    width: 426px;
+    margin: 50px 25px 170px;
+}
+
+.dialog-warp label.title{
+	font-size: 1em;
+    font-weight: 500;
+    width: auto;
+} 
+
+
+.dialog-warp textarea.medium {
+    height: 10em;
+    width: 100%;
+}
+
+.dialog-warp input[type=text],
+.dialog-warp input[type=password],
+.dialog-warp input[type=email],
+.dialog-warp input[type=url],
+.dialog-warp input[type=date],
+.dialog-warp input[type=number],
+.dialog-warp input[type=tel],
+.dialog-warp textarea,
+.dialog-warp .element-file .file_text,
+.dialog-warp select{
+  border-style: solid;
+  border-width: 2px;
+  border-color: #bdc3c7;
+  -webkit-transition: border-color 0.5s ease-in-out;
+  transition: border-color 0.5s ease-in-out;
+  border-radius:3px;
+
+  padding: 10px 10px 9px 2.3em;
+  
+  outline:none;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: normal;
+  
+  font-size: 1em;
+}
+
+
+.dialog-warp .icon-place:before {
+  position: absolute;
+  font: 1em 'icons';
+  vertical-align: top;
+  top: 15px;
+  left: 0.9em;
+  pointer-events: none;
+  color: #A2A6A8;
+  z-index: 2;
+}
+
+.dialog-warp .element-input .item-cont .icon-place:before,
+.dialog-warp .element-textarea .item-cont .icon-place:before {
+  content: '\e800';
+}
+
+.box img{
+	width:100%;
+	height:100%;	
+}
+
+.test{
+display: inline-block;
+width: 100px;
+}

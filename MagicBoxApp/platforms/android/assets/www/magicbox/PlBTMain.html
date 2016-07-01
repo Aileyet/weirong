@@ -1,0 +1,499 @@
+<style type="text/css" media="all">
+/*put your style here*/
+.main-box {
+	height: 100%;
+	width: 100%;
+	display: box;
+	display: -webkit-box;
+	box-orient: vertical;
+	-webkit-box-orient: vertical;
+}
+
+.top-box {
+	height: 53%;
+
+	border-bottom: 1px #e7e7e7 solid;
+}
+
+.table-menu {
+	padding: 0px 20px;
+	overflow: hidden;
+}
+
+.div-menu {
+	overflow: hidden;
+	font-size: 20px;
+	color: pink;
+}
+
+.div-menu div:nth-child(1) {
+	float: left;
+	width: 50%;
+	padding: 20px 0px;
+}
+
+.div-menu div:nth-child(2) {
+	float: left;
+	width: 50%;
+	text-align: right;
+	padding: 20px 0px;
+}
+
+.table-play {
+	position: relative;
+	overflow: hidden;
+}
+
+.div-play {
+	position: relative;
+	width: 260px;
+	height: 260px;
+	border-radius: 100%;
+	margin: auto;
+}
+
+.div-play:AFTER {
+	content: "";
+	position: relative;
+	display: inline-block;
+	width: 230px;
+	height: 230px;
+	border-radius: 100%;
+	top: 15px;
+	left: 15px;
+}
+
+.center-1 {
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	background-color: #f7f7f7;
+	border-radius: 100%;
+	z-index: 100;
+	top: 30px;
+	left: 30px;
+	border: 10px #fdfdfd solid;
+}
+
+.gear-1 {
+	position: relative;
+	width: 175px;
+	height: 175px;
+	border-radius: 100%;
+	
+	margin: auto;
+	border-top: 3px #fff solid;
+	border-left: 3px #fff solid;
+	text-align: center;
+	line-height: 103px;
+}
+
+.gear-1 div:nth-child(1) {
+	float: left;
+	width: 100%;
+	text-align: center;
+	padding: 35px 0px;
+	font-size: 18px;
+}
+
+.gear-1 div:nth-child(2) {
+	float: left;
+	width: 40%;
+	text-align: left;
+	padding: 35px 0px;
+	font-size: 18px;
+}
+
+.table-vol {
+	position: absolute;
+	display: -webkit-box;
+	display: box;
+	-webkit-box-orient: horizontal;
+	box-orient: horizontal;
+	width: 100%;
+	top: 50%;
+}
+
+.vol-add {
+	position: relative;
+	box-flex: 1;
+	-webkit-box-flex: 1;
+	text-align: right;
+	font-size: 32px;
+}
+
+.vol-icon {
+	position: relative;
+	box-flex: 1;
+	text-align: center;
+	-webkit-box-flex: 1;
+}
+
+.vol-sub {
+	position: relative;
+	box-flex: 1;
+	-webkit-box-flex: 1;
+	text-align: left;
+	font-size: 32px;
+}
+
+.icon-add {
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+	overflow: hidden;
+	margin: auto;
+}
+
+.icon-add i {
+	font-size: 0.5rem;
+}
+
+.icon-sub {
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+	overflow: hidden;
+	margin: auto;
+}
+
+.icon-sub i {
+	font-size: 0.5rem;
+}
+
+.bottom-box {
+	height: 45%;
+	background-color: #fff;
+}
+
+.menu-box {
+	display: inline-block;
+	float: left;
+	width: 49.5%;
+	background-color: #fff;
+	border-bottom: 1px #e7e7e7 solid;
+	border-right: 1px #e7e7e7 solid;
+}
+
+.menu-box:BEFORE {
+	content: "";
+	display: inline-block;
+	padding-bottom: 65%;
+	vertical-align: middle;
+}
+
+.menu-view {
+	position: absolute;
+	transition: all 100ms;
+	display: inline-block;
+	text-align: center;
+}
+
+.menu-view i {
+	display: block;
+	vertical-align: middle;
+	font-size: 3em;
+	pointer-events: none;
+	color: #585c64;
+}
+
+.menu-view div {
+	display: block;
+	vertical-align: middle;
+	pointer-events: none;
+	color: #585c64;
+	padding-top: 5px;
+}
+
+.icon-vol {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	overflow: hidden;
+	margin: auto;
+}
+
+.icon-vol i {
+	font-size: 0.7rem;
+	color: #de3d96;
+}
+
+.vol-bar {
+	position: relative;
+	width: 75%;
+	height: 15px;
+	background-color: #3d414a;
+	border-radius: 10px;
+	margin: auto;
+	top:18px;
+}
+
+.vol-progress {
+	position: absolute;
+	width: 0px;
+	height: 15px;
+	border-radius: 10px;
+	top: 0px;
+	left: 0px;
+	z-index: 100;
+	transition: width 50ms ease-out 0s;
+	-webkit-transition: width 50ms ease-out 0s;
+}
+
+@media screen and (max-device-width: 375px) {
+	.div-menu {
+		font-size: 16px;
+	}
+	.table-menu {
+		height: 15%;
+	}
+	.div-play {
+		width: 200px;
+		height: 200px;
+	}
+	.div-play:AFTER {
+		width: 170px;
+		height: 170px;
+	}
+	.center-1 {
+		width: 120px;
+		height: 120px;
+	}
+	.gear-1 {
+		width: 117px;
+		height: 117px;
+		box-shadow: 2px 5px 3px #999797;
+		overflow: hidden;
+		text-align: center;
+		line-height: 53px;
+		border-top: 0px;
+		border-left: 0px;
+	}
+	.gear-1 div:nth-child(1) {
+		font-size: 14px;
+	}
+	.gear-1 div:nth-child(2) {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-device-width: 320px) {
+	.div-menu {
+		font-size: 16px;
+	}
+	.table-menu {
+		height: 15%;
+	}
+	.div-play {
+		width: 160px;
+		height: 160px;
+	}
+	.div-play:AFTER {
+		width: 140px;
+		height: 140px;
+		top: 10px;
+		left: 10px;
+	}
+	.center-1 {
+		width: 110px;
+		height: 110px;
+		top: 15px;
+		left: 15px;
+	}
+	.gear-1 {
+		width: 110px;
+		height: 110px;
+		box-shadow: 2px 5px 3px #999797;
+		overflow: hidden;
+		text-align: center;
+		line-height: 53px;
+		border-top: 0px;
+		border-left: 0px;
+	}
+	.gear-1 div:nth-child(1) {
+		font-size: 12px;
+	}
+	.gear-1 div:nth-child(2) {
+		font-size: 12px;
+	}
+	.menu-box:BEFORE {
+		padding-bottom: 50%;
+	}
+}
+</style>
+
+<script type="text/x-underscore-template">
+
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left">
+		<a class="react" gaevent="imt/hd/home"> <i class="icon iconfont">&#xe661;</i>
+		</a>
+	</div>
+	<span class="nav-header h1">蓝牙音箱</span>
+</header>
+
+
+
+<!-- content -->
+<div class="content">
+	<div class="main-box ">
+		<div class="top-box">
+			<!-- 开 开始 -->
+			<div class="table-menu">
+				<div class="div-menu">
+					<div>
+						<span class="switch">开 
+					</div>
+				</div>
+			</div>
+			<!-- 开 结束 -->
+			<!-- 歌曲播放 开始 -->
+			<div class="table-play">
+				<div class="div-play">
+					<div class="center-1">
+						<div class="gear-1">
+							<div id="scrollobj"
+								style="white-space: nowrap; overflow: hidden; width: 80px;">
+								<span class="song-title"><%=music_name%></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 歌曲播放 结束 -->
+		<!-- 音量进度条 开始 -->
+		<div class="table-vol">
+			<div class="vol-add">
+				<div class="icon-add">
+					<span class="addVol"><i class="icon iconfont i-color">&#xe643;</i>
+				</div>
+			</div>
+			<div class="vol-icon">
+				<div class="vol-bar">
+					<div class="vol-progress"></div>
+				</div>
+			</div>
+			<div class="vol-sub">
+				<div class="icon-sub">
+					<span class="subVol"><i class="icon iconfont i-color">&#xe649;</i>
+				</div>
+			</div>
+		</div>
+		<!-- 音量进度条 结束 -->
+	</div>
+	<div class="bottom-box">
+		<div class="menu-box">
+			<div class="menu-view" draggable="true" data-module="ehome"
+				data-view="Switch">
+				<span class="BTset"> <i class="icon iconfont">&#xe628;</i>
+					<div>蓝牙</div>
+			</div>
+		</div>
+		<div class="menu-box">
+			<div class="menu-view" draggable="true" data-module="ehome"
+				data-view="Switch">
+				<span class="readCard"> <i class="icon iconfont">&#xe629;</i>
+					<div>读卡</div>
+			</div>
+		</div>
+		<div class="menu-box">
+			<div class="menu-view" draggable="true" data-module="ehome"
+				data-view="Switch">
+				<span class="song"> <i class="icon iconfont">&#xe62a;</i>
+					<div>TF卡曲目</div>
+			</div>
+		</div>
+		<div class="menu-box">
+			<div class="menu-view" draggable="true" data-module="ehome"
+				data-view="Switch">
+				<span class="sleep"> <i class="icon iconfont">&#xe62b;</i>
+					<div>睡眠助理</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<script id="PlBTMainTemplate" type="text/x-jquery-tmpl">
+	<div class="main-box">
+		<div class="top-box magicbox_PlBTMain_top-box">
+			<!-- 开 开始 -->
+			<div class="table-menu">
+				<div class="div-menu">
+					<div>
+						<span class="switch"><%=switch_text%>
+					</div>
+				</div>
+			</div>
+			<!-- 开 结束 -->
+			<!-- 歌曲播放 开始 -->
+			<div class="table-play">
+				<div class="div-play magicbox_PlBTMain_div-play">
+					<div class="center-1">
+						<div class="gear-1 magicbox_PlBTMain_gear-1">
+							<div id="scrollobj" style="white-space:nowrap;overflow:hidden;">
+							<span class="song-title fontColor"><%=music_name%></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 歌曲播放 结束 -->
+			<!-- 音量进度条 开始 -->
+			<div class="table-vol">
+				<div class="vol-add">
+					<div class="icon-add">
+						<span class="addVol"><i class="icon iconfont i-color iconColor"><%=addVol_icon%></i>
+					</div>
+				</div>
+				<div class="vol-icon">
+					<div class="vol-bar">
+						<div class="vol-progress vol-progressColor"></div>
+					</div>
+				</div>
+				<div class="vol-sub">
+					<div class="icon-sub">
+						<span class="subVol"><i class="icon iconfont i-color iconColor"><%=subVol_icon%></i>
+					</div>
+				</div>
+			</div>
+			<!-- 音量进度条 结束 -->
+		</div>
+		<div class="bottom-box">
+			<div class="menu-box">
+				<div class="menu-view" draggable="true" data-module="ehome"
+					data-view="Switch">
+					<span class="BTset"> <i class="icon iconfont" style="color:<%=BT_iconColor%>"><%=BT_icon%></i>
+						<div><%=BT_text%></div>
+				</div>
+			</div>
+			<div class="menu-box">
+				<div class="menu-view" draggable="true" data-module="ehome"
+					data-view="Switch">
+					<span class="readCard"> <i class="icon iconfont" style="color:<%=readCard_iconColor%>"><%=readCard_icon%></i>
+						<div><%=readCard_text%></div>
+				</div>
+			</div>
+			<div class="menu-box">
+				<div class="menu-view" draggable="true" data-module="ehome"
+					data-view="Switch">
+					<span class="song"> <i class="icon iconfont" style="color:<%=musicList_iconColor%>"><%=musicList_icon%></i>
+						<div><%=musicList_text%></div>
+				</div>
+			</div>
+			<div class="menu-box">
+				<div class="menu-view" draggable="true" data-module="ehome"
+					data-view="Switch">
+					<span class="sleep"> <i class="icon iconfont" style="color:<%=sleep_iconColor%>"><%=sleep_icon%></i>
+						<div><%=sleep_text%></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>

@@ -1,0 +1,176 @@
+
+<style type="text/css">
+	.navigate-bar ~ .content {
+		padding-top: .1rem;
+	}
+	.navigate-bottom{
+	}
+	#PullDownRefresh{
+		border-bottom: 1px solid #ccc;
+	}
+	#subsForm-list .detail-list li, #search_tempelete-list  .detail-list li{
+		border-bottom: none;
+	}
+	.padding-more{
+		padding-right:.18rem;
+	}
+	
+	#form_select{
+		border-top: 1px solid #ccc;
+	}
+	.nav-tab{
+		width:49%;
+	}
+	 .column {
+		color: #666666;
+		margin-right: 10px;
+	}
+	.icon-ok.triangle {
+		float: right;
+		margin-right: 10px;
+		position: relative;
+		color: #18B9F5;
+		top: 2px;
+		display:none;
+	}
+
+	.ok .triangle{
+		display:block;
+	}
+	dl.list .dd-padding, dl.list dt, dl.list dd>.react {
+		padding: .38rem .2rem;
+	}
+	
+	
+</style>
+<script id="filling_subsForm" type="text/x-jquery-tmpl"  >
+	    <ul class="detail-list dealcard"  data-formid=<%=formId%>  data-formtempid=<%=formTempId%> data-formtempname=<%=formTempName%>  >				
+			<li >表单号码：<span><%=formId%></span></li>	
+			<li >表单名称：<%=formTempName%></li>	 
+			<small >银行名称：&nbsp;&nbsp<span><%=bankPointName%></span></small><br>
+			<small >业务类型：&nbsp;&nbsp<span><%=businessTypeName%></span></small>		
+			<% 
+			    if(subsId){    %>
+					<small>
+			           <div>
+				         	 预约状态：&nbsp;&nbsp已预约
+			           </div>
+	            	</small>
+             <% }%>  
+	   </ul>
+</script>
+<script id="search_tempelete_Form" type="text/x-jquery-tmpl">
+	    <ul class="detail-list dealcard" data-formtempid=<%=formTempId%> data-formtempname=<%=formTempName%>>
+			 <li >表单名称：<%=formTempName%></li>	 
+			<small >银行名称：&nbsp;&nbsp<span><%=bankPointName%></span></small><br>
+			<small >业务类型：&nbsp;&nbsp<span><%=businessTypeName%></span></small><br>	
+	   </ul>
+</script>
+<script id="businessTypeTemplate" type="text/x-jquery-tmpl">
+<dd class="business" id=<%=businessTypeId%> data-type = <%=businessTypeName%>>
+	<a class="react" >
+		<div class="">
+           <span class="column h5"><%=businessTypeName%></span>
+           	<span class=" icon-ok triangle"></span>
+      	</div>
+    </a>
+</dd>
+</script>
+<div class="index-page">
+	<header id="form_header" class="navbar">
+		<span class="nav-header h1">填单</span>
+	</header>
+	<nav class="navigate-bar" id="navigate_bar_nav">
+		<ul class="navigate-bar-inner">
+			<li id="nav-tab-left" class="nav-tab selected" style="width:49%" data-page="" >已填表单</li>
+			<li id="nav-tab-right" class="nav-tab last-li " style="width:49%">表单选择</li>
+		</ul>
+	</nav>
+
+	<dl id="selectCondition" class="list" >	
+		 <dd id="city">
+			<a class="react">
+				<div class="more more-weak">
+		           <i class="icon-globe gray"></i>
+		           <span class="column h5">城市选择：</span>
+		            <span class="dialog-value ellipsis" id="cityResult">还未选</span>
+	       		</div>
+	       	</a>
+	     </dd>
+		 <dd id="bankPoint">
+			<a class="react">
+				<div class="more more-weak">
+		           <i class="icon-building gray"></i>
+		           <span class="column h5">银行选择：</span>
+		            <span class="dialog-value ellipsis" id="bankPointResult">还未选</span>
+	       		</div>
+	       	</a>
+	     </dd>
+		<dd id="business">
+			<a class="react">
+				<div class="more more-weak">
+		           <i class="icon-briefcase gray"></i>
+		           <span class="column h5">所办业务：</span>
+		           <span class="dialog-value ellipsis" id="businessTypeResult">还未选</span>
+	       		</div>
+	       	</a>
+	      </dd>
+	</dl>
+	<div class="content">
+		<dl class="list" id="form_filled">
+			<dd class="detail">
+				<list id="subsForm-list" 
+						autoLoad="false" 
+						isPullDownRefresh="true"
+						jsonRoot="dataList" 
+						bundle="fs"
+						 paging="true"
+						  iScroll="true"
+						_itemTemplate="filling_subsForm">
+				 </list>
+			</dd>
+		</dl>
+		<dl class="list" id="form_select">
+					<dd class="detail">
+						<list id="search_tempelete-list" 
+								autoLoad="false" 
+								isPullDownRefresh="true"
+								jsonRoot="dataList" 
+								bundle="fs"
+								 paging="true"
+								  iScroll="ture"
+								_itemTemplate="search_tempelete_Form">
+						 </list>
+					</dd>
+		</dl>
+	</div>
+<footer id="id-footer-menu" class="footer-menu" data-value="forms" data-page="/form-index"></footer>
+</div>
+<div class="sub-page">
+	  	<header class="navbar">
+	              <div class="nav-wrap-left">
+	                  <a class="react  back-index" ><i class="text-icon icon-back"></i></a>
+	              </div>
+	              <span class="nav-header h1 adjust">业务类型选择</span>
+	
+	       		<div class="nav-wrap-right">
+	       			<a class="react"  id="save" >
+                          <span class="save" >
+                               确定
+                          </span>
+                	</a>
+	          </div>
+	      </header>		
+	      <div class="content sub-page">
+	      <dl class="list list-in" id="businessList">
+				<list id="subscribes-business-list" 
+					    autoLoad="false"
+					    isPullDownRefresh="false"  
+					    jsonRoot="dataList",
+					    paging="false"
+					    iScroll="false"
+					    _itemTemplate="businessTypeTemplate">
+				</list>		
+		  </dl>
+		  </div>
+</div>

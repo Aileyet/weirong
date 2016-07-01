@@ -1,0 +1,102 @@
+<style type="text/css" media="all">
+	
+	.main{
+		margin-top: 100px;
+	}
+	.progress-bar{
+		position:relative;
+		width: 70%;
+		height: 7px;
+		background-color: #3d414a;
+		border-radius:10px;
+		margin: auto;
+	}
+	.pro-point{
+		position:absolute;
+		width: 15px;
+		height: 15px;
+		border-radius:100%;
+		background-color: #ffffff;
+		top: -4px;
+		left: 0%;
+		z-index: 110;
+		transition: left 50ms ease-out 0s; 
+		-webkit-transition: left 50ms ease-out 0s; 
+	}
+	.progress{
+		position:absolute;
+		width: 0px;
+		height: 7px;
+		background-color: #e5007f;
+		border-top-left-radius:10px;
+		border-bottom-left-radius:10px;
+		top: 0px;
+		left: 0px;
+		z-index: 100;
+		transition: width 50ms ease-out 0s; 
+		-webkit-transition: width 50ms ease-out 0s; 
+	}
+	.stop,.start{
+		width: 70px;
+		line-height:30px;
+		height: 30px;
+		background-color: #3d414a;
+		color: #ffffff;
+		margin:70px auto;
+		text-align: center;
+		font-size: 1.3em;
+	}
+	
+	*{margin:0; padding:0;list-style: none}
+	#ul1{width:800px;position:relative;margin:10px auto;}
+	#ul1 li{width:200px;height:150px;float:left;margin:25px;-moz-border-radius:25px;border-radius:25px;}
+	#ul1 li:hover{border-color:#9a9fa4; box-shadow:0 0 6px 0 rgba(0, 0, 0, 0.85);}
+	#ul1 .active{border:1px dashed red;}
+	#ul1 li img{-moz-border-radius:15px;border-radius:15px;}
+</style>
+
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+
+<!-- header -->
+<header class="bar-title">
+  <a id="" class="button">
+    Left
+  </a>
+  <h1 class="title">scene</h1>
+  <a id="" class="button">
+    Right
+  </a>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content">
+	<!-- <div class="main">
+		<div class="progress-bar">
+			<div class="pro-point"></div>
+			<div class="progress"></div>
+		</div>
+	</div>
+	<div class="stop">暂停</div>
+	
+	<div class="start">开始</div> -->
+	
+	<ul id="ul1">
+		<li><img src="../images/images/1.jpg" width="200" height="150" /></li>
+		<li><img src="../images/images/2.jpg" width="200" height="150"  /></li>
+		<li><img src="../images/images/3.jpg" width="200" height="150" /></li>
+		<li><img src="../images/images/4.jpg" width="200" height="150" /></li>
+		<li><img src="../images/images/5.jpg" width="200" height="150"  /></li>
+		<li><img src="../images/images/6.jpg" width="200" height="150" /></li>
+	</ul>
+	
+	
+</div>

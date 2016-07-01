@@ -1,0 +1,316 @@
+<style type="text/css" media="all">
+    	/* 操作按钮栏 */
+	.toolBtn-div{
+		padding: 10px 0px;
+		overflow: hidden;
+	}
+	.toolBtn-row-div{
+		width: 33.33%;
+		float: left;
+	}
+	.toolBtn-row-div-2{
+		width: 66.66%;
+		float: left;
+	}
+	.toolBtn-row-div-3{
+		width: 50%;
+		float: left;
+	}
+	.border-container{
+		width:80%;
+		margin:auto;
+		border: 1px #b0b1b2 dashed;
+		overflow: hidden;
+	}
+	.border-container>div:nth-child(1){
+		overflow: hidden;
+		padding: 7px 0px 1px 0px;
+	}
+	
+	/* 按钮样式 */
+	.tBtn-div,.tBtn-div-2,.tBtn-div-3{
+		border-radius: 100%;
+		margin: auto;
+		text-align: center;
+		display: table;
+	}
+	.tBtn-div{
+		width: 50%;
+	}
+	.tBtn-div-2{
+		float:left;
+		width: 31.5%;
+		margin: auto 17px;
+	}
+	.tBtn-div-3{
+		width: 33.5%;
+	}
+	.border-container .tBtn-div-2:nth-child(2){float: right;background: #de3d96;}
+	
+	.tBtn-div:BEFORE,
+	.tBtn-div-2:BEFORE,
+	.tBtn-div-3:BEFORE,
+	.operating-disk-dot-wai:BEFORE,
+	.operating-disk-dot-nei:BEFORE,
+	.operating-disk-dot-zhong:BEFORE{
+		content: "";
+		display: inline-block;
+		padding-bottom: 100%;
+		vertical-align: middle;
+	}
+	.tBtn-div i,.tBtn-div-2 i,.tBtn-div-3 i{
+		vertical-align: middle;
+	}
+	
+	.i-font-size-8{font-size: 0.8rem;}
+	.i-font-size-6{font-size: 0.6rem;}
+	.i-font-size-4{font-size: 0.4rem;}
+	
+	.tBtn-text-div{
+		text-align: center;
+		padding: 5px 0px;
+		font-size: 0.4rem;
+        margin-top:8px;
+	}
+	
+	/* 操作圆盘 */
+	.operating-disk-div{
+		height: 45%;
+		position: relative;
+		overflow: hidden;
+	}
+	.operating-disk-Btn{
+		position: relative;
+		overflow: hidden;
+	}
+	.operDiskBtn-top{
+		position: absolute;
+		top: 5px;
+		width: 100%;
+	}
+	.operDiskBtn-bottom{
+		position: absolute;
+		bottom: 5px;
+		width: 100%;
+	}
+	.operating-disk-dot-content{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0px;
+	}
+	.operating-disk-dot-wai{
+		width: 70%;
+		border-radius: 100%;
+		margin: auto;
+		text-align: center;
+		overflow: hidden;
+		position: relative;
+	}
+	
+	.direction-up{position: absolute;top:15px;left:calc(50% - 15px);}
+	.direction-bottom{position: absolute;bottom: 15px;left:calc(50% - 15px);}
+	.direction-right{position: absolute;right: 15px;top:calc(50% - 15px);}
+	.direction-left{position: absolute;left: 15px;top:calc(50% - 15px);}
+	
+	.operating-disk-dot-nei{
+		position: absolute;
+		width: 92%;
+		top: 4%;
+		left: 4%;
+		border-radius: 100%;
+	}
+	.operating-disk-dot-zhong{
+		position: absolute;
+		width: 40%;
+		background: #ffffff;
+		top: 30%;
+		left: 30%;
+		border-radius: 100%;
+		border: 1px #e2e2e2 solid;
+		color: #222222;
+		font-size: 0.8rem;
+	}
+	.operating-disk-dot-zhong span{
+		position: absolute;
+		top: calc(50% - 25px);
+		left: calc(50% - 20px);
+	}
+	
+	
+	@media screen and (max-device-width: 350px) and (max-device-height: 500px){
+		.tBtn-div-2 {margin: 0px 10px 0px 17px;}
+		.border-container .tBtn-div-2:nth-child(2){margin: 0px 17px 0px 10px;}
+	 	
+	 	.operating-disk-dot-wai{width: 60%;}
+	 	
+	 	.i-font-size-6{font-size: 0.45rem;}
+		.i-font-size-4{font-size: 0.35rem;}
+	 	
+	 	.direction-up{position: absolute;top:10px;left:calc(50% - 11.5px);}
+		.direction-bottom{position: absolute;bottom: 10px;left:calc(50% - 11.5px);}
+		.direction-right{position: absolute;right: 10px;top:calc(50% - 11.5px);}
+		.direction-left{position: absolute;left: 10px;top:calc(50% - 11.5px);}
+	 }
+	 
+	 @media screen and (max-device-width: 350px) and (min-device-height: 550px){
+	 	.tBtn-div-2 {margin: 0px 10px 0px 17px;}
+		.border-container .tBtn-div-2:nth-child(2){margin: 0px 17px 0px 10px;}
+		
+		.i-font-size-6{font-size: 0.45rem;}
+		.i-font-size-4{font-size: 0.35rem;}
+	 	
+	 	.direction-up{position: absolute;top:10px;left:calc(50% - 11.5px);}
+		.direction-bottom{position: absolute;bottom: 10px;left:calc(50% - 11.5px);}
+		.direction-right{position: absolute;right: 10px;top:calc(50% - 11.5px);}
+		.direction-left{position: absolute;left: 10px;top:calc(50% - 11.5px);}
+	 }
+	       /* 右上角下拉菜单 */
+	.nav-wrap-right ul{
+		display:none;
+		position:absolute;
+		list-style: none;
+		right: 0px;
+		box-shadow:1px 2px 2px 2px #dddddd;
+	}
+	.nav-wrap-right ul li{
+		width:120px;
+		background-color: #ffffff;
+		padding:0px 10px;
+		border-bottom: 1px #e7e7e7 solid;
+		font-size: 0.3rem;
+		color: #222222;
+        z-index:100;
+	}
+	.nav-wrap-right .disp{
+		display: block;
+	}
+     /* 自定义按钮 */
+     .box-flex{
+		position: relative;
+		box-flex: 1;
+		-webkit-box-flex: 1;
+	}
+	.control-btn{
+		position:absolute;
+		display: -webkit-box;
+		display: box;
+		-webkit-box-orient: vertical;
+		box-orient: vertical;
+		width: 100%;
+		padding-top:0px;
+        z-index:50;
+	 }
+	.custom-btn-div {
+		width: 80px;
+		height: 50px;
+		background-color: #efefef;
+		box-shadow: 1px 2px 3px 2px #dddddd;
+		border-radius: 10px;
+		color: #818181;
+		text-align: center;
+		display: table;
+		margin: auto;
+		border-left: 1px #ffffff solid;
+	}
+	 .control-btn-container-custom{
+			display: -webkit-box;
+			display: box;
+			-webkit-box-orient: horizontal;
+			box-orient: horizontal;
+			width: 100%;
+			margin-top: 20px;
+		 }
+	.btnName {
+			display:inline-block;
+			width:100%;
+			text-align:center;
+			padding-top:15px;
+			font-size:17px;
+	  }
+</style>
+
+<script id="ehome_CoIPTV_Template" type="text/x-underscore-template">
+    <div class="toolBtn-div">
+        <div class="toolBtn-row-div">
+            <div class="tBtn-div RoundBtn-bg-color" id="power"><i class="icon iconfont i-font-size-6 i-font-color-2"><%=power_icon%></i></div>
+        </div>
+        <div class="toolBtn-row-div-2">
+            <div class="border-container">
+                <div>
+                    <div class="tBtn-div-2 RoundBtn-bg-color" id="tvMute"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=mute_icon%></i></div>
+                    <div class="tBtn-div-2 RoundBtn-bg-color" id="tvPower"><i class="icon iconfont i-font-size-6 i-font-color-3"><%=power_icon%></i></div>
+                </div>
+                <div class="tBtn-text-div text-font-color"><%=tv%></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="operating-disk-div">
+        <div class="operating-disk-dot-content">
+            <div class="operating-disk-dot-wai">
+                <div class="operating-disk-dot-nei">
+                    <div class="direction-up" id="up"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=up_icon%></i></div>
+                    <div class="direction-bottom" id="down"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=down_icon%></i></div>
+                    <div class="direction-left" id="left"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=left_icon%></i></div>
+                    <div class="direction-right" id="right"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=right_icon%></i></div>
+                    <div class="operating-disk-dot-zhong" id="ok">
+                        <span class="tBtn-text-div text-font-color"><%=ok%></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolBtn-div">
+        <div class="toolBtn-row-div">
+            <div class="tBtn-div RoundBtn-bg-color" id="chUp"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=director_icon%></i></div>
+        </div>
+        <div class="toolBtn-row-div">
+            <div class="tBtn-div RoundBtn-bg-color" id="Return"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=return_icon%></i></div>
+        </div>
+        <div class="toolBtn-row-div">
+            <div class="tBtn-div RoundBtn-bg-color" id="chDown"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=menu_icon%></i></div>
+        </div>
+    </div>
+
+    <div class="toolBtn-div">
+        <div class="toolBtn-row-div-3">
+            <div class="tBtn-div-3 RoundBtn-bg-color" id="volUp"><i class="icon iconfont i-font-size-8 i-font-color-1"><%=volume_up_icon%></i></div>
+        </div>
+        <div class="toolBtn-row-div-3">
+            <div class="tBtn-div-3 RoundBtn-bg-color" id="volDown"><i class="icon iconfont i-font-size-8 i-font-color-1"><%=volume_down_icon%></i></div>
+        </div>
+    </div>
+	<!--<div class="costb-top-view">
+		<div class="b-flex"><div class="div-btn costb-div-btn" id="power"><i class="icon iconfont"><%=power_icon%></i></div></div>
+		<div class="b-flex"><div class="div-btn costb-div-btn" id="Return"><i class="icon iconfont"><%=return_icon%></i></div></div>
+		<div class="b-flex"><div class="div-btn costb-div-btn" id=""><i class="icon iconfont"><%=power_icon%></i></div><div class="costb-text-label"><%=tv%></div></div>
+	</div>
+	<div class="center-view">
+		<div class="costb-outer-circle"><div class="costb-fillet">
+			<div id="left"><i class="icon iconfont"><%=left_icon_2%></i></div>
+			<div id="up"><i class="icon iconfont"><%=left_icon_1%></i></div>
+			<div id="right"><i class="icon iconfont"><%=left_icon_2%></i></div>
+			<div id="down"><i class="icon iconfont"><%=left_icon_1%></i></div>
+			<div id="ok" class="costb-chassis"><i class="icon iconfont"><%=play_icon%></i></div>
+		</div></div>
+	</div>
+	<div class="bottom-view">
+		<div class="b-flex"><div class="div-btn costb-div-btn" id="volUp"><i class="icon iconfont"><%=volume_up_icon%></i></div></div>
+		<div class="b-flex"><div class="div-btn costb-div-btn" id="mute"><i class="icon iconfont"><%=mute_icon%></i></div></div>
+		<div class="b-flex"><div class="div-btn costb-div-btn" id="volDown"><i class="icon iconfont"><%=volume_down_icon%></i></div></div>
+	</div>-->
+    <div class="control-btn">
+    </div>
+</script>
+
+
+<header id="homelist_header" class="navbar header_font_color">
+
+</header>
+
+
+<div class="content">
+
+</div>

@@ -1,0 +1,248 @@
+<style type="text/css" media="all">
+.form-input {
+	width: 51%;
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
+	height: 0.5rem;
+}
+.icon-right {
+	position: relative;
+  	top: 7px;
+  	right: 26px;
+}
+.icon-down {
+  position: relative;
+  top: 7px;
+  right: 26px;
+}
+.form-label {
+	display: inline-block;
+	width: 40%;
+	font-size: 13px;
+	font-weight: 900;
+	color: initial;
+	margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+input.input-select{
+  width: 52%;
+  height: 33px;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  
+}
+/**
+input.input-select{
+  width: 49%;
+  height: 33px;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+**/
+.form-check-label {
+	height: 40px;
+	position: absolute;
+	left: 180px;
+	margin-top: -35px;
+}
+
+.form-select {
+	width: 51%;
+	height: 0.8rem;
+	font-size: small;
+    font-weight: bold;
+    background: white;
+}
+.form-span-select {
+  /**
+  margin-left: -15px	
+ 
+  background-color: #18B9F5;
+  padding: 7px 2px;
+  margin-left: 3px;
+  -webkit-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 4px 0px 0px #156785, 0px 7px 5px #999;
+  -moz-box-shadow: inset 0 1px 0 #2ab7ec inset, 0 4px 0 0 #156785, 0 7px 2px #999;
+  -o-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 4px 0px 0px #156785, 0px 7px 5px #999;
+  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 2px 0px #156785, 0px 0px 0px #999;
+  **/
+	
+}
+
+pre {
+	white-space: pre-wrap; /* css-3 */
+	word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+.form-textarea {
+	width: 49%;
+	height: 1rem;
+	top: -15px;
+	margin-top: 0.2rem;
+	margin-bottom: -0.2rem;
+}
+
+.form-label-title {
+	font-size: 14px;
+	font-weight: bold;
+	color: deepskyblue
+}
+
+.cb-enable, .cb-disable, .cb-enable span, .cb-disable span {
+	background: url(../piece/images/switch.gif) repeat-x;
+	display: block;
+	float: left;
+}
+
+.cb-enable span, .cb-disable span {
+	line-height: 30px;
+	display: block;
+	background-repeat: no-repeat;
+	font-weight: bold;
+}
+
+.cb-enable span {
+	background-position: left -90px;
+	padding: 0 10px;
+}
+
+.cb-disable span {
+	background-position: right -180px;
+	padding: 0 10px;
+}
+
+.cb-disable.selected {
+	background-position: 0 -30px;
+}
+
+.cb-disable.selected span {
+	background-position: right -210px;
+	color: #fff;
+}
+
+.cb-enable.selected {
+	background-position: 0 -60px;
+}
+
+.cb-enable.selected span {
+	background-position: left -150px;
+	color: #fff;
+}
+
+.switch label {
+	cursor: pointer;
+}
+  .column {
+		color: #666666;
+		margin-right: 10px;
+	}
+.icon-ok.triangle {
+	float: right;
+	margin-right: 10px;
+	position: relative;
+	color: #18B9F5;
+	top: 2px;
+	display:none;
+}
+
+.ok .triangle{
+	display:block;
+}
+.hr-min{
+	width: 90%;
+  	margin-left: 0rem;
+}
+.hr-max{
+	width: 100%;
+  	margin-left: 0rem;
+}
+
+
+</style>
+<script id="userTemplate" type="text/x-jquery-tmpl">
+<dd class="userName" id=<%=userId%> data-type = <%=name%>>
+	<a class="react" >
+		<div class="">
+           <span class="column h5"><%=name%></span>
+           	<span class=" icon-ok triangle"></span>
+      	</div>
+    </a>
+</dd>
+</script>
+
+<script id="cardTemplate" type="text/x-jquery-tmpl">
+<dd class="cardNumber" id=<%=bankCardId%> data-type = <%=bankCardNumber%>>
+	<a class="react" >
+		<div class="">
+           <span class="column h5"><%=bankCardNumber+"   "+accountName%></span>
+           	<span class=" icon-ok triangle"></span>
+      	</div>
+    </a>
+</dd>
+</script>
+
+<div class="index-page">
+	<!-- header -->
+	<header id="form_header" class="navbar">
+		<div class="nav-wrap-left">
+			<a id="formInput-back" class="react back"><i class="text-icon icon-back"></i></a>
+		</div>
+		<span id="nav-header" class="nav-header h1 ">填单</span>
+		<div class="nav-wrap-right">
+		<a id="form-right-submit" type="submit" style="color:#ffffff; font-size:15px;">提交</a></div>
+	</header>
+	<script id="formTemplate" type="text/x-jquery-tmpl">
+	    <ul class="detail-list dealcard">
+			 <label><%=itemAlias%></label>
+	   </ul>
+	</script>
+	<div class="content">
+		<form  id="form_content" method="get" >
+		</form>
+	</div>
+</div>
+<div id="userSubPage" class="sub-page">
+	<header class="navbar">
+              <div class="nav-wrap-left">
+                  <a  id="back-name" class="react  back-index" ><i class="text-icon icon-back"></i></a>
+              </div>
+              <span class="nav-header h1 adjust">常用联系人</span>
+
+       		<div class="nav-wrap-right">
+          </div>
+      </header>		
+      <div class="content">
+      <dl class="list list-in" id="userList">
+			<list id="userList" 
+				    autoLoad="false"
+				    isPullDownRefresh="false"  
+				    jsonRoot="dataList",
+				    paging="false"
+				    iScroll="false"
+				    _itemTemplate="userTemplate">
+			</list>		
+	  </dl>
+	  </div>
+</div>
+<div id="cardSubPage" class="sub-page">
+	<header class="navbar">
+              <div class="nav-wrap-left">
+                  <a  id="back-card" class="react  back-index" ><i class="text-icon icon-back"></i></a>
+              </div>
+              <span class="nav-header h1 adjust">银行卡</span>
+
+       		<div class="nav-wrap-right">
+          </div>
+      </header>		
+      <div class="content">
+      <dl class="list list-in" id="cardList">
+			<list id="cardList" 
+				    autoLoad="false"
+				    isPullDownRefresh="false"  
+				    jsonRoot="dataList"
+				    paging="false"
+				    iScroll="false"
+				    _itemTemplate="cardTemplate">
+			</list>		
+	  </dl>
+	  </div>
+</div>

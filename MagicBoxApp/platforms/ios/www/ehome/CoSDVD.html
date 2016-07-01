@@ -1,0 +1,707 @@
+<style type="text/css" media="all">
+	.cosdvd-top-view,.cosdvd-bottom-view{
+		display: box;
+		display: -webkit-box;
+		box-orient:horizontal;
+		-webkit-box-orient:horizontal;
+		margin-top: 30px;
+	}
+	.cosdvd-top-view i{
+		font-size: 2.5em;
+	}
+	.cosdvd-top-view .b-flex:nth-child(1) i{
+	}
+	.b-flex{
+		box-flex:1;
+		-webkit-box-flex:1;
+	}
+	.div-btn{
+		
+	}
+	.cosdvd-text-label{
+		text-align: center;
+		font-size: 1.2em;
+		margin-top: 7px;
+	}
+	.cosdvd-top-view .b-flex:nth-child(3)>div:nth-child(1){
+		padding: 18px 0px 6px 0px;
+	}
+	.cosdvd-div-slider{
+		position:relative;
+		width: 60px;
+		height: 30px;
+		background-color: #dcdde0;
+		border-radius:25px;
+		padding: 3px;
+		overflow: hidden;
+		margin: -8px auto;
+	}
+    .cosdvd-text-label2
+    {
+        text-align: center;
+		font-size: 1.2em;
+		margin-top: 13px;
+	}
+
+	.cosdvd-div-slider .div-slidering{
+		width: 30px;
+		height: 30px;
+		border-radius:100%;
+		float: left;
+		transition: float 500ms ease-out 0s; 
+		-webkit-transition: float 500ms ease-out 0s; 
+	}
+	
+	.center-view{
+		padding: 10px 30px;
+		overflow: hidden;
+		margin-top: 10%;
+	}
+	.center-view>div{
+		display: block;
+	}
+	.center-view>div:nth-child(1){
+		float: left;
+	}
+	.sound-panel,.regulation-panel{
+		width: 60px;
+		height: 170px;
+		border-radius:40px;
+		background: gradient(linear,0 0,100% 100%,from(#ffffff),to(#f3f4f6));
+		background: -webkit-gradient(linear,0 0,100% 100%,from(#ffffff),to(#f3f4f6));
+		border: 1px #dbdbdd solid;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient:vertical;
+		color: #5a5967;
+	}
+	.sound-panel>div{
+		text-align: center;
+		line-height: 57px;
+	}
+	.sound-panel>div:nth-child(2){
+		font-size: 1.2em;
+	}
+	.regulation-panel>div{
+		text-align: center;
+		font-size: 1.2em;
+	}
+	.regulation-panel>div i{font-size: 1.2em;}
+	.regulation-panel>div:nth-child(1){
+		margin-top: 10px;
+	}
+	.regulation-panel>div:nth-child(2){
+		margin-top: 50px;
+	}
+	
+	
+	
+	
+	.center-view>div:nth-child(2){
+		float: left;
+		width: calc(100% - 5px);
+		text-align: center;
+	}
+	.circle-1{
+		position: relative;
+		overflow: hidden;
+		width:90%;
+		vertical-align: middle;
+		background: gradient(linear,0 0,100% 100%,from(#e5e5e5),to(#f1f1f1));
+		background: -webkit-gradient(linear,0 0,100% 100%,from(#e5e5e5),to(#f1f1f1)); 
+		margin: 0px auto;
+		border-radius:100%;
+	}
+	.circle-2{
+		position:absolute;
+		width:90%;
+		top:5%;
+		left:5%;
+		background-color: #ffffff;
+		border-radius:100%;
+	}
+	.circle-3{
+		position:absolute;
+		width:40%;
+		top:30%;
+		left:30%;
+		background-color: #ffffff;
+		border-radius:100%;
+		border: 1px #e4e4e4 solid;
+		font-size: 2em;
+		color: #5a5e67;
+		font-weight: bolder;
+		text-align: center;
+	}
+	.circle-1:BEFORE,.circle-2:BEFORE,.circle-3:BEFORE{
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		padding-bottom: 100%;
+	}
+	.operation-btn:nth-child(1),.operation-btn:nth-child(3){
+		position: absolute;
+		top: calc(50% - 29px / 2);
+		left: calc(50% - 28px / 2);
+		z-index: 100;
+	}
+	.operation-btn:nth-child(2),.operation-btn:nth-child(4){
+		position: absolute;
+		top: calc(50% - 35px / 2);
+		left: calc(50% - 28px / 2);
+		z-index: 100;
+	}
+	.operation-btn i{font-size: 2em;color: #585c65;}
+	.operation-btn:nth-child(1){-webkit-transform: rotate(0deg) translate(245%);}
+	.operation-btn:nth-child(2){-webkit-transform: rotate(90deg) translate(245%);}
+	.operation-btn:nth-child(3){-webkit-transform: rotate(180deg) translate(245%);}
+	.operation-btn:nth-child(4){-webkit-transform: rotate(270deg) translate(245%);}
+	.operation-btn:nth-child(2) i,
+	.operation-btn:nth-child(4) i{display: inline-block;-webkit-transform: rotate(180deg);}
+	
+	.center-view>div:nth-child(3){
+		float: right;
+	}
+	
+	.cosdvd-bottom-view{
+		margin-top: 10%;
+	}
+	.cosdvd-bottom-view i{
+		font-size: 1.5em;
+	}
+	
+	@media screen and (min-device-width: 350px) and (max-device-height: 700px){
+		.operation-btn:nth-child(1),.operation-btn:nth-child(3){
+			position: absolute;
+			top: calc(50% - 24px / 2);
+			left: calc(50% - 24px / 2);
+			z-index: 100;
+		}
+		.operation-btn:nth-child(2),.operation-btn:nth-child(4){
+			position: absolute;
+			top: calc(50% - 30px / 2);
+			left: calc(50% - 24px / 2);
+			z-index: 100;
+		}
+		.operation-btn i{font-size: 1.7em;}
+	}
+	
+	@media screen and (max-device-width: 350px) {
+		.cosdvd-top-view{margin-top: 20px;}
+		.center-view{margin-top: 5%;}
+		.cosdvd-bottom-view{margin-top: 5%;}
+		.circle-3{font-size: 1.5em;}
+		
+		
+		.operation-btn:nth-child(1),.operation-btn:nth-child(3){
+			position: absolute;
+			top: calc(50% - 17px / 2);
+			left: calc(50% - 17px / 2);
+			z-index: 100;
+		}
+		.operation-btn:nth-child(2),.operation-btn:nth-child(4){
+			position: absolute;
+			top: calc(50% - 21px / 2);
+			left: calc(50% - 17px / 2);
+			z-index: 100;
+		}
+		.operation-btn i{font-size: 1.2em;}
+	}
+</style>
+<style type="text/css" media="all">
+    /* ѧϰ��ʽ */
+    .nav-wrap-right ul {
+        display: none;
+        position: absolute;
+        list-style: none;
+        right: 0px;
+        box-shadow: 1px 2px 2px 2px #dddddd;
+    }
+
+        .nav-wrap-right ul li {
+            width: 120px;
+            background-color: #ffffff;
+            padding: 0px 10px;
+            border-bottom: 1px #e7e7e7 solid;
+            font-size: 0.3rem;
+            color: #222222;
+            z-index: 100;
+        }
+
+    /* ������ť�� */
+    .toolBtn-div {
+        padding: 10px 0px;
+        overflow: hidden;
+    }
+
+    .toolBtn-row-div {
+        width: 33.33%;
+        float: left;
+    }
+
+    .tBtn-div {
+        width: 50%;
+        border-radius: 100%;
+        margin: auto;
+        text-align: center;
+        display: table;
+    }
+
+        .tBtn-div:BEFORE,
+        .switchBin-content-div:BEFORE,
+        .operating-disk-dot-wai:BEFORE,
+        .operating-disk-dot-nei:BEFORE,
+        .operating-disk-dot-zhong:BEFORE {
+            content: "";
+            display: inline-block;
+            padding-bottom: 100%;
+            vertical-align: middle;
+        }
+
+        .tBtn-div i {
+            vertical-align: middle;
+        }
+
+    .i-font-size-6 {
+        font-size: 0.6rem;
+    }
+
+    .i-font-size-4 {
+        font-size: 0.4rem;
+    }
+
+    .tBtn-text-div {
+        text-align: center;
+        padding: 5px 0px;
+        font-size: 0.4rem;
+    }
+    /* ���ز� */
+    .switchBin-content-div {
+        width: 50%;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .switchBin-div {
+        position: absolute;
+        top: 27%;
+        width: 90%;
+        margin: auto;
+        border-radius: 25px;
+        padding: 3px;
+        overflow: hidden;
+        background: #dcdde0;
+    }
+
+        .switchBin-div .switchBin-Dot-div {
+            width: 45%;
+            border-radius: 100%;
+            background: #ffffff;
+            float: left;
+        }
+
+            .switchBin-div .switchBin-Dot-div:BEFORE {
+                content: "";
+                display: inline-block;
+                padding-bottom: 100%;
+                vertical-align: middle;
+            }
+
+    /* ����Բ�� */
+    .operating-disk-div {
+        height: 60%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .operating-disk-Btn, .operating-disk-dot {
+        width: 33.33%;
+        height: 100%;
+        float: left;
+    }
+
+    .operating-disk-Btn {
+        position: relative;
+        overflow: hidden;
+        z-index: 100;
+    }
+
+    .operDiskBtn-top {
+        position: absolute;
+        top: 5px;
+        width: 100%;
+    }
+
+    .operDiskBtn-bottom {
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+    }
+
+
+    .operating-disk-dot {
+    }
+
+    .operating-disk-dot-content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+    }
+
+    .operating-disk-dot-wai {
+        width: 70%;
+        border-radius: 100%;
+        margin: auto;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        margin-top:40px;
+    }
+
+    .direction-up {
+        position: absolute;
+        top: 15px;
+        left: calc(50% - 15px);
+    }
+
+    .direction-bottom {
+        position: absolute;
+        bottom: 15px;
+        left: calc(50% - 15px);
+    }
+
+    .direction-right {
+        position: absolute;
+        right: 15px;
+        top: calc(50% - 15px);
+        z-index: 101;
+    }
+
+    .direction-left {
+        position: absolute;
+        left: 15px;
+        top: calc(50% - 15px);
+        z-index: 100;
+    }
+
+    .operating-disk-dot-nei {
+        position: absolute;
+        width: 92%;
+        top: 4%;
+        left: 4%;
+        border-radius: 100%;
+    }
+
+    .operating-disk-dot-zhong {
+        position: absolute;
+        width: 40%;
+        background: #ffffff;
+        top: 30%;
+        left: 30%;
+        border-radius: 100%;
+        border: 1px #e2e2e2 solid;
+        color: #222222;
+        font-size: 0.8rem;
+    }
+
+        .operating-disk-dot-zhong span {
+            position: absolute;
+            top: calc(50% - 25px);
+            left: calc(50% - 20px);
+        }
+
+
+    @media screen and (max-device-width: 350px) {
+        .operating-disk-dot-wai {
+            width: 60%;
+        }
+
+        .switchBin-div {
+            width: 89%;
+        }
+
+        .i-font-size-6 {
+            font-size: 0.45rem;
+        }
+
+        .i-font-size-4 {
+            font-size: 0.35rem;
+        }
+
+        .direction-up {
+            position: absolute;
+            top: 10px;
+            left: calc(50% - 11.5px);
+        }
+
+        .direction-bottom {
+            position: absolute;
+            bottom: 10px;
+            left: calc(50% - 11.5px);
+        }
+
+        .direction-right {
+            position: absolute;
+            right: 10px;
+            top: calc(50% - 11.5px);
+        }
+
+        .direction-left {
+            position: absolute;
+            left: 10px;
+            top: calc(50% - 11.5px);
+        }
+    }
+</style>
+
+<style type="text/css" media="all">
+	
+	.center-view{
+		text-align: center;
+		margin-top: 20px;
+	}
+	.cosdvd-outer-circle{
+		display: inline-block;
+		width:75%;
+		vertical-align: middle;
+		border-radius:100%;
+		margin-left:45px;
+	}
+	.cosdvd-fillet{
+		position:relative;
+		display: inline-block;
+		width:94%;
+		vertical-align: middle;
+		border-radius:100%;
+		overflow: hidden;
+	}
+	.cosdvd-chassis{
+		position:relative;
+		left:-2px;
+		display: inline-block;
+		vertical-align: middle;
+		width: 40%;
+		border-radius:100%;
+		text-align: center;
+	}
+	.cosdvd-chassis i{font-size: 3em;display: inline-block;vertical-align: middle;}
+	.cosdvd-chassis:BEFORE,.cosdvd-outer-circle:BEFORE,.cosdvd-fillet:BEFORE {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		padding-bottom: 100%;
+	}
+	
+	.cosdvd-fillet div:nth-child(1),.cosdvd-fillet div:nth-child(2),.cosdvd-fillet div:nth-child(3),.cosdvd-fillet div:nth-child(4){
+		position:absolute;
+		left: calc(50% - 28px / 2);
+		top: calc(50% - 35px / 2);
+	}
+	.cosdvd-fillet div:nth-child(1) i,
+	.cosdvd-fillet div:nth-child(2) i,
+	.cosdvd-fillet div:nth-child(3) i,
+	.cosdvd-fillet div:nth-child(4) i{
+		font-size: 2em;
+	}
+	.cosdvd-fillet div:nth-child(1){-webkit-transform: rotate(0deg) translate(-310%);}
+	.cosdvd-fillet div:nth-child(1) i{-webkit-transform: rotate(180deg);display: inline-block;}
+	.cosdvd-fillet div:nth-child(2){-webkit-transform: rotate(90deg) translate(-310%);}
+	.cosdvd-fillet div:nth-child(3){-webkit-transform: rotate(180deg) translate(-310%);}
+	.cosdvd-fillet div:nth-child(3) i{-webkit-transform: rotate(180deg);display: inline-block;}
+	.cosdvd-fillet div:nth-child(4){-webkit-transform: rotate(270deg) translate(-310%);}
+	
+	
+	.cosdvd-bottom-view{margin-top: 50px;color: #585c64;}
+	.cosdvd-bottom-view>div:nth-child(1) i:nth-child(1){font-size: 2em;}
+	.cosdvd-bottom-view>div:nth-child(2) i:nth-child(1){font-size: 2.5em;}
+	.cosdvd-bottom-view>div:nth-child(3) i:nth-child(1){font-size: 2em;}
+	.cosdvd-bottom-view>div:nth-child(1) i:nth-child(2),
+	.cosdvd-bottom-view>div:nth-child(3) i:nth-child(2){font-size: 1em;position: relative;top: -6%;}
+	
+	
+	 @media screen and (max-device-width: 350px) {
+	 	.cosdvd-fillet div:nth-child(1) i,
+		.cosdvd-fillet div:nth-child(2) i,
+		.cosdvd-fillet div:nth-child(3) i,
+		.cosdvd-fillet div:nth-child(4) i{
+			font-size: 1.5em;
+		}
+		.cosdvd-fillet div:nth-child(1),.cosdvd-fillet div:nth-child(2),.cosdvd-fillet div:nth-child(3),.cosdvd-fillet div:nth-child(4){
+			left: calc(50% - 21px / 2);
+			top: calc(50% - 21px / 2);
+		}
+	 	.cosdvd-fillet div:nth-child(1){-webkit-transform: rotate(0deg) translate(-350%);}
+		.cosdvd-fillet div:nth-child(2){-webkit-transform: rotate(90deg) translate(-350%);}
+		.cosdvd-fillet div:nth-child(3){-webkit-transform: rotate(180deg) translate(-350%);}
+		.cosdvd-fillet div:nth-child(4){-webkit-transform: rotate(270deg) translate(-350%);}
+		
+		.cosdvd-chassis i{font-size: 2em;}
+	 }
+         /* ���Ͻ������˵� */
+	.nav-wrap-right ul{
+		display:none;
+		position:absolute;
+		list-style: none;
+		right: 0px;
+		box-shadow:1px 2px 2px 2px #dddddd;
+	}
+	.nav-wrap-right ul li{
+		width:120px;
+		background-color: #ffffff;
+		padding:0px 10px;
+		border-bottom: 1px #e7e7e7 solid;
+		font-size: 0.3rem;
+		color: #222222;
+        z-index:100;
+	}
+	.nav-wrap-right .disp{
+		display: block;
+	}
+     /* �Զ��尴ť */
+     .box-flex{
+		position: relative;
+		box-flex: 1;
+		-webkit-box-flex: 1;
+	}
+	.control-btn{
+		position:absolute;
+		display: -webkit-box;
+		display: box;
+		-webkit-box-orient: vertical;
+		box-orient: vertical;
+		width: 100%;
+		padding-top:0px;
+        z-index:50;
+	 }
+	.custom-btn-div {
+		width: 80px;
+		height: 50px;
+		background-color: #efefef;
+		box-shadow: 1px 2px 3px 2px #dddddd;
+		border-radius: 10px;
+		color: #818181;
+		text-align: center;
+		display: table;
+		margin: auto;
+		border-left: 1px #ffffff solid;
+	}
+	 .control-btn-container-custom{
+			display: -webkit-box;
+			display: box;
+			-webkit-box-orient: horizontal;
+			box-orient: horizontal;
+			width: 100%;
+			margin-top: 20px;
+		 }
+	.btnName {
+			display:inline-block;
+			width:100%;
+			text-align:center;
+			padding-top:15px;
+			font-size:17px;
+	  }
+</style>
+
+<script id="ehome_CoSDVD_Template" type="text/x-underscore-template">
+    <div class="toolBtn-div">
+        <div class="toolBtn-row-div">
+            <div class="tBtn-div RoundBtn-bg-color" id="power"><i class="icon iconfont i-font-size-6 i-font-color-2"><%=power_icon%></i></div>
+            <div class="tBtn-text-div text-font-color"><%=power%></div>
+        </div>
+        <div class="toolBtn-row-div">
+            <div class="tBtn-div RoundBtn-bg-color" id="mute"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=mute_icon%></i></div>
+            <div class="tBtn-text-div text-font-color"><%=mute%></div>
+        </div>
+        <div class="toolBtn-row-div">
+            <div class="switchBin-content-div">
+                <div class="switchBin-div" id="open">
+                    <div class="switchBin-Dot-div"></div>
+                </div>
+            </div>
+            <div class="tBtn-text-div text-font-color" ><%=switchBin%></div>
+        </div>
+    </div>
+    <div class="operating-disk-div">
+        <div class="operating-disk-Btn">
+            <div class="operDiskBtn-top" id="previous">
+                <div class="tBtn-div RoundBtn-bg-color text-font-color"><%=lastSong%></div>
+            </div>
+            <div class="operDiskBtn-bottom">
+                <div class="tBtn-div RoundBtn-bg-color" id="reverse"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=rewind_icon%></i></div>
+                <div class="tBtn-text-div text-font-color"><%=rewind%></div>
+            </div>
+        </div>
+        <div class="operating-disk-dot">
+            <div class="operating-disk-dot-content">
+                <div class="operating-disk-dot-wai">
+                    <div class="operating-disk-dot-nei">
+                        <div class="direction-up"     id="up"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=up_icon%></i></div>
+                        <div class="direction-bottom" id="down"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=down_icon%></i></div>
+                        <div class="direction-left"   id="left"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=left_icon%></i></div>
+                        <div class="direction-right"  id="right"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=right_icon%></i></div>
+                        <div class="operating-disk-dot-zhong" id="ok">
+                            <span><%=ok%></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="operating-disk-Btn">
+            <div class="operDiskBtn-top">
+                <div class="tBtn-div RoundBtn-bg-color text-font-color" id="next"><%=nextSong%></div>
+            </div>
+            <div class="operDiskBtn-bottom">
+                <div class="tBtn-div RoundBtn-bg-color" id="forware"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=fastForward_icon%></i></div>
+                <div class="tBtn-text-div text-font-color"><%=fastForward%></div>
+            </div>
+        </div>
+    </div>
+    <div class="toolBtn-div">
+        <div class="toolBtn-row-div">
+            <div class="tBtn-div RoundBtn-bg-color" id="menu"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=menu_icon%></i></div>
+            <div class="tBtn-text-div text-font-color"><%=menu%></div>
+        </div>
+        <div class="toolBtn-row-div">
+            <div class="tBtn-div RoundBtn-bg-color" id="play"><i class="icon iconfont i-font-size-4 i-font-color-1"><%=play_icon%></i></div>
+            <div class="tBtn-text-div text-font-color"><%=play%></div>
+        </div>
+        <div class="toolBtn-row-div">
+            <div class="tBtn-div RoundBtn-bg-color" id="Return"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=returning_icon%></i></div>
+            <div class="tBtn-text-div text-font-color"><%=returning%></div>
+        </div>
+    </div>
+
+	<!--<div class="cosdvd-top-view">
+		<div class="b-flex"><div class="div-btn codvd-div-btn" id="power"><i class="icon iconfont"  ><%=power_icon%></i></div><div class="cosdvd-text-label"><%=power%></div></div>
+		<div class="b-flex"><div class="div-btn codvd-div-btn" id="mute"><i class="icon iconfont"  ><%=mute_icon%></i></div><div class="cosdvd-text-label"><%=mute%></div></div>
+		<div class="b-flex" ><div ><div class="cosdvd-div-slider" id="open"><div class="div-slidering"></div></div></div><div class="cosdvd-text-label2"><%=switchBin%></div></div>
+	</div>
+	<div class="center-view">
+		<div class="cosdvd-outer-circle"><div class="cosdvd-fillet">
+			<div id="reverse"><i class="icon iconfont" ><%=fastForward_icon%></i></div>
+			<div id="up"><i class="icon iconfont" ><%=cancle_icon%></i></div>
+			<div id="forware"><i class="icon iconfont" ><%=fastForward_icon%></i></div>
+			<div id="down"><i class="icon iconfont" ><%=cancle_icon%></i></div>
+			<div id="play" class="cosdvd-chassis"><i class="icon iconfont" ><%=play_icon%></i></div>
+		</div></div>
+	</div>
+	<div class="cosdvd-bottom-view">
+	<div class="b-flex"><div class="div-btn codvd-div-btn" id="menu"><i class="icon iconfont"  ><%=menu_icon%></i></div><div class="cosdvd-text-label"><%=menu%></div></div>
+	<div class="b-flex"><div class="div-btn codvd-div-btn" id="Return"><i class="icon iconfont"  ><%=returning_icon%></i></div><div class="cosdvd-text-label"><%=returning%></div></div> 
+    </div>-->
+
+    <div class="control-btn">
+    </div>
+</script>
+
+
+<header id="homelist_header" class="navbar header_font_color">
+
+</header>
+
+
+<div class="content">
+</div>

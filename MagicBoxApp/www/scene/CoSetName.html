@@ -1,0 +1,47 @@
+<style type="text/css" media="all">
+.content {
+    padding: 0;
+    margin: 0;
+    font-family: 'Microsoft YaHei',Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    color: #222;
+    line-height:180%;
+}
+.header {
+    font-size: 1.2em;
+    text-align: center;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.5em 0;
+}
+.header-add {
+    position: absolute;
+    right: 0;
+    padding: -0.7em 0.9em;
+    top: 0;
+}
+.relative {
+    position:relative;
+}
+.back {
+    position: absolute;
+    padding: 0.7em;
+    width: 9px;
+    top: 0;
+    display: inline-block;
+    height: 19px;
+    left: 0px;
+    background: url("../images/left-arrow.png") no-repeat 50% 50%;
+    text-indent: -9999px;
+}
+</style>
+
+<script id="setName_inf" type="text/x-underscore-template">
+	        <input type="text" id="ModeName" value="<%=inputMsg%>" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"></input>
+       </div>
+</script>
+
+<header id="homelist_header" class="navbar header_font_color">
+</header>
+<div class="content">
+
+</div>

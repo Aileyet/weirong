@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest android:hardwareAccelerated="true" android:versionCode="1" android:versionName="0.0.1" package="cn.weirong.magicbox.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"></uses-feature>		
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23" />
+	
+    <application android:hardwareAccelerated="true" android:icon="@drawable/launcher_icon" android:label="@string/app_name" android:name=".MyApplication" android:supportsRtl="true">
+        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name=".MainActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:windowSoftInputMode="adjustResize">
+            <intent-filter android:label="@string/launcher_name">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote" />
+        <activity android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:launchMode="singleTask" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent222222" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.zxing.client.android.CaptureActivity"
+              android:clearTaskOnLaunch="true"
+              android:stateNotNeeded="true"
+              android:configChanges="orientation|keyboardHidden"
+              android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:windowSoftInputMode="stateAlwaysHidden">
+		      <intent-filter>
+		        <action android:name="com.google.zxing.client.android.SCAN"/>
+		        <category android:name="android.intent.category.DEFAULT"/>
+		      </intent-filter>
+    	</activity>
+	    <activity android:name="com.google.zxing.client.android.PreferencesActivity"
+	              android:label="@string/preferences_name"
+	              android:stateNotNeeded="true">
+	    </activity>
+	    <activity android:name="com.google.zxing.client.android.encode.EncodeActivity"
+	              android:label="@string/share_name"
+	              android:stateNotNeeded="true">
+	      <intent-filter>
+	        <action android:name="com.google.zxing.client.android.ENCODE"/>
+	        <category android:name="android.intent.category.DEFAULT"/>
+	      </intent-filter>
+	      <!-- This allows us to handle the Share button in Contacts. -->
+	      <intent-filter>
+	        <action android:name="android.intent.action.SEND"/>
+	        <category android:name="android.intent.category.DEFAULT"/>
+	        <data android:mimeType="text/x-vcard"/>
+	      </intent-filter>
+	      <!-- This allows us to handle sharing any plain text . -->
+	      <intent-filter>
+	        <action android:name="android.intent.action.SEND"/>
+	        <category android:name="android.intent.category.DEFAULT"/>
+	        <data android:mimeType="text/plain"/>
+	      </intent-filter>
+	    </activity>
+	    <activity android:name="com.google.zxing.client.android.book.SearchBookContentsActivity"
+	              android:label="@string/sbc_name"
+	              android:stateNotNeeded="true"
+	              android:screenOrientation="landscape"
+	              android:configChanges="orientation|keyboardHidden">
+	      <intent-filter>
+	        <action android:name="com.google.zxing.client.android.SEARCH_BOOK_CONTENTS"/>
+	        <category android:name="android.intent.category.DEFAULT"/>
+	      </intent-filter>
+	    </activity>
+	    <activity android:name="com.google.zxing.client.android.share.ShareActivity"
+	              android:label="@string/share_name"
+	              android:stateNotNeeded="true"
+	              android:screenOrientation="user"
+	              android:theme="@android:style/Theme.Light">
+	      <intent-filter>
+	        <action android:name="com.google.zxing.client.android.SHARE"/>
+	        <category android:name="android.intent.category.DEFAULT"/>
+	      </intent-filter>
+	    </activity>
+	    <activity android:name="com.google.zxing.client.android.history.HistoryActivity"
+	              android:label="@string/history_title"
+	              android:stateNotNeeded="true">
+	      <intent-filter>
+	        <action android:name="android.intent.action.VIEW"/>
+	        <category android:name="android.intent.category.DEFAULT"/>
+	      </intent-filter>
+	    </activity>
+	    <activity android:name="com.google.zxing.client.android.share.BookmarkPickerActivity"
+	              android:label="@string/bookmark_picker_name"
+	              android:stateNotNeeded="true">
+	      <intent-filter>
+	        <action android:name="android.intent.action.PICK"/>
+	        <category android:name="android.intent.category.DEFAULT"/>
+	      </intent-filter>
+	    </activity>
+	    <activity android:name="com.google.zxing.client.android.share.AppPickerActivity"
+	              android:label="@string/app_picker_name"
+	              android:stateNotNeeded="true"
+	              android:configChanges="orientation">
+		      <intent-filter>
+		        <action android:name="android.intent.action.PICK"/>
+		        <category android:name="android.intent.category.DEFAULT"/>
+		      </intent-filter>
+	    </activity>
+	    <activity android:name="com.google.zxing.client.android.HelpActivity"
+	              android:screenOrientation="user">
+		      <intent-filter>
+		        <action android:name="android.intent.action.VIEW"/>
+		        <category android:name="android.intent.category.DEFAULT"/>
+		      </intent-filter>
+    	</activity>
+        
+	    
+	    <activity
+                android:name=".wxapi.WXEntryActivity"
+                android:label="@string/launcher_name"
+                android:exported="true">
+                <intent-filter>
+                    <action android:name="android.intent.action.VIEW"/>
+                    <category android:name="android.intent.category.DEFAULT"/>
+                    <data android:scheme="wx19545caa6b654cc6"/>
+                </intent-filter>
+            </activity>
+            <activity
+                android:name=".wxapi.WXPayEntryActivity"
+                android:label="@string/launcher_name"
+                android:exported="true"
+                android:launchMode="singleTop">
+                <intent-filter>
+                    <action android:name="android.intent.action.VIEW"/>
+                    <category android:name="android.intent.category.DEFAULT"/>
+                    <data android:scheme="wx19545caa6b654cc6"/>
+                </intent-filter>
+            </activity>
+	    
+	    
+	    
+        <meta-data android:name="IFLYTEK_APPKEY" android:value="'5656bd70'" />
+        <meta-data android:name="IFLYTEK_CHANNEL" android:value="Android_Demo" />
+    </application>
+
+</manifest>

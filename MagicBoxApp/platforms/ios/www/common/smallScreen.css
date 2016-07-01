@@ -1,0 +1,17 @@
+/*//小屏幕，改变登陆框*/
+.form-container{
+	padding: 10px !important;
+	text-indent: 5px !important;
+}
+.form-field{
+	height: 30px !important;
+	width: 80% !important;
+}
+.form-title{
+	margin-bottom: 0px !important;
+	line-height: :35px !important;
+}
+.form-frist{
+	line-height: 45px !important;
+}
+			

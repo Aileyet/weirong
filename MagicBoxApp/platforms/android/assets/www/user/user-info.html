@@ -1,0 +1,214 @@
+<style type="text/css" media="all">
+
+	.triangle{
+		float: right;
+		margin-right: 10px;
+		position: relative;
+		top:2px;
+	}
+	.userInfoContent-warp{
+		display:block;
+		position:relative;
+		margin-top : .3rem;
+		overflow-y:auto; 
+	}
+	.userInfoContent-warp dt{
+		font-size : .34rem;
+		margin-left: .08rem;
+		color: #222222;
+	}
+    .userInfoContent{
+	    margin-top: .2rem;
+	    margin-bottom: .16rem;
+	    border:1px solid silver;
+	   	border-style：-moz-border-radius: .14rem;-khtml-border-radius: .14rem;-webkit-border-radius: .14rem; border-radius: .14rem;
+	    background-color: white;
+   }
+   .userInfo{
+   	    padding:15px 10px;
+        border-bottom: 1px solid silver;
+        text-overflow: ellipsis;
+   }
+   div.userInfo:last-child{
+	   border-bottom: none;
+   }
+   .userInfoLast{
+   	    padding:15px 10px;
+   }
+   .column{
+   	    color:#666666;
+   	    margin-right: 10px;
+   }
+   .userpic{
+   	    float:left;
+   	    width: 1rem;
+   	    height: 1rem;
+   	    border-radius: .1rem;
+   }
+   .userNameContent{
+		float: left;
+		margin-top: .2rem;
+		margin-left: .2rem;
+   }
+   .editUserpic{
+   	    position:absolute;
+   	    right:0;
+   	    bottom:0;
+   	    padding:5px 5px;
+        border-style：-moz-border-radius: 3px;-khtml-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;
+        background-color: #8FB7F8;
+        color:black;
+   }
+   .genderMale{
+   	    position: relative;
+		top: .2rem;
+		color:#ABC9FA;
+   }
+   .genderFemale{
+   		position: relative;
+		top: .2rem;
+   	    color:#FF99CC;
+   }
+   .userHead{
+   		padding-top:.3rem;
+   }
+   
+   .content-inner{
+   		overflow-y:auto;
+   }
+   
+   .select  input{
+   		border: none;
+   		padding-top: .14rem;
+   }
+   .div-btn-bg{
+		height:40px;
+		line-height: 40px;
+		width: calc(100% - 30px);
+		margin-left: 15px;
+		border-radius:3px;
+		color: #ffffff;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+</style>
+
+<script id="userInfoTemplate" type="text/x-jquery-tmpl">
+<div class="userHead">
+		<img  class="userpic" src="<%=portraitUrl%>" onerror="javascript:this.src='../base/img/widget_dface.ing';"/>
+		<div class="userNameContent">
+		   <span class="username"><%=name%></span></br>
+		   <%
+			   var genderClass = "icon-male genderMale";
+			   if(sex == "F"){
+                   genderClass = "icon-female genderFemale";
+			   }%>
+	 	  <span class="<%=genderClass%>"></span>
+		</div>
+		<div style="clear:both"></div>
+	</div>	
+	
+	<dl class="userInfoContent-warp">
+		<dt>基本信息</dt>
+		<dd class="userInfoContent">
+			<div class="userInfo" id="account">
+	    		<span class="column h5" id="softTypeName"><strong>用户名:</strong></span>
+				<span class="dialog-value"><%=nickName%></span>
+				<span class="icon-chevron-right triangle"></span>
+	    	</div>
+	    	<div class="userInfo">
+				<span class="column h5"><strong>手机号码：</strong></span> <%=tel%>
+			</div>
+	    	<div class="userInfo" id="email">
+				<span class="column h5"><strong>邮箱：</strong></span> 
+				<span class="dialog-value"><%=email%></span>
+				<span class="icon-chevron-right triangle"></span>
+			</div>
+		</dd>
+	</dl>
+
+	<dl class="userInfoContent-warp">
+		<dt>常用信息</dt>
+		<dd class="userInfoContent">
+			<div class="userInfo" id="lastName">
+	    		<span class="column h5" ><strong>姓:</strong></span>
+				<span class="dialog-value"><%=lastName%></span>
+				<span class="icon-chevron-right triangle"></span>
+	    	</div>
+	    	<div class="userInfo" id="firstName">
+	    		<span class="column h5"><strong>名:</strong></span>
+				<span class="dialog-value"><%=firstName%></span>
+				<span class="icon-chevron-right triangle"></span>
+	  	 	</div>
+	    	<div class="userInfo kv-line" >
+				<span class="column h5" ><strong>性别：</strong></span>
+				<span class="select kv-v">
+					<select id="sex">
+  						<option value="M">男</option>
+				  		<option value="F">女</option>
+					</select>
+				</span>
+					<span class="icon-chevron-right triangle"></span>
+			</div>
+	    	<div class="userInfo kv-line">
+				<span class="column h5"><strong>证件类型：</strong></span> 
+				<label class="select kv-v">
+					<select id="certType" data-role="none">
+  						<option value="ID_CARD">身份证</option>
+				  		<option value="PASSPORT">护照</option>
+						<option value="LAISSEZ_PASSER">港澳通行证</option>
+					</select>
+				</label>
+				<span class="icon-chevron-right triangle triangle-select"></span>
+			</div>
+	    	<div class="userInfo" id="certNO">
+				<span class="column h5"><strong>证件号码：</strong></span>
+				<span class="dialog-value"><%=certNO%></span> 
+				<span class="icon-chevron-right triangle"></span>
+			</div>
+			<div class="userInfo kv-line">
+				<span class="column h5"><strong>出生年月：</strong></span>
+				<label class="select kv-v">
+					<input class="kv-input" id="birthday">
+				</label>
+				<span class="icon-chevron-right triangle"></span>
+			</div>
+    		<div class="userInfo" id="residence">
+				<span class="column h5"><strong>现居住地址：</strong></span> 
+				<span class="dialog-value"><%=residence%></span> 
+				<span class="icon-chevron-right triangle"></span>
+			</div>
+		</dd>
+	<dl>
+</script>
+<!-- header -->
+
+<header class="navbar">
+                <div class="nav-wrap-left">
+                    <a class="react back" ><i class="icon iconfont">&#xe661;</i></a>
+                </div>
+                <span class="nav-header h1 adjust">我的资料</span>
+
+				<div class="nav-wrap-right">
+					<!-- <a class="react" gaevent="imt/hd/home" >
+						<span class="nav-word">
+							 保存
+						</span>
+			       	</a> -->
+			     </div>
+        </header>
+
+<!-- content -->
+
+<div class="content" >
+    <div class="content-inner" id="content">
+    
+    </div>
+    <div class="div-btn-bg div-marg40 btnColor" id="Logout">
+		注销		
+	</div>
+</div>
+
+
+
+

@@ -1,0 +1,87 @@
+<style type="text/css" media="all">
+	.main{
+		position:relative;
+		text-align: center;
+		top: 20%;
+	}
+	.btn-div{
+		width: 80px;
+		height: 80px;
+		background-color: #efefef;
+		box-shadow:1px 2px 3px 2px #dddddd;
+		border-radius:10px; 
+		color: #818181;
+		text-align: center;
+		display: table;
+		margin: auto;
+		border-left: 1px #ffffff solid;
+	}
+	.btn-div i{
+		font-size: 0.5rem;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.text-1{
+		color: #222222;
+		font-size: 0.42rem;
+		font-weight: bold;
+		margin: 8px;
+	}
+	.text-2{
+		color: #575b66;
+		font-size: 0.28rem;
+	}
+	.text-2 p{text-align: center;margin: 7px;}
+	
+	.bottom-div{
+		position: absolute;
+		display: table;
+		border-top: 1px #e7e7e7 solid;
+		width: 100%;
+		height: 60px;
+		bottom: 50px;
+	}
+	.bottom-div div{
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		color: #ffffff;
+		font-size: 0.3rem;
+	}
+    .reStudy{
+        width:185px;
+    }
+	.bottom-div div:nth-child(1){background-color: #dd3d95;border-right: 1px #e7e7e7 solid;}
+	.bottom-div div:nth-child(2){background-color: #dd3d95;border-right: 1px #e7e7e7 solid;}
+	.bottom-div div:nth-child(3){background-color: #575b64;}
+</style>
+
+
+
+
+<header id="homelist_header" class="navbar header_font_color">
+</header>
+
+<script id="ehome_SeRemoteCopy" type="text/x-underscore-template">
+<div class="main">
+		<div class="btn-div"><i class="icon iconfont"></i></div>
+		<div class="text-1"></div>
+	    <div class="text-2" id="tipIng">
+			<p><%=message1%></p>
+			<p><%=message2%></p>
+		</div>
+		<div class="text-2" id="tipOK" style="display:none">
+			<p><%=message3%></p>
+			<p><%=message4%></p>
+		</div>
+	</div>
+	<div class="bottom-div">
+		<div class="cancel"><%=cancel%></div>
+		<div class="reStudy" style="display:none"><%=reStudy%></div>
+		<div id="save" style="color:gray" ><%=save%></div>
+	</div>
+</script>
+
+<div class="content">
+
+</div>

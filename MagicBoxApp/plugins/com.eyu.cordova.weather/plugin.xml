@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="com.eyu.cordova.weather" version="0.1.0">
+    <name>Weather</name>
+    <description>Weather Plugin for Phonegap</description>
+    <license>MIT</license>
+    <keywords>Weather, Weather, phonegap</keywords>
+ 
+    <!-- android -->
+    <platform name="android">
+        <js-module src="www/Weather.js" name="Weather">
+            <clobbers target="window.Weather" />
+        </js-module>
+ 
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Weather">
+                <param name="android-package" value="com.eyu.cordova.weather.Weather"/>
+            </feature>
+        </config-file> 
+        
+        <config-file target="AndroidManifest.xml" parent="/*">
+        </config-file>
+        
+        <source-file src="src/android/Weather.java" target-dir="com/eyu/cordova/weather" />      
+    </platform>         
+</plugin>

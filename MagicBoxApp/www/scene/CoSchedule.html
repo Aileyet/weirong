@@ -1,0 +1,299 @@
+<style type="text/css" media="all">
+.main-box{
+	    position:relative;
+		height: 90px;
+		background-color: #ffffff;
+		display: box;
+		display: -webkit-box;
+		box-orient:horizontal;
+		-webkit-box-orient: horizontal;
+		transition: right 500ms ease-out 0s; 
+		-webkit-transition: right 500ms ease-out 0s; 
+		margin-top:10px;
+	}
+	.b-flex-1{
+		width:25%;
+		height:100%;
+		border: 1px #e7e7e7 solid;
+		border-top: none;
+		text-align: center;
+		font-size: 0.9em;
+		color: #575b64;
+		display: table;
+	}
+	.b-flex-1 i,.b-flex-2 i{
+		font-size: 2em;
+		color: #575b64;
+	}
+	.b-flex-1>div,.b-flex-2>div{display: table-cell;vertical-align: middle;}
+	.b-flex-2{
+		width:75%;
+		height:100%;
+		border: 1px #e7e7e7 solid;
+		border-left: none;
+		border-top: none;
+		text-align: center;
+		font-size: 1.2em;
+		color: #575b64;
+		display: table;
+	}
+	.main-box:nth-child(1){margin-top: 10px;}
+	.main-box:nth-child(1) .b-flex-1,.main-box:nth-child(1) .b-flex-2{border-top: 1px #e7e7e7 solid;}
+	.b-flex-2 .open-color{color: #de3d96;}
+		.div-slider{
+		position:relative;
+		width: 50px; 
+		height: 30px;
+		background-color: #dcdde0;
+		border-radius:25px;
+		padding: 3px;
+		overflow: hidden;
+		margin: 0px auto;
+	}
+	.div-slider .div-slidering{
+		width: 30px;
+		height: 30px;
+		border-radius:100%;
+		background-color: #fff;
+		float: left;
+		transition: float 500ms ease-out 0s; 
+		-webkit-transition: float 500ms ease-out 0s; 
+	}
+	
+	.setSch{
+		height: 90px;
+		background-color: #ffffff;
+		display: box;
+		display: -webkit-box;
+		box-orient:horizontal;
+		-webkit-box-orient: horizontal;
+		margin: 10px 0px; 
+		text-align: center;
+		color: #575b64;
+		font-size: 1em;
+	}
+	.setSch i{color: #de3d96;}
+	.setSch>div:nth-child(1){
+		width: 40%;
+		line-height: 40px;
+	}
+	.setSch>div:nth-child(2){
+		width: 60%;
+		line-height: 40px;
+	}
+</style>
+<style type="text/css" media="all">
+	.main-box1{
+		height:50%;
+		width:50%;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient:vertical;
+		color: #585c64;
+		overflow-y:scroll;
+	}
+	.table-rg{
+		background-color: #eff0f4;
+		padding:0px 10px 0px 15px;
+		overflow: hidden;
+	}
+	.table-rg div{
+		background-color: #fff;
+	}
+    .table-rg .div-menu{
+		margin-top:12px;
+		margin-bottom:12px;
+		background-color: #eff0f4;
+		overflow: hidden;
+		 border-radius: 10px;
+	}
+	.div-btn{
+		position:relative;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		background-color: #efefef;
+		border-radius: 50px;
+		text-align: center;
+		border-left:2px #fff solid; 
+		box-shadow: 1px 2px 1px 1px #A8A1A1;
+		overflow: hidden;
+		margin: auto;
+	}
+	.div-menu div:nth-child(1){
+		float: left;
+		width: 50%;
+		padding:0px 0px;
+		background-color: #eff0f4;
+	}
+	.div-menu div:nth-child(2){
+		float: left;
+		width: 50%;
+		text-align:right;
+		padding:0px 0px;
+		background-color: #eff0f4;
+		color: #df489c;
+	}
+	.table-rg .div-menu i{
+		float: right;
+	}
+	.div-list{
+		<!-- border: 1px #e7e7e7 solid; -->
+		overflow: hidden,
+		 padding-left:7px;
+		 padding-right:7px;
+		 margin-top:5px;
+		 height: 50px;
+	}
+	.div-list1{
+		<!-- border: 1px #e7e7e7 solid; -->
+		overflow: hidden;
+		 border-radius: 10px;
+		 padding-left:7px;
+		 padding-right:7px;
+		 margin-top:5px;
+		 height: 50px;
+	}
+	.div-list2{
+		<!-- border: 1px #e7e7e7 solid; -->
+		overflow: hidden;
+		 border-radius: 10px;
+		 padding-left:7px;
+		 padding-right:7px;
+		 margin-top:5px;
+		 height: 50px;
+	}
+	.div-list div:nth-child(1){
+		float: left;
+		width: 50%;
+		line-height: 50px;
+	}
+	.div-list div:nth-child(2){
+		float: left;
+		width: 50%;
+		text-align:right;
+		line-height: 50px;
+	}
+	.content{
+		background-color:#eff0f4;
+	}
+	@media screen and (max-device-width: 350px) {
+		.div-list{
+		border: 1px #e7e7e7 solid;
+		overflow: hidden;
+		 border-radius: 10px;
+		 padding-left:7px;
+		 padding-right:7px;
+		 margin-top:5px;
+		 height: 40px;
+	}
+	.div-list div:nth-child(1){
+		float: left;
+		width: 50%;
+		line-height: 40px;
+	}
+	.div-list div:nth-child(2){
+		float: left;
+		width: 50%;
+		text-align:right;
+		line-height: 40px;
+	}
+	 .table-rg .div-menu{
+		margin-top:8px;
+		margin-bottom:8px;
+	}
+	}
+	.item{
+	  font-size:1.25em;
+	}
+	.coloritem{
+	  margin:10px;height:20px;border:solid 1px #303030;
+	}
+	.color{
+		display:block;
+		width: 40px;
+		height: 100%;
+		float: right;
+		padding-top:30%;
+	}
+	.main-conterner{position: relative;}
+	.cont-edit{
+		position:absolute;
+		height: 100%;
+		top: 0px;
+		right: -100px;
+		font-size: 0;
+		transition: right 500ms ease-out 0s; 
+		-webkit-transition: right 500ms ease-out 0s; 
+	}
+	.cont-edit>div{
+		display: table;
+		height: 100%;
+	}
+	.cont-edit-1{
+		display:table-cell;
+		height:100%;
+		width: 80px;
+		color: #ffffff;
+		font-size: 0.5rem;
+		text-align: center;
+		font-weight: bold;
+		vertical-align: middle;
+	}
+	.cont-edit-1{background-color: #ff3a30;width: 100px;}
+</style>
+
+
+<script id="schedule_inf" type="text/x-underscore-template">
+	<div class="setSch" style="display:none">
+	<div class="periodBtn">
+	   <i class="icon iconfont"><%=priod_icon%></i> <span id="periodName"><%=priod%></span>
+	  
+	</div>
+	<div>
+		<label class="select kv-v" style="padding-top:23px">
+		<input class="kv-input" id="startTime">
+		</label>
+		<label class="select kv-v" style="padding-top:5px">
+		<input class="kv-input" id="endTime">
+		</label>
+	</div>
+</div>
+<div class="main-box1" id="periodList" style="display:none">
+	<div class="table-rg">
+	</div>
+</div>
+<div class="main-box1" id="weekList" style="display:none">
+	<div class="table-rg">
+	</div>
+</div>
+<div class="main-box1" id="equipList" style="display:none">
+<div class="table-rg">
+</div>
+</div>
+<div class="main-box1" id="tempList" style="display:none">
+<div class="table-rg">
+</div>
+</div>
+<div class="main-box1" id="fanStepList" style="display:none">
+<div class="table-rg">
+</div>
+</div>
+<div class="main-box1" id="ModeImgList" style="display:none">
+<div class="table-rg">
+</div>
+</div>
+<!-- <div class="main-box">
+<div class="b-flex-1" id="add"><div><i class="icon iconfont"><%=add_icon%></i><div><%=add%></div></div></div>
+</div> -->
+</script>
+
+
+<header id="homelist_header" class="navbar header_font_color">
+</header>
+
+<div class="content">	
+</div>
+
+

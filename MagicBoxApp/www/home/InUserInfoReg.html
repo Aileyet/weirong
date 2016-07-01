@@ -1,0 +1,114 @@
+<style type="text/css" media="all">
+	.div-cont{
+		height:50px;
+
+		padding-left: 20px;
+	}
+	.div-label{
+		line-height:50px;
+		width:70px;
+		float: left;
+	}
+	.div-input{
+		line-height:50px;
+		width:calc(100% - 70px); 
+		float: left;
+	}
+	.div-input input{
+		width: 80%;
+		margin: 0px;
+		padding: 3px;
+		outline:none;
+		border-style: none;
+		border: none;
+		box-shadow:none;
+	}
+	
+	.border-bottom{
+		border-bottom:1px solid #e7e7e7;
+	}
+	
+	.div-input2{
+		line-height:50px;
+		width:calc(100% - 220px);
+		float: left;
+	}
+	.div-input2 input{
+		width: 100%;
+		border: none;
+	}
+	.div-label2{
+		line-height: 50px;
+		width: 130px;
+		float: left;
+		border-left: 1px solid #e7e7e7;
+		padding-left: 15px;
+	}
+	.div-marg30{
+		margin-top: 0.3rem;
+	}
+	.div-marg20{
+		margin-top: 20px;
+	}
+	.div-marg40{
+		margin-top: 0.5rem;
+	}
+	
+	.div-btn-bg{
+		height:40px;
+		line-height: 40px;
+		width: calc(100% - 30px);
+		
+		margin-left: 15px;
+		border-radius:3px;
+		color: #ffffff;
+		text-align: center;
+	}
+</style>
+
+<script type="text/x-underscore-template" id="regTemplate">
+	<div class="div-cont div-marg30 inputColor">
+		<div class="div-label fontColor"><%=accountNumber%></div>
+		<div class="div-input"><input id="account" placeholder="<%=accountNumber_placeholder%>" class="inputColor" ></div>
+	</div>
+	
+	<div class="div-cont div-marg20 border-bottom inputColor">
+		<div class="div-label fontColor"><%=register_password%></div>
+		<div class="div-input"><input id="register_password" type="password" class="inputColor" placeholder="<%=register_password_placeholder%>" ></div>
+	</div>
+	<div class="div-cont border-bottom inputColor">
+		<div class="div-label fontColor"><%=register_password_confirm%></div>
+		<div class="div-input"><input id="register_password_confirm" type="password" placeholder="<%=register_password_confirm_placeholder%>" class="inputColor" ></div>
+	</div>
+	<div class="div-cont inputColor">
+		<div class="div-label fontColor"><%=register_phoneNO%></div>
+		<div class="div-input"><input id="register_phoneNO" placeholder="<%=register_phoneNO_placeholder%>" class="inputColor" ></div>
+	</div>
+	
+	<div class="div-cont div-marg20 inputColor">
+		<div class="div-label fontColor"><%=register_captcha%></div>
+		<div class="div-input2"><input placeholder="<%=register_captcha_placeholder%>" id="register_captcha" class="inputColor" ></div>
+		<div class="div-label2 fontColor" id="time_CAPTCHA"><%=time_CAPTCHA%></div>
+	</div>
+	
+	<div class="div-btn-bg div-marg40 btnColor" id="submit_register_info">
+		<%=submit_register_info%>
+	</div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 20px;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1"><%=register%></span>
+</header>
+
+
+<!-- content -->
+
+<div class="content" id="content">
+	
+</div>

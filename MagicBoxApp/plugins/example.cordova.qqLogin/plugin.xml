@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="example.cordova.qqLogin" version="0.1.0">
+    <name>qqLogin</name>
+    <description>qqLogin Plugin for Phonegap</description>
+    <license>MIT</license>
+    <keywords>qq, login, phonegap</keywords>
+ 
+    <!-- android -->
+    <platform name="android">
+        <js-module src="www/qqLogin.js" name="QQLogin">
+            <clobbers target="window.QQLogin" />
+        </js-module>
+ 
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="QQLogin">
+                <param name="android-package" value="example.cordova.qqLogin.QQLogin"/>
+            </feature>
+        </config-file> 
+        
+        <config-file target="AndroidManifest.xml" parent="/*">
+        
+		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity android:name="com.tencent.connect.common.AssistActivity" 
+				android:theme="@android:style/Theme.Translucent.NoTitleBar" 
+				android:screenOrientation="portrait"/> 
+
+			<activity 
+				android:name="com.tencent.tauth.AuthActivity" 
+				android:noHistory="true" 
+				android:launchMode="singleTask" > 
+				<intent-filter> 
+					<action android:name="android.intent.action.VIEW" /> 
+						<category android:name="android.intent.category.DEFAULT" /> 
+						<category android:name="android.intent.category.BROWSABLE" /> 
+						<data android:scheme="tencent222222" /> 
+				</intent-filter> 
+			</activity>
+		</config-file>
+        
+        <source-file src="src/android/QQLogin.java" target-dir="src/example/cordova/qqLogin" />   
+        <source-file src="src/android/mta-sdk-1.0.0.jar" target-dir="libs" framework="true"/>      
+        <source-file src="src/android/open_sdk.jar" target-dir="libs" framework="true"/>   
+    </platform>         
+</plugin>

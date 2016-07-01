@@ -1,0 +1,201 @@
+ <script id="footer_menu_Template" type="text/x-underscore-template">
+	<ul class="tab-inner" id="index_foot">
+		<li data-module="home" data-value="home/MeIndex" class="tab-item active">
+			<i class="icon iconfont" style="font-size: 25px;"><%=home_icon%></i>
+			<div><%=home%></div>
+		</li>
+		<li data-module="bankmap" data-value="devicemanage/Ehome" class="tab-item">
+			<i class="icon iconfont" style="font-size: 25px;"><%=equipment_icon%></i>
+			<div><%=equipment%></div>
+			<!--<div style="position: absolute;width: 15px;height: 15px;border-radius:100%;background-color: #df489c;
+						top: 2px;right: 5px;color: #fff;line-height: 15px;text-align: center; ">5</div>-->
+		</li>
+		<li data-module="voice" class="tab-item bgStyle_gray" >
+			<i class="icon iconfont microphone"><%=microphone_icon%></i>
+		</li>
+		<li data-module="cube" data-value="cube/cube-index" class="tab-item">
+			<i class="icon iconfont" style="font-size: 25px;"><%=mall_icon%></i>
+			<div><%=mall%></div>
+		</li>
+		<li data-module="ehome" data-value="ehome/ehome-index"  class="tab-item">
+			<i class="icon iconfont" style="font-size: 25px;"><%=my_icon%></i>
+			<div><%=my%></div>
+		</li>
+	</ul>
+</script>
+ 
+ <footer class="bar-tab">
+	<ul class="tab-inner" id="index_foot">
+		<li data-module="home" data-value="home/MeIndex" class="tab-item active">
+			<i class="icon iconfont" style="font-size: 25px;">&#xe668;</i>
+			<div>主页</div>
+		</li>
+		<li data-module="bankmap" data-value="devicemanage/Ehome" class="tab-item">
+			<i class="icon iconfont" style="font-size: 25px;">&#xe669;</i>
+			<div>设备</div>
+			<!--<div style="position: absolute;width: 15px;height: 15px;border-radius:100%;background-color: #df489c;
+						top: 2px;right: 5px;color: #fff;line-height: 15px;text-align: center; ">5</div>-->
+		</li>
+		<li data-module="voice" class="tab-item bgStyle_gray" >
+			<i class="icon iconfont microphone">&#xe66a;</i>
+		</li>
+		<li data-module="cube" data-value="cube/cube-index" class="tab-item">
+			<i class="icon iconfont" style="font-size: 25px;">&#xe66b;</i>
+			<div>敢尚商城</div>
+		</li>
+		<li data-module="user" data-value="user/user-info"  class="tab-item">
+			<i class="icon iconfont" style="font-size: 25px;">&#xe66c;</i>
+			<div>我的</div>
+		</li>
+	</ul>
+</footer>
+<style type="text/css">
+	 body footer{
+		color:white;
+	 }
+	.icon-gittip{
+		z-index: 100;
+	}
+   .promptInformation{
+      display: none;
+      line-height: 1;
+      background-color: #0882f0;
+      color: #fff;
+      height: 11px;
+      font-size: 10px;
+      /*font-weight: 700 !important;*/
+      position: relative;
+      width: 11px;
+      padding-bottom: 1px;
+      bottom: 31px;
+      left: 58%;
+      border: solid 2px #ffffff;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+     /* -moz-box-shadow: 1px 1px 8px #cccccc;
+      -webkit-box-shadow: 1px 1px 8px #cccccc;
+      box-shadow: 1px 1px 8px #cccccc;*/
+   }
+	/*.userPromptNum{
+      color:white;
+      display: block;
+      position: relative;
+      bottom: 15px;
+   }
+	.userPrompt{
+    color: #0882f0;
+	display: none;
+	position: relative;
+	left: 17px;
+	z-index: -1;
+	bottom: 33px;
+
+   }*/
+    #footer-more-detail div{
+        text-align: center;
+        color: black;
+        z-index: 1000 !important;
+    }
+	#footer-more-detail{
+		z-index: 1000 !important;
+		width: 100%;
+		height: 70px;
+		background-color: #DFDFDF;
+		position: absolute;
+		left: 0px;
+		bottom: 60px;
+		display: none;    /*开始的时候是隐藏的*/
+	}
+	.first_row {
+		height: 70px;
+		width: 100% ;
+		margin: 0;
+		/*background-color: green;*/
+		position: absolute;
+	}
+	.second_row{
+		height: 70px;
+		width: 100%;
+		margin: 0;
+		/*background-color: red;*/
+		position: absolute;
+		bottom: 0px;
+	}
+	.detail_left{
+		padding-top: 11px;
+		position: absolute;
+		left: 0px;
+		height: 70px;
+		width: 33.3%;
+		float: left;
+	}
+	.detail_center2{
+	  padding-top: 11px;
+      width: 33.3%;
+      height: 70px;
+      margin-left: 33.3%;
+	  float:left;
+	}
+	.detail_right{
+	  padding-top: 11px;
+	  text-align: center;
+      width: 33.3%;
+      height: 70px;
+      position: absolute;
+      top:0px;
+      right: 0px;
+	}
+
+	/*---simona--modify--add mask--*/
+	#more-detail-mask{
+      z-index: 11;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0);
+      display: none;
+   }
+	.footer-menu {
+		z-index: 110 !important;
+		transform:translate(0%);
+		-webkit-transform: translate(0%);
+		transition: transform 500ms ease-out 0s; 
+		-webkit-transition: -webkit-transform 500ms ease-out 0s; 
+	}
+	.footer-move{
+		transform:translate(80%);
+		-webkit-transform: translate(80%);
+	}
+	
+	.microphone{
+		font-size: 1.2rem;
+		z-index: 9999;
+		position: relative;
+		bottom: 25px;
+	}
+	
+	@media screen and (max-device-width: 350px) {
+		.tab-item:nth-child(3):BEFORE{
+			height: 72px;
+			border-top-left-radius: 50%;
+			border-top-right-radius: 50%;
+		}
+		.microphone{bottom: 22px;}
+	}
+	
+</style>
+
+<div id="footer-more-detail">
+	<div class="first_row">
+		<div class="detail_left" id="footMySubscribe"><span class="icon-info-sign icon-2x"></span><div>我的预约</div></div>
+		<div class="detail_center2" id="footSysSetting"><span class=" icon-cog icon-2x"></span><div>系统设置</div></div>
+		<div class="detail_right" id="footSignout"><span class="icon-signout icon-2x"></span><div>退出程序</div></div>
+	</div>
+   <div class="pointer" style="content: ''; position: absolute; border-style: solid; border-width:
+    15px 15px 0px; display: block; width: 0px; z-index: 1; bottom: -11px; right: 9.5%;
+    border-color:#DFDFDF transparent;">
+	</div>
+</div>

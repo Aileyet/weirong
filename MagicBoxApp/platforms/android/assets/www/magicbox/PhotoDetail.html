@@ -1,0 +1,59 @@
+<style type="text/css" media="all">
+	.main-box{
+		height:100%;
+		width:100%;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient:vertical;
+	}
+	img{
+		height: 75%;
+		width: 100%;
+	}
+	@media screen and (max-device-width: 350px) {
+		img{
+		height: 70%;
+		}
+
+	}
+	#downloadIcon{
+		position: fixed;
+		border-radius:100%;
+		width:60px;
+		height:60px;
+		 background-color:#efefef;
+		 border:1px solid #dcdcdc; 
+		 bottom:1.5%;
+		 left: 10%;
+		 text-align: center;
+	}
+	#delIcon{
+		position: fixed;
+		border-radius:100%;
+		width:60px;
+		height:60px;
+		bottom:1.5%;
+		left: 75%;
+		text-align: center; 
+	}
+</style>
+
+<script type="text/x-underscore-template" id="photoDetailIconTemplate">
+	<div id="downloadIcon"><i class="icon iconfont" style="font-size: 40px;color:#343740;"><%=downloadIcon%></i></div>
+ 	<div id="delIcon"><i class="icon iconfont" style="font-size: 64px;color:#df489c;line-height:55px;"><%=delIcon%></i></div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+
+</header>
+
+
+<!-- content -->
+<div class="content" id="content">
+	<div class="main-box">
+		<img  src="../images/ehome-temp.jpg"/>
+	</div>
+	
+</div>

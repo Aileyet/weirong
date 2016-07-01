@@ -1,0 +1,478 @@
+/* .navbar ~ .content {
+	padding-top: 1.4rem;
+} */
+.checkcss{
+ position: absolute;
+ border-radius:100%; 
+ right:10px;
+ top: 15px;
+ color: #fff;
+ line-height: 15px;
+ text-align: center;
+  font-size:11px; 
+}
+.golden{
+	color: #de3d96 !important;
+}
+
+
+/*图标颜色*/
+.iconColor{
+	color: #585c64;
+}
+.iconBarColor{
+	background-color: #de3d96;
+}
+/*字体颜色*/
+.fontColor{
+	color: #585c64;
+}
+/*背景颜色*/
+.backgroundColor{
+	background-color: #f3f4f6;
+}
+/*菜单项DIV背景颜色*/
+.menuDivColor{
+	background-color: #fff;
+}
+/*标题颜色*/
+.titleColor{
+	color: #585c64;
+}
+.circleBackground{
+	background-color: #fff;
+}
+/*文本框颜色*/
+.inputColor{
+	background-color: #fff;
+}
+/*按钮的背景颜色*/
+.btnColor{
+	background-color: #de3d96;
+}
+/*进度条颜色*/
+.vol-progressColor{
+	background-color: #F967B9;
+}
+
+.circleBorderColor{
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(red), to(blue));
+}
+.circleFontColor{
+	color: #585c64;
+}
+.magicbox_PlBTMain_top-box{
+		background-color: #EEF0F3;
+}
+.magicbox_PlBTMain_div-play{
+	background-color: #e1e1e1;
+}
+.magicbox_PlBTMain_div-play:AFTER{
+	background: gradient(linear, 50% 100%, 0 50%, from(#e3017f), to(#555e6e));
+	background: -webkit-gradient(linear, 50% 100%, 0 50%, from(#EC6DB4),
+		to(#E5C4D8));
+}
+.magicbox_PlBTMain_gear-1{
+	background-color: #efefef;
+}
+.home_InUserInfoL_fontColor{
+	color: #585c64;
+}
+.home_InUserInfoL_btnRegister{
+	color: #de3d96;
+	border: 1px solid #de3d96;
+}
+.magicbox_Setup_table-rg{
+		background-color: #eff0f4;
+}
+.magicbox_Setup_table-rg div{
+		background-color: #fff;
+		color: #585c64;
+}
+.magicbox_Setup_addColor{
+	background-color: #de3d96;
+}
+.magicbox_InShareUser_div-top{
+	background-color: #eeeef0;
+}
+.magicbox_InShareUser_fontColor{
+		color: #dd3d95;
+}
+.magicbox_addInShareUser_backgroundColor{
+	background-color: #f3f4f6;
+}
+.home_MeFuncSet_get-back{
+	background-color: #e43594;
+}
+.ehome_CoSDVD_iconColor{
+	background-color: #fff;
+	color: #585c64;
+	border-left:2px #fff solid; 
+	box-shadow: 1px 2px 1px 1px #A8A1A1;
+}
+.ehome_CoSDVD_iconColor>i{
+	color: #585c65 !important;
+}
+.network-model .checked-i {
+	color: #de3d96;
+}
+.magicbox_CoBTSetup_div-listColor{
+		background-color: #D9D9D9;
+		color: #585c64;
+}
+.magicbox_CoBTSetup_div-listColor2{
+		background-color: #fff;
+		color: #585c64;
+}
+.magicbox_CoBTSetup_div-slider{
+	background-color: #33c24e;
+}
+.magicbox_CoBTSetup_div-slidering{
+	background-color: #fff;
+}
+.magicbox_SeSubscribe_i-color{
+	color: #df3c97;
+}
+.home_MeFuncSet_div-menu{
+	background-color: #ffffff;
+}
+.div-menu>div{
+	color: #222222;
+}
+.home_MeFuncSet_normal{
+		color: #575b64;
+	}
+.home_MeFuncSet_title-label{
+		color: #575b67;
+	}
+/*.main-box{
+		width:100%;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient:vertical;
+	}
+	.top-box{
+		height:45%;
+		text-align: -webkit-center;
+		padding: 30px 0px;
+	}
+	.view-box{
+		width: 250px;
+		height: 250px;
+		border-radius:100%;
+		background: -webkit-gradient(linear, 0 0, 0 100%, from(red), to(blue));
+	}
+	.view-box .div-circle{
+		position: relative;
+		display: inline-block;
+		width: 230px;
+		height: 230px;
+		border-radius: 100%;
+		background-color: #fff;
+		top: calc(50% - 230px / 2);
+	}
+	.view-box .div-circle .div-list{
+		height: 73px;
+		text-align:center;
+		line-height:73px;   
+	}
+	.view-box .div-circle div:nth-child(1){
+		font-size:18px;  
+	}
+	.view-box .div-circle div:nth-child(2){
+		font-size:89px;
+		color:#34bd3c; 
+		font-weight:bold;
+		font-weight: bold;
+	}
+	.view-box .div-circle div:nth-child(2) span:nth-child(1){
+		font-size:84.5px;
+		font-weight:bold;
+		margin-left: 5px;
+		color: #222222;
+	}
+	.view-box .div-circle div:nth-child(2) span:nth-child(2){
+		font-size:44.5px;
+		font-weight:bold;
+		margin-left: 5px;
+		color: #222222;
+	}
+	.view-box .div-circle div:nth-child(3){
+		font-size:26px;
+		color:#e5007e; 
+	}
+	.bottom-box{
+		height:50%;
+		color: #585c64;
+	}
+	.table-rg{
+		background-color: #fff;
+		padding:0px 20px;
+		overflow: hidden;
+	}
+	.table-rg .div-list{
+		width:100%;
+		border-bottom: 1px #e7e7e7 solid;
+		overflow: hidden;
+		height: 52px;
+	}
+	.table-rg .div-list div:nth-child(1){
+		float: left;
+		width: 50%;
+		line-height: 52px;
+	}
+	.table-rg .div-list div:nth-child(2){
+		float: left;
+		width: 50%;
+		text-align:right;
+		line-height: 52px;
+	}
+	.div-middle{
+		padding:20px 0px;
+		text-align: center;
+		color: #dd3d97;
+	}
+	@media screen and (max-device-width: 350px) {
+		.view-box{
+		width: 170px;
+		height: 170px;
+		}
+		.view-box .div-circle{
+			width: 150px;
+			height: 150px;
+			top: calc(50% - 150px / 2);
+		}
+
+		.table-rg .div-list{
+			height: 40px;
+		}
+		.table-rg .div-list div:nth-child(2),.table-rg .div-list div:nth-child(1) {
+			line-height: 40px;
+		}
+		.view-box .div-circle .div-list{
+			height: 45px;
+			text-align:center;
+			line-height:45px;   
+		}
+		.view-box .div-circle div:nth-child(1){
+			font-size:14px;  
+		}
+		.view-box .div-circle div:nth-child(2){
+			font-size:48px;
+			color:#34bd3c; 
+			font-weight:bold;
+			font-weight: bold;
+		}
+		.top-box{
+			padding:8px 0px 0px 0px;
+		}
+		.view-box .div-circle div:nth-child(2) span{
+			font-size:22.5px;
+			font-weight:bold;
+			margin-left: 5px;
+			color: #222222;
+	}
+	}*/
+	/*首页背景色*/
+	.meindex-menus{background-color: #ffffff;color: #222;}
+	/*菜单块 背景颜色*/
+	#ul1 .menu-bg-black{background:-webkit-gradient(linear, 100% 0%, 0% 100%,from(#585c65), to(#585c65));color: #ffffff;}
+	#ul1 .menu-bg-pink{background-color: #dd3d95;color: #ffffff;}
+	.meindex-menus-list{background: rgba(39,44,53,1);}
+	.meindex-menus-list ul li:nth-child(1){color:#c83386;}
+	.meindex-menus-list ul li span div{background-color: #c83386;}
+	
+	.misc-menu .menu-bg-black{background-color: #585c65;color: #ffffff;}
+	.misc-menu .menu-bg-pink{background-color: #dd3d95;color: #ffffff;}
+	
+	/* 
+	* 点灯页面样式
+	*/
+	.colamp-view-box{background-color: #dcdde0;}
+	.colamp-color{background-color: #8d12eb;}
+	.colamp-top-box,.colamp-bottom-box{background-color: #f3f4f6}
+	/*
+	* 空调页面样式
+	*/
+	.coair-content-bgcolor{background: -webkit-gradient(linear, 100% 0%, 100% 100%,from(#f3f4f6), to(#f3f4f6));}
+	.div-btn {
+		position: relative;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		background-color: #efefef;
+		border-radius: 50px;
+		text-align: center;
+		border-left: 2px #fff solid;
+		box-shadow: 1px 2px 1px 1px #A8A1A1;
+		overflow: hidden;
+		margin: auto;
+	}
+	.control-btn .div-btn i {color: #585c64;}
+	/*
+	* 插座页面样式
+	*/
+	.cosocket-view-box{background-color: #dcdde0;}
+	.cosocket-view-box i{color: rgb(222, 61, 150);}
+	.div-slider .div-slidering{background-color: #ffffff;}
+	/*
+	* 电视机页面样式
+	*/
+	.cotv-main{color: #585c64;}
+	.cotv-volume-bg{
+		background: gradient(linear,0 0,0 100%,from(#e6e6e6),to(#f3f4f5));
+		background: -webkit-gradient(linear,0 0,0 100%,from(#e6e6e6),to(#f3f4f5));
+	}
+	.cotv-volume-bg > div{
+		background-color: #efefef;
+		box-shadow: 1px 1px 1px 1px #A8A1A1;
+		border-top:2px #fff solid; 
+		border-left:2px #fff solid; 
+	}
+	/*
+	* 净化器页面样式
+	*/
+	.coclean-bor-bottom{border-bottom: 3px #e4007f solid;}
+	.coclean-content-view{background-color: #ffffff;}
+	.coclean-content-view>div:nth-child(1){color: #585c64;}
+	.coclean-content-view .b-flex:nth-child(2){color: #585c64;}
+	.coclean-content-view .b-flex:nth-child(1){color: #e4007f;}
+	.coclean-power{
+		background: #efefef;
+		box-shadow: 1px 2px 3px 2px #C7C2C2;
+		border-top: 2px #ffffff solid;
+		border-left: 2px #ffffff solid;
+	}
+	.coclean-text-icon i{color: #de3d96;}
+	.coclean-text-icon div{color: #585c64;}
+	.coclean-text-icon div span{color: #de3d96;}
+	.coclean-operation{
+		background: #efefef;
+		box-shadow: 1px 2px 3px 2px #C7C2C2;
+		border-top: 2px #ffffff solid;
+		border-left: 2px #ffffff solid;
+	}
+	/*
+	* 智能厨房页面样式
+	*/
+	.cokitchen-div-bottom{background-color: #fff;}
+	.cokitclen-div-list div:nth-child(1){color: #585c64;}
+	.cokitclen-text-color{color: #6ece70;}
+	/*
+	* 智能卫生间页面样式
+	*/
+	.cotoilet-view-box{background-color: #dcdde0;}
+	.cotoilet-view-box i{color: #e4007f;}
+	.cotoilet-div-sliders div:nth-child(1):AFTER{background-color: #e4007f;}
+	/*
+	* 窗帘页面样式
+	*/
+	.cocurtain-view-box{background-color: #dcdde0;color: #de3d96; }
+	.cocurtain-div-sliders div:nth-child(1):AFTER{background-color: #e4007f;}
+	/*
+	* 机顶盒页面样式
+	*/
+	.costb-top-view .div-btn i{color: #585c64;}
+	.costb-text-label{color: #212121;}
+	.costb-outer-circle{
+		background: gradient(linear,0 0,100% 100%,from(#e8e8e8),to(#fafafa));
+		background: -webkit-gradient(linear,0 0,100% 100%,from(#e8e8e8),to(#fafafa));
+	}
+	.costb-fillet{
+		background-color: #e7e7e7;
+		border-top: 1px #fff solid;
+		box-shadow:1px 2px 3px 1px #a0a0a0;
+	}
+	.costb-chassis{
+		background: gradient(linear,right top,left bottom,from(#f1f2f2),to(#e1e3e5));
+		background: -webkit-gradient(linear,0 0,100% 100%,from(#f1f2f2),to(#e1e3e5));
+		box-shadow:0px 2px 3px 1px #ffffff,0px -2px 3px 2px #DADADA;
+	}
+	.costb-fillet div:nth-child(1) i,
+	.costb-fillet div:nth-child(2) i,
+	.costb-fillet div:nth-child(3) i,
+	.costb-fillet div:nth-child(4) i,.costb-chassis i{
+		color: #585c64;
+	}
+	/*
+	* DVD页面样式
+	*/
+	.cosdvd-top-view i,.cosdvd-bottom-view i{color: #585c65;}
+	.cosdvd-text-label{color: #212121;}
+	.cosdvd-div-slider .div-slidering{background-color: #fff;}
+	.cosdvd-outer-circle{
+		background: gradient(linear,0 0,100% 100%,from(#e8e8e8),to(#fafafa));
+		background: -webkit-gradient(linear,0 0,100% 100%,from(#e8e8e8),to(#fafafa));
+	}
+	.cosdvd-fillet{
+		background-color: #e7e7e7;
+		border-top: 1px #fff solid;
+		box-shadow:1px 2px 3px 1px #a0a0a0;
+	}
+	.cosdvd-chassis{
+		background: gradient(linear,right top,left bottom,from(#f1f2f2),to(#e1e3e5));
+		background: -webkit-gradient(linear,0 0,100% 100%,from(#f1f2f2),to(#e1e3e5));
+		box-shadow:0px 2px 3px 1px #ffffff,0px -2px 3px 2px #DADADA;
+	}
+	.cosdvd-fillet div:nth-child(1) i,
+	.cosdvd-fillet div:nth-child(2) i,
+	.cosdvd-fillet div:nth-child(3) i,
+	.cosdvd-fillet div:nth-child(4) i,.cosdvd-chassis i{
+		color: #585c64;
+	}
+	/*
+	* 投影仪页面样式
+	*/
+	.coprojector-power{color: #de3291;}
+	.coprojector-volume{color:#585c64; }
+	.coprojector-channel-btn{
+		background-color: #efefef;
+		box-shadow: 1px 2px 1px 1px #A8A1A1;
+		border-top: 1px #fff solid;
+		border-left: 1px #fff solid;
+		border-bottom: 1px #dedede solid;
+		border-right: 1px #dedede solid;
+		color: #585c64;
+	}
+	.coprojector-floor{
+		background-color: #e6e6e6;
+		border-right: 1px #fff solid;
+		border-bottom: 1px #fff solid;
+	}
+	.coprojector-floor>div{
+		background-color: #efefef;
+		box-shadow: 1px 2px 5px 1px #909090;
+		border-top: 1px #fff solid;
+		border-left: 1px #fff solid;
+		color: #585c64;
+	}
+	.coprojector-floor i{color: #6c6c6c;}
+	.coprojector-floor-radius{
+		background-color: #e6e6e6;
+		border-right: 1px #fff solid;
+		border-bottom: 1px #fff solid;
+	}
+	.coprojector-floor-radius>div{
+		background-color: #efefef;
+		box-shadow: 1px 2px 1px 1px #A8A1A1;
+		border-top: 1px #fff solid;
+		border-left: 1px #fff solid;
+	}
+	.coprojector-sure{
+		background:-webkit-gradient(linear ,100% 0 , 100% 100%,color-stop(0.14,#f1f2f2), color-stop(0.5,#e3e6e7), color-stop(1,#e1e3e5) );
+		box-shadow: 1px 3px 5px 3px #F9F8F8,-1px -3px 5px 3px #E8E7E7;
+		color: #585c64;
+	}
+	.coproject-key{color: #aeb1b4;}
+	/*
+	* 电风扇页面样式
+	*/
+	.coprojector-text-d,.coprojector-text-h{color: #585c64;}
+	
+	/*
+	* 底部导航栏样式
+	*/
+	footer.bar-tab li.active{color: #de3d96;}
+	footer.bar-tab li{color: #9fa0a0;}
+	.microphone{color: #de3d96;}

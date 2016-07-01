@@ -1,0 +1,214 @@
+<style type="text/css" media="all">
+
+.content {
+    padding: 0;
+    margin: 0;
+    font-family: 'Microsoft YaHei',Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    color: #222;
+    line-height:180%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a, a:link, a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+ a:hover, a:active {
+   color: #de3d96;
+   text-decoration: none;
+}
+
+.header {
+    font-size: 1.2em;
+    text-align: center;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.5em 0;
+}
+.relative {
+    position:relative;
+}
+ .back {
+    position: absolute;
+    padding: 0.7em;
+    width: 9px;
+    top: 0;
+    display: inline-block;
+    height: 19px;
+    left: 0px;
+    background: url("../images/left-arrow.png") no-repeat 50% 50%;
+    text-indent: -9999px;
+} 
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2) {
+    .back{
+        background-image:url("../images/left-arrow@2x.png");
+        background-size:9px 19px;
+    }
+}
+.header-add {
+    position: absolute;
+    right: 0;
+    padding: -0.7em 0.9em;
+    top: 0;
+    font-size: 0.78em;
+}
+.top-head {
+    position: absolute;
+    left: 0.7em;
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+    border-radius: 50%;
+    background-color: #de3d96;
+    top: 0.3em;
+}
+.top-head img {
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 50%;
+}
+.my-E-home-cell {
+    width:33.33%;
+    float:left;
+}
+.inner-border {
+    border-right:1px solid #d5d5d5; 
+    border-bottom:1px solid #d5d5d5;
+    padding:1.6em 0;
+	text-align: center;
+}
+.my-E-home-cell:nth-child(3n) .inner-border {
+    border-right:none; 
+}
+.my-E-home-icons {
+    background-image:url("../images/my-icons.png");
+    background-repeat:no-repeat;
+    height:35px;
+    background-position:50% 0;
+    display:inline-block;
+    width:100%;
+}
+.toggleOn-icon {
+    background-position:50% 5px;
+}
+.plug-icon {
+    background-position:50% -48px;
+}
+.idea-icon {
+    background-position:50% -111px;
+}
+.airConditioner-icon {
+    background-position:50% -174px;
+}
+.videoProjector-icon {
+    background-position:50% -241px;
+}
+.fan-icon {
+    background-position:50% -309px;
+}
+.TV-icon {
+    background-position:50% -370px;
+}
+.loudspeaker-icon {
+    background-position:50% -441px;
+}
+.wet-icon {
+    background-position:50% -508px;
+}
+.bellService-icon {
+    background-position:50% -579px;
+}
+.toiletBowl-icon {
+    background-position:50% -647px;
+}
+.curtains-icon {
+    background-position:50% -719px;
+}
+
+.inner-border:hover a .toggleOn-icon {
+    background-position:50% -784px;
+}
+.inner-border:hover a .plug-icon {
+    background-position:50% -837px;
+}
+.inner-border:hover a .idea-icon {
+    background-position:50% -900px;
+}
+.inner-border:hover a .airConditioner-icon {
+    background-position:50% -963px;
+}
+.inner-border:hover a .videoProjector-icon {
+    background-position:50% -1030px;
+}
+.inner-border:hover a .fan-icon {
+    background-position:50% -1098px;
+}
+.inner-border:hover a .TV-icon {
+    background-position:50% -1159px;
+}
+.inner-border:hover a .loudspeaker-icon {
+    background-position:50% -1230px;
+}
+.inner-border:hover a .wet-icon {
+    background-position:50% -1297px;
+}
+.inner-border:hover a .bellService-icon {
+    background-position:50% -1368px;
+}
+.inner-border:hover a .toiletBowl-icon {
+    background-position:50% -1436px;
+}
+.inner-border:hover a .curtains-icon {
+    background-position:50% -1508px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2) {
+    .my-E-home-icons{
+        background-image:url("../images/my-icons@2x.png");
+        background-size:34px 1540px;
+    }
+}
+
+.my-E-home-name {
+    display:inline-block;
+    width:100%;
+    text-align:center;
+}
+</style>
+<script type="text/javascript">
+    (function ($) {
+    	
+    })(jQuery);
+ </script>
+
+
+
+<!-- content -->
+<header id="homelist_header" class="navbar header_font_color">
+	<span class="nav-header h1">设备列表</span>
+	   <div id="homelist_city_name_div" class="nav-wrap-right header_right" >
+		<a  class="header-add" >添加</a>
+	</div>
+	
+
+</header>
+<div class="content">
+    <div class="my-E-home-box" id="equipList">
+       
+    </div>
+</div>
+<footer class="footer-menu" bgcolor="gray" data-value="home" data-page="/home-list"></footer>

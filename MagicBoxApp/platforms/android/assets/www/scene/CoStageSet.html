@@ -1,0 +1,152 @@
+<style type="text/css" media="all">
+	.main{
+		height: calc(100% - 125px);
+		width: 100%;
+		background-color: #fff;
+		display: -webkit-box;
+		display: box;
+		-webkit-box-orient: vertical;
+		box-orient: vertical;
+	}
+	.main-box{
+		position: relative;
+		float:left;
+		width:33.3%;
+		-webkit-box-flex: 1;
+		box-flex: 1;
+		border-bottom: 1px #e7e7e7 solid;
+		display: -webkit-box;
+		display: box;
+		-webkit-box-orient: horizontal;
+		box-orient: horizontal;
+		text-align: center;
+		height:132px;
+		background-color: #ffffff;
+	}
+	.div-box{
+		-webkit-box-flex: 1;
+		box-flex: 1;
+		border-right: 1px #e7e7e7 solid;
+		padding-top:20px;
+	}
+	.div-box-add{
+		-webkit-box-flex: 1;
+		box-flex: 1;
+		border-right: 1px #e7e7e7 solid;
+		padding-top:20px;
+	}
+	.view-box {	    	   
+	    display:inline-block;
+	    transition: all 100ms;
+	    font-size: 1em;
+	    color:#585c64;
+	    text-align: center;
+	}
+	.view-box i{
+		font-size: 40px;
+	}
+	.view-box i,.view-box div{	    	   
+	    pointer-events:none;
+	}
+	.view-box.move {
+	    -webkit-transform:scale3d( 1.1, 1.1, 1.1 );
+	}
+	.events{
+		pointer-events:none;
+	}
+	
+	/* 右上角下拉菜单 */
+	.nav-wrap-right ul{
+		display:none;
+		position:absolute;
+		list-style: none;
+		right: 0px;
+		box-shadow:1px 2px 2px 2px #dddddd;
+	}
+	.nav-wrap-right ul li{
+		width:120px;
+		background-color: #ffffff;
+		padding:0px 10px;
+		border-bottom: 1px #e7e7e7 solid;
+		font-size: 0.3rem;
+		color: #222222;
+	}
+	.nav-wrap-right .disp{
+		display: block;
+	}
+	.choosed{
+		position: absolute;
+		display:none;
+		width: 23px;
+		height: 23px;
+		border-radius:100%;
+		background-color: #df489c;
+		top: 7px;
+		left: 7px;
+		color:#ffffff;
+		line-height: 23px;
+		text-align: center; 
+		font-size:11px;
+	}
+	.choosed i{font-size: 0.4rem;pointer-events:none;}
+	
+	.choosedA i{font-size: 0.4rem;pointer-events:none;}
+	.choosedA{
+	position: absolute;
+	width: 25px;height: 25px;
+	border-radius:100%; 
+	right:10px;
+	top: 15px;
+	color: #fff;
+	line-height: 15px;
+	text-align: center;
+	 font-size:11px; 
+}
+
+
+
+</style>
+
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont">&#xe661;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">布置场景</span>
+	<div id="homelist_city_name_div" class="nav-wrap-right header_right">
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 1.5em;pointer-events:none;">&#xe65f;</i>
+       	</a>
+       	<ul>
+       		<li class="opera" data-type="start">启动</li>
+			<li class="opera" data-type="end">关闭</li>
+       		<li class="opera" data-type="edit">修改</li>
+       		<li class="opera" data-type="delete">删除</li>
+       	</ul>
+	</div>
+</header>
+
+
+<script id="stage_inf" type="text/x-underscore-template">
+		<div class="main-box">
+		<div class="<%=div_style%> <%=menuDivColor%>" >
+			<div draggable="true" class="view-box" data-type="<%=data_type%>" data-index="<%=data_index%>" >
+				<i class="icon iconfont <%=iconColor%>"><%=icon%></i>
+				<div class="<%=name_style%>  <%=fontColor%>"><%=name%></div>
+			</div>
+		</div>
+	</div>
+</script>
+
+
+<div class="content">
+<div class="list">
+</div>
+</div>
+<footer class="footer-menu" bgcolor="gray" data-value="ehome" data-page=""></footer>

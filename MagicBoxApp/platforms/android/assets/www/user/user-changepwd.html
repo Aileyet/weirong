@@ -1,0 +1,79 @@
+<style type="text/css">
+	.content{
+		padding-top : .2rem;
+	}
+    div.userPwd{				
+   	    padding:5px 10px;
+		margin:0;
+        text-overflow: ellipsis;
+
+   }
+	.triangle{
+		float: right;
+		margin-right: 10px;
+		position: relative;
+		top:2px;
+	}
+	div.userPwd:last-child{
+	   border-bottom: none;
+   }
+   	.column{
+   	    color:#666666;
+   	    margin-right: 10px;
+   }
+   .span-middle{		
+		height: 40px;
+		line-height: 40px;
+		width: 70px;
+		display: inline-block;
+	}
+   	dl.list{		
+		padding: .2rem .2rem;
+		border:1px solid silver;
+	   	border-style：-moz-border-radius: .14rem;-khtml-border-radius: .14rem;-webkit-border-radius: .14rem; border-radius: .14rem;
+	}
+	dl.list:first-child{
+		margin-top:.2rem;
+		border:1px solid silver;
+	   	border-style：-moz-border-radius: .14rem;-khtml-border-radius: .14rem;-webkit-border-radius: .14rem; border-radius: .14rem;
+	}
+	div.userPwd input{
+		margin-bottom:0;
+	}
+	.list .kv-line>.kv-v{
+		display:inline;
+		position: relative;
+		width:65%;		
+	}
+</style>
+<header class="navbar">
+                <div class="nav-wrap-left">
+                    <a class="react back" ><i class="text-icon icon-back"></i></a>
+                </div>
+                <span class="nav-header h1 adjust">修改密码</span>
+
+				<div class="nav-wrap-right" id="save-password">				
+					<a class="react" gaevent="imt/hd/home" >
+						<span class="nav-word">
+							 保存
+						</span>
+			       	</a>				
+			    </div>
+</header>
+<div class="content">
+	<dl class="list list-in">
+		<div class="userPwd kv-line">				
+			<span class="column h5 span-middle" ><strong>原密码:</strong></span>
+			<input class="kv-v" type="password" id="userPwd_password"/>
+		</div>
+		<div class="userPwd kv-line">
+			<span class="column h5 span-middle" ><strong>新密码:</strong></span>
+			<input class="kv-v" type="password"id="userPwd_current_password" />
+		</div>
+		<div class="userPwd kv-line">
+			<span class="column h5 span-middle" ><strong>确认密码:</strong></span>
+			<input class="kv-v" type="password"id="userPwd_repeat_password" />
+		</div>
+	</dl>
+</div>
+<footer class="footer-menu" bgcolor="gray" data-value="user" data-page="/user-changepwd"></footer>

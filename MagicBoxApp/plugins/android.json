@@ -1,0 +1,57 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cn.net.wenzhixin.cordova": {
+            "PACKAGE_NAME": "cn.weirong.magicbox.app"
+        },
+        "com.eyu.cordova.weather": {
+            "PACKAGE_NAME": "cn.weirong.magicbox.app"
+        },
+        "com.spout.phonegap.plugins.baidulocation": {
+            "PACKAGE_NAME": "cn.weirong.magicbox.app"
+        },
+        "cordova-plugin-datepicker": {
+            "PACKAGE_NAME": "cn.weirong.magicbox.app"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "cn.weirong.magicbox.app"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "cn.weirong.magicbox.app"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "cn.weirong.magicbox.app"
+        },
+        "edu.uic.travelmidwest.cordova.udptransmit": {
+            "PACKAGE_NAME": "cn.weirong.magicbox.app"
+        },
+        "example.cordova.qqLogin": {
+            "PACKAGE_NAME": "cn.weirong.magicbox.app"
+        },
+        "org.apache.cordova.musicsearch": {
+            "PACKAGE_NAME": "cn.weirong.magicbox.app"
+        },
+        "org.bcsphere.bluetooth": {
+            "PACKAGE_NAME": "cn.weirong.magicbox.app"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "cn.weirong.magicbox.app"
+        },
+        "wbample.cordova.weiboLogin": {
+            "PACKAGE_NAME": "cn.weirong.magicbox.app"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "cn.weirong.magicbox.app"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "cn.weirong.magicbox.app"
+        }
+    },
+    "dependent_plugins": {}
+}

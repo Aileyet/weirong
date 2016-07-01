@@ -1,0 +1,107 @@
+<style type="text/css" media="all">
+	.main-box{
+		height:100%;
+		width:100%;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient:vertical;
+	}
+	.table-rg{
+		background-color: #eff0f4;
+		overflow: hidden;
+		padding-top: 20px;
+	}
+	.table-rg div{
+		background-color: #fff;
+	}
+	.div-list{
+		border-bottom: 1px #e7e7e7 solid;
+		overflow: hidden;
+		padding:0px 20px;
+		height: 52px;
+	}
+	.div-list div:nth-child(1){
+		float: left;
+		width: 30%;
+		line-height: 52px;
+	}
+	.div-list div:nth-child(2){
+		float: left;
+		width: 70%;
+		text-align:right;
+		line-height: 52px;
+	}
+	.table-rg .div-list:nth-child(7){
+		margin-top:15px;
+	}
+	#sphoto{
+		width: 45px;
+		height: 45px;
+		border-radius: 100%;
+		margin-top: 0.08rem;
+		overflow: hidden;
+		float:right;
+		padding: 0px;
+		line-height: 45px;
+	}
+	@media screen and (max-device-width: 350px) {
+		.div-list,.div-cont{
+			height: 40px;
+		}
+		.div-list div:nth-child(1),.div-list div:nth-child(2),.div-label,.div-input{
+			line-height:40px;
+		}
+		#sphoto{
+			width: 35px;
+			height: 35px;
+			margin-top: 0.05rem;
+		}
+	}
+</style>
+
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 20px;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">个人资料</span>
+	<div id="homelist_city_name_div" class="nav-wrap-right header_right">
+		<a class="edit" gaevent="imt/hd/home" style="color:#222">
+			<i class="icon iconfont" style="font-size: 23px;">&#xe674;</i>
+       	</a>
+	</div>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content">
+	<div class="main-box">
+			<div class="table-rg">
+				<div class="div-list"><div>个人资料</div>
+					<div id="sphoto">
+						<img id="avatar" alt="" src="../images/ehome-temp.jpg" width="50px">
+					</div>
+				</div>
+				<div class="div-list"><div>昵称</div><div><span id="name"></span></div></div>
+				<div class="div-list"><div>性别</div><div><span id="sex"></span></div></div>
+				<div class="div-list"><div>生日</div><div><span id="birthday"></span></div></div>
+				<div class="div-list"><div>身高</div><div><span id="height">165CM</span></div></div>
+				<div class="div-list"><div>体重</div><div><span id="weight">50kg</span></div></div>
+				<div class="div-list"><div>收货地址</div><div><span id="location">浙江省苍南县苍南工业园区</span></div></div>
+				<div class="div-list"><div>绑定手机</div><div><span id="mobilePhone"></span></div></div>
+			</div>
+	</div>
+</div>

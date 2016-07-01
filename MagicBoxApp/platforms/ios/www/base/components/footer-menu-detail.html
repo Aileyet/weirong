@@ -1,0 +1,46 @@
+<style>
+   .commentBtn{
+      display: none
+   }
+   #gotoCommon{
+      z-index: 100;
+   }
+   .promptInformation{
+      display: none;
+      line-height: 1;
+      background-color: #0882f0;
+      color: #fff;
+      height: 11px;
+      font-size: 10px;
+      position: relative;
+      width: 11px;
+      padding-bottom: 1px;
+      bottom: 31px;
+      left: 58%;
+      border: solid 2px #ffffff;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+   }
+</style>
+<ul class="tab-inner">
+   <li class="tab-item commentFoot">
+      <input type="text" class="footcomment" placeholder="发表评论" id="commentCont"></li>
+   <li class="tab-item active">
+      <span class="icon-file-text-alt icon-2x detail" data-value="news/news-detail"></span>
+   </li>
+   <li class="tab-item comment" data-value="common/common-comment" id="gotoCommon">
+      <span class="icon-comment-alt icon-2x " ></span>
+      <span class="promptInformation commentImg commentCount"></span>
+   </li>
+   <li class="tab-item">
+      <span class="icon-star-empty icon-2x collect"></span>
+
+   </li>
+   <li class="tab-item moreShare">
+      <span class="icon-weibo icon-2x"></span>
+   </li>
+   <li class="commentFoot commentBtn">
+      <button class="footerBtn" id="commentNew">评论</button>
+   </li>
+</ul>

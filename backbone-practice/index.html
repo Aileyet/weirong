@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>backbone-practice</title>
+    <link rel="stylesheet" href="prac.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="adder">
+            <input id="text" placeholder="添加用户" >
+        </div>
+        <div class="message">
+            <p>用户表</p>
+            <ul id="user">
+                <li class="view">张三<a class="delete">删除</a></li>
+                <li>李四</li>
+                <li>jojo</li>
+            </ul>
+            <button class="clear">清空</button>
+        </div>
+    </div>
+    <script src="prac.js"></script>
+    <!--script>
+
+        //add the list
+        function adduser() {
+            var node = document.createElement("li"); //首先创造LI节点
+            var textnode = document.createTextNode("?");  //创造文本节点
+            node.appendChild(textnode);  //把文本节点添加到LI节点
+            document.getElementById("user").appendChild(node);  //把LI节点添加到列表中
+        }
+    </script-->
+
+    <script src="../framework/jquery-3.0.0.min.js"></script>
+    <script src="../framework/underscore.js"></script>
+    <script src="../framework/backbone.js"></script>
+    <script src="../framework/backbone.localStorage.js"></script>
+</body>
+</html>

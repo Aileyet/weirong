@@ -1,0 +1,136 @@
+<style type="text/css" media="all">
+	.main-box{
+		height:100%;
+		width:100%;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient:vertical;
+		color: #585c64;
+	}
+	.table-rg{
+		background-color: #eff0f4;
+		padding:0px 10px 0px 15px;
+		overflow: hidden;
+	}
+	.table-rg div{
+		background-color: #fff;
+	}
+    .table-rg .div-menu{
+		margin-top:12px;
+		margin-bottom:12px;
+		background-color: #eff0f4;
+		overflow: hidden;
+		 border-radius: 10px;
+	}
+	.div-menu div:nth-child(1){
+		float: left;
+		width: 50%;
+		padding:0px 0px;
+		background-color: #eff0f4;
+	}
+	.div-menu div:nth-child(2){
+		float: left;
+		width: 50%;
+		text-align:right;
+		padding:0px 0px;
+		background-color: #eff0f4;
+		color: #df489c;
+	}
+	.table-rg .div-menu i{
+		float: right;
+	}
+	.div-list{
+		border: 1px #e7e7e7 solid;
+		overflow: hidden;
+		 border-radius: 10px;
+		 padding-left:7px;
+		 padding-right:7px;
+		 margin-top:5px;
+		 height: 50px;
+	}
+	.div-list div:nth-child(1){
+		float: left;
+		width: 50%;
+		line-height: 50px;
+	}
+	.div-list div:nth-child(2){
+		float: left;
+		width: 50%;
+		text-align:right;
+		line-height: 50px;
+	}
+	.content{
+		background-color:#eff0f4;
+	}
+	@media screen and (max-device-width: 350px) {
+		.div-list{
+		border: 1px #e7e7e7 solid;
+		overflow: hidden;
+		 border-radius: 10px;
+		 padding-left:7px;
+		 padding-right:7px;
+		 margin-top:5px;
+		 height: 40px;
+	}
+	.div-list div:nth-child(1){
+		float: left;
+		width: 50%;
+		line-height: 40px;
+	}
+	.div-list div:nth-child(2){
+		float: left;
+		width: 50%;
+		text-align:right;
+		line-height: 40px;
+	}
+	 .table-rg .div-menu{
+		margin-top:8px;
+		margin-bottom:8px;
+	}
+	}
+</style>
+
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont">&#xe661;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">添加场景</span>
+	<div id="homelist_city_name_div" class="nav-wrap-right header_right" >
+		<a class="react" gaevent="imt/hd/home">
+       	</a>
+	</div>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content">
+	<div class="main-box">
+		<div class="bottom-box">
+			<div class="table-rg">
+				<div class='div-menu'>场景名称</div>
+				<div class="div-list"><div>关闭所有的灯</div><div></div></div>
+				<div class='div-menu'><div>设备列表</div><div><i class="icon iconfont">&#xe639;</i></div></div>
+				<div class="div-list"><div>客厅空调</div><div><i class="icon iconfont">&#xe631;</i></div></div>
+				<div class="div-list"><div>客厅电视</div><div><i class="icon iconfont">&#xe631;</i></div></div>
+				<div class="div-list"><div>卫生间灯光</div><div><i class="icon iconfont">&#xe631;</i></div></div>
+				<div class="div-list"><div>厨房灯光</div><div><i class="icon iconfont">&#xe631;</i></div></div>
+				<div class="div-list"><div>主卧灯光</div><div><i class="icon iconfont">&#xe631;</i></div></div>
+				<div class="div-list"><div>楼梯灯光</div><div><i class="icon iconfont">&#xe631;</i></div></div>
+			</div>
+		</div>
+	</div>
+</div>

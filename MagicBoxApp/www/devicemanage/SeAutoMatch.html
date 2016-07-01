@@ -1,0 +1,222 @@
+﻿<style type="text/css" media="all">
+	.div-top{
+		position: relative;
+		padding: 0px 20px;
+		top: 50px;
+		overflow: hidden;
+		padding-bottom: 5px;
+	}
+	.div-top div:nth-child(1){
+		float: left;
+	}
+	.div-top div:nth-child(2){
+		float: right;
+	}
+	.div-btn{
+		position:relative;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		background-color: #efefef;
+		border-radius: 50px;
+		text-align: center;
+		border-left:2px #fff solid; 
+		box-shadow: 1px 2px 1px 1px #A8A1A1;
+		overflow: hidden;
+		margin: auto;
+	}
+	.div-top .div-btn i{
+		font-size: 0.7rem;
+		color: #de3d96;
+	}
+	.div-top .div-btn span{
+		font-size: 18px;
+		color: #585c64;
+	}
+	.div-control{
+		position: relative;
+		width: 300px;
+		height: 300px;
+		border-radius:100%;
+		background: gradient(linear,0 0,0 100%,from(#E2E2E2),to(#f3f4f5));
+		background: -webkit-gradient(linear,0 0,0 100%,from(#E2E2E2),to(#f3f4f5));
+		box-shadow: inset 0px 4px 5px 5px #dddddd;
+		margin: auto;
+		top: 20px;
+	}
+	
+	.chassis{
+		position:relative;
+		width:180px;
+		height:180px;
+		border-radius:100%;
+		background: -webkit-gradient(linear,100% 100%,0 0,from(#dc007b),to(#484f5d));
+		margin: auto;
+		top:35px;
+	}
+	.text-chassis{
+		position: relative;
+		width: 150px;
+		height: 150px;
+		border-radius:100%;
+		background-color: #efefef;
+		margin: auto;
+		top: 15px;
+		box-shadow: 1px 2px 10px 7px #7f064b;
+		
+	}
+	.text-chassis > div:nth-child(1){
+		position: relative;
+		width: 25px;
+		height: 25px;
+		border-radius:100%;
+		background-color: #e21a89;
+		margin: auto;
+		top:calc(50% - 15px);
+		-webkit-transform: rotate(60deg) translate(-50px);
+	}
+	.text-chassis > div:nth-child(2){
+		position: relative;
+		text-align: center;
+		color: #999999;
+		top: 15px;
+	}
+	.text-chassis > div:nth-child(2) span:nth-child(1){
+		font-size: 4.5em;
+	}
+	.text-chassis > div:nth-child(2) span:nth-child(2){
+		position:absolute;
+		display:inline-block;
+		font-size: 2em;
+	}
+	
+	.control-btn{
+		position:absolute;
+		display: -webkit-box;
+		display: box;
+		-webkit-box-orient: vertical;
+		box-orient: vertical;
+		width: 100%;
+	 }
+	 .control-btn-container{
+	 	display: -webkit-box;
+		display: box;
+		-webkit-box-orient: horizontal;
+		box-orient: horizontal;
+		width: 100%;
+		margin-top: 50px;
+	 }
+	 .box-flex{
+	 	position: relative;
+	 	box-flex:1;
+	 	-webkit-box-flex:1;
+	 }
+	 .control-btn .div-btn i{
+		font-size: 0.7rem;
+		color: #585c64;
+	 }
+	 
+	 @media screen and (max-device-width: 350px) {
+	 	.div-control{width: 230px;height: 230px;}
+	 	.reticle-1{-webkit-transform: translate(95px);}
+		.reticle-2{-webkit-transform: translate(-95px);}
+		.reticle-3{-webkit-transform: rotate(30deg) translate(-95px);}
+		.reticle-4{-webkit-transform: rotate(60deg) translate(-95px);}
+		.reticle-5{-webkit-transform: rotate(90deg) translate(-100px);}
+		.reticle-6{-webkit-transform: rotate(120deg) translate(-105px);}
+		.reticle-7{-webkit-transform: rotate(145deg) translate(-100px);}
+		
+		.temperature-1{-webkit-transform: rotate(-10deg) translate(-100px);}
+		.temperature-2{-webkit-transform: rotate(15deg) translate(-105px);}
+		.temperature-3{-webkit-transform: rotate(37deg) translate(-105px);}
+		.temperature-4{-webkit-transform: rotate(62deg) translate(-105px);}
+		.temperature-5{-webkit-transform: rotate(92deg) translate(-100px);}
+		.temperature-6{-webkit-transform: rotate(120deg) translate(-85px);}
+		.temperature-7{-webkit-transform: rotate(150deg) translate(-80px);}
+		.temperature-8{-webkit-transform: rotate(176deg) translate(-70px);}
+		
+		.chassis{width: 130px;height: 130px;top:25px;}
+		.text-chassis{width: 110px;height: 110px;top:10px;}
+		.text-chassis > div:nth-child(1){width: 20px;height: 20px;top:calc(50% - 10px);-webkit-transform: rotate(60deg) translate(-40px);}
+	 	.text-chassis > div:nth-child(2) span:nth-child(1){font-size: 3em;}
+		.text-chassis > div:nth-child(2) span:nth-child(2){font-size: 1em;}
+	 }
+	 
+	 .content{
+	 text-align:center;
+	 }
+	 #tip{
+	    font-size:1.2em;
+	 }
+	 .btn-div{
+		width: 80px;
+		height: 80px;
+		background-color: #efefef;
+		box-shadow:1px 2px 3px 2px #dddddd;
+		border-radius:10px; 
+		color: #818181;
+		text-align: center;
+		display: table;
+		margin: auto;
+		border-left: 1px #ffffff solid;
+	}
+	.btn-div i{
+		font-size: 0.5rem;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.txt-div{
+	    padding:10px;
+	}
+	 .bottom-div{
+		position: absolute;
+		display: table;
+		border-top: 1px #e7e7e7 solid;
+		width:100%;
+		height: 60px;
+		bottom: 50px;
+		margin:0;
+		padding:0;
+	}
+	
+	 #btnOk{
+	  width:50%;
+	   border:0;
+	   font-size:0.2rem;
+	   margin:0 auto;
+	   background:#909090;
+	   color:#fff;
+	   height: 60px;
+	 }
+	 
+	 #btnCancel{
+	   width:50%;
+	   border:0;
+	   font-size:0.2rem;
+		 margin:0 auto;
+		 background:#de3d96;
+		 color:#fff;
+		 height: 60px;
+	 }
+</style>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+
+</header>
+
+
+<!-- content -->
+<div class="content">
+<br><br>
+<span id="key"></span>
+<br><br>
+<span id="tip"></span>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<div class="bottom-div">
+<input type="button" value="否" id="btnCancel" /><input type="button" value="是" id="btnOk" />
+</div>
+</div>

@@ -1,0 +1,519 @@
+<style type="text/css" media="all">
+   .div-top{
+		position: relative;
+		padding: 0px 20px;
+		top: 50px;
+		overflow: hidden;
+		padding-bottom: 5px;
+	}
+	.div-top div:nth-child(1){
+		float: left;
+	}
+	.div-top div:nth-child(2){
+		float: right;
+	}
+	.cotv-main{
+		position: absolute;
+		width: 100%;
+	}
+	.power-btn{
+		position:relative;
+		top: 50px;
+	}
+	.div-btn{
+		
+	}
+	.div-btn i{
+		font-size: 0.5rem;
+	}
+	.div-btn span{
+		font-size: 24px;
+		font-weight: bold;
+		font-style: oblique;
+	}
+	.div-container{
+		top: 90px;
+	}
+	.controlbtn{
+		top: 120px;
+	}
+	.controlbtn,.div-container{
+		position:relative;
+		display: -webkit-box;
+		display: box;
+		-webkit-box-orient: horizontal;
+		box-orient: horizontal;
+		width: 100%;
+	}
+	.box-flex{
+		position: relative;
+		box-flex: 1;
+		-webkit-box-flex: 1;
+	}
+	.cotv-volume-bg{
+		width: 70px;
+		height: 160px;
+		margin:auto;
+		border-radius:70px;
+		color: #6c6c6c;
+	}
+	.cotv-volume-bg > div{
+		position:relative;
+		width: 60px;
+		height: 150px;
+		border-radius:60px;
+		margin: 5px;
+		top: 5px;
+		display: -webkit-box;
+		display: box;
+		-webkit-box-orient: vertical;
+		box-orient: vertical;
+		text-align: center;
+	}
+	.container-1{
+		position: relative;
+		box-flex: 1;
+		-webkit-box-flex: 1;
+		display: -webkit-box;
+		display: box;
+		-webkit-box-orient: vertical;
+		box-orient: vertical;
+		padding-top: 5px;
+	}
+	.i-color{
+	}
+	.vmiddle{
+		line-height: 50px;
+		font-size: 18px;
+	}
+	.vmiddle i{
+		font-size: 0.5rem;
+	}
+	/* 右上角下拉菜单 */
+	.nav-wrap-right ul{
+		display:none;
+		position:absolute;
+		list-style: none;
+		right: 0px;
+		box-shadow:1px 2px 2px 2px #dddddd;
+	}
+	.nav-wrap-right ul li{
+		width:120px;
+		background-color: #ffffff;
+		padding:0px 10px;
+		border-bottom: 1px #e7e7e7 solid;
+		font-size: 0.3rem;
+		color: #222222;
+	}
+	.nav-wrap-right .disp{
+		display: block;
+	}
+	/* 自定义按钮 */
+	.control-btn{
+		position:absolute;
+		display: -webkit-box;
+		display: box;
+		-webkit-box-orient: vertical;
+		box-orient: vertical;
+		width: 100%;
+	 }
+	.custom-btn-div {
+		width: 80px;
+		height: 50px;
+		background-color: #efefef;
+		box-shadow: 1px 2px 3px 2px #dddddd;
+		border-radius: 10px;
+		color: #818181;
+		text-align: center;
+		display: table;
+		margin: auto;
+		border-left: 1px #ffffff solid;
+	}
+	 .control-btn-container-custom{
+			display: -webkit-box;
+			display: box;
+			-webkit-box-orient: horizontal;
+			box-orient: horizontal;
+			width: 100%;
+			margin-top: 20px;
+		 }
+	.btnName {
+			display:inline-block;
+			width:100%;
+			text-align:center;
+			padding-top:15px;
+			font-size:17px;
+	  }
+</style>
+<style type="text/css" media="all">
+    /* 学习样式 */
+    .nav-wrap-right ul {
+        display: none;
+        position: absolute;
+        list-style: none;
+        right: 0px;
+        box-shadow: 1px 2px 2px 2px #dddddd;
+    }
+
+        .nav-wrap-right ul li {
+            width: 120px;
+            background-color: #ffffff;
+            padding: 0px 10px;
+            border-bottom: 1px #e7e7e7 solid;
+            font-size: 0.3rem;
+            color: #222222;
+            z-index: 100;
+        }
+
+    /* 操作按钮栏 */
+    .toolBtn-div {
+        padding: 10px 0px;
+        overflow: hidden;
+    }
+
+    .toolBtn-row-div {
+        width: 33.33%;
+        float: left;
+    }
+
+    .tBtn-div {
+        width: 50%;
+        border-radius: 100%;
+        margin: auto;
+        text-align: center;
+        display: table;
+    }
+
+        .tBtn-div:BEFORE,
+        .switchBin-content-div:BEFORE,
+        .operating-disk-dot-wai:BEFORE,
+        .operating-disk-dot-nei:BEFORE,
+        .operating-disk-dot-zhong:BEFORE {
+            content: "";
+            display: inline-block;
+            padding-bottom: 100%;
+            vertical-align: middle;
+        }
+
+        .tBtn-div i {
+            vertical-align: middle;
+        }
+
+    .i-font-size-6 {
+        font-size: 0.5rem;
+    }
+
+    .i-font-size-4 {
+        font-size: 0.4rem;
+    }
+
+    .i-font-size-3 {
+        font-size: 0.3rem;
+    }
+
+    /* 操作圆盘 */
+    .operating-disk-div {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .operating-disk-Btn {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .operDiskBtn-top {
+        position: absolute;
+        top: 5px;
+        width: 100%;
+    }
+
+    .operDiskBtn-bottom {
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+    }
+
+    .operating-disk-dot-wai {
+        width: 60%;
+        border-radius: 100%;
+        margin: auto;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .direction-up {
+        position: absolute;
+        top: 7px;
+        left: calc(50% - 15px);
+    }
+
+    .direction-bottom {
+        position: absolute;
+        bottom: 7px;
+        left: calc(50% - 15px);
+    }
+
+    .direction-right {
+        position: absolute;
+        right: 7px;
+        top: calc(50% - 15px);
+    }
+
+    .direction-left {
+        position: absolute;
+        left: 7px;
+        top: calc(50% - 15px);
+    }
+
+    .operating-disk-dot-nei {
+        position: absolute;
+        width: 92%;
+        top: 4%;
+        left: 4%;
+        border-radius: 100%;
+    }
+
+    .operating-disk-dot-zhong {
+        position: absolute;
+        width: 40%;
+        background: #ffffff;
+        top: 30%;
+        left: 30%;
+        border-radius: 100%;
+        border: 1px #e2e2e2 solid;
+        color: #585c64;
+        font-size: 0.6rem;
+    }
+
+    .operating-disk-dot-zhong span {
+        position: absolute;
+        top: calc(50% - 25px);
+        left: calc(50% - 20px);
+    }
+
+    /* 操作频道，声音等键 */
+    .control-key-disk {
+        width: 100%;
+        overflow: hidden;
+        padding: 5px 0px;
+    }
+
+    .control-key-disk-block {
+        width: 33.33%;
+        float: left;
+        height: 100%;
+    }
+
+    .control-key-wai {
+        width: 60%;
+        height: 200px;
+        margin: auto;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        text-align: center;
+    }
+
+    .control-key-wai div {
+        height: 33.33%;
+        width: 100%;
+        display: table;
+        font-size: 0.3rem;
+        color: #222222;
+    }
+
+    .control-key-wai div i, .control-key-wai div span {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .control-key-diskBTn-fanhui {
+        margin-top: 25%;
+        height: 25%;
+        width: 100%;
+    }
+
+    .control-key-diskBTn-jinying {
+        margin-top: 25%;
+        height: 15%;
+        width: 100%;
+    }
+
+
+    @media screen and (max-device-width: 350px) and (max-device-height: 500px) {
+        .operating-disk-dot-wai {
+            width: 60%;
+        }
+
+        .i-font-size-6 {
+            font-size: 0.45rem;
+        }
+
+        .i-font-size-4 {
+            font-size: 0.35rem;
+        }
+
+        .direction-up {
+            position: absolute;
+            top: 7px;
+            left: calc(50% - 11.5px);
+        }
+
+        .direction-bottom {
+            position: absolute;
+            bottom: 7px;
+            left: calc(50% - 11.5px);
+        }
+
+        .direction-right {
+            position: absolute;
+            right: 7px;
+            top: calc(50% - 11.5px);
+        }
+
+        .direction-left {
+            position: absolute;
+            left: 7px;
+            top: calc(50% - 11.5px);
+        }
+
+        .control-key-disk {
+            top: 60%;
+            height: 40%;
+        }
+
+        .control-key-wai {
+            width: 55%;
+            height: 90%;
+        }
+
+        .control-key-diskBTn-fanhui {
+            margin-top: 25%;
+        }
+
+        .control-key-diskBTn-jinying {
+            margin-top: 15%;
+        }
+    }
+
+    @media screen and (max-device-width: 350px) and (min-device-height: 550px) {
+
+        .i-font-size-6 {
+            font-size: 0.45rem;
+        }
+
+        .i-font-size-4 {
+            font-size: 0.35rem;
+        }
+
+        .direction-up {
+            position: absolute;
+            top: 10px;
+            left: calc(50% - 11.5px);
+        }
+
+        .direction-bottom {
+            position: absolute;
+            bottom: 10px;
+            left: calc(50% - 11.5px);
+        }
+
+        .direction-right {
+            position: absolute;
+            right: 10px;
+            top: calc(50% - 11.5px);
+        }
+
+        .direction-left {
+            position: absolute;
+            left: 10px;
+            top: calc(50% - 11.5px);
+        }
+
+        .control-key-disk {
+            top: 55%;
+            height: 40%;
+        }
+
+        .control-key-wai {
+            width: 60%;
+            height: 85%;
+        }
+
+        .control-key-diskBTn-fanhui {
+            margin-top: 35%;
+        }
+
+        .control-key-diskBTn-jinying {
+            margin-top: 15%;
+        }
+    }
+</style>
+
+<script id="ehome_CoTV_Template" type="text/x-underscore-template">
+    <div class="toolBtn-div">
+        <div class="toolBtn-row-div">
+            <div class="tBtn-div RoundBtn-bg-color" id="power"><i class="icon iconfont i-font-size-6 i-font-color-2"><%=power_icon%></i></div>
+        </div>
+        <div class="toolBtn-row-div">
+            <div class="tBtn-div RoundBtn-bg-color text-font-color i-font-size-3" id="menu"><%=menu%></div>
+        </div>
+        <div class="toolBtn-row-div">
+            <div class="tBtn-div RoundBtn-bg-color text-font-color i-font-size-3" id="source"><%=source%></div>
+        </div>
+    </div>
+
+    <div class="operating-disk-div">
+        
+            <div class="operating-disk-dot-wai">
+                <div class="operating-disk-dot-nei"> 
+                    <div class="direction-up"     id="up"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=up_icon%></i></div>
+                    <div class="direction-bottom" id="down"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=down_icon%></i></div>
+                    <div class="direction-left"   id="left"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=left_icon%></i></div>
+                    <div class="direction-right"  id="right"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=right_icon%></i></div>
+                    <div class="operating-disk-dot-zhong" id="ok">
+                        <span><%=ok%></span>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+
+    <div class="control-key-disk">
+        <div class="control-key-disk-block">
+            <div class="control-key-wai">
+                <div id="volUp"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=volume_up_icon%></i></div>
+                <div><span class="text-font-color"><%=volume%></span></div>
+                <div id="volDown"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=volume_down_icon%></i></div>
+            </div>
+        </div>
+        <div class="control-key-disk-block">
+            <div class="control-key-diskBTn-fanhui">
+                <div class="tBtn-div RoundBtn-bg-color" id="Return"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=return_icon%></i></div>
+            </div>
+            <div class="control-key-diskBTn-jinying ">
+                <div class="tBtn-div RoundBtn-bg-color" id="mute"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=mute_icon%></i></div>
+            </div>
+        </div>
+        <div class="control-key-disk-block">
+            <div class="control-key-wai">
+                <div id="chUp"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=channel_up_icon%></i></div>
+                <div><span class="text-font-color"><%=channel%></span></div>
+                <div id="chDown"><i class="icon iconfont i-font-size-6 i-font-color-1"><%=channel_down_icon%></i></div>
+            </div>
+        </div>
+    </div>
+	<div class="control-btn">
+	</div>
+</script>
+
+
+<header id="homelist_header" class="navbar header_font_color">
+</header>
+
+<div class="content">
+	
+</div>

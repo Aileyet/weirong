@@ -1,0 +1,123 @@
+<style type="text/css" media="all">
+	.main-box{
+		position:relative;
+		height:100%;
+		width:100%;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient:vertical;
+		overflow: hidden;
+	}
+	.colamp-top-box{
+		position: relative;
+		text-align: -webkit-center;
+		border-bottom: 1px #e7e7e7 solid;
+		overflow: hidden;
+		padding: 40px 0px;
+	}
+	.colamp-view-box{
+		position:relative;
+		width: 250px;
+		height: 250px;
+		border-radius:100%;
+		overflow: hidden;
+		color: #de3d96;
+		top: calc((50% - 250px) / 2);
+		display: table;
+	}
+	.colamp-view-box i{
+		display:table-cell;
+		vertical-align:middle;
+		font-size: 3rem;
+		color:#d0d0d0;
+	}
+	.colamp-bottom-box{
+		height:50%;
+		color: #585c64;
+		background-color: #FFFFFF;
+	}
+	.table-rg{
+		background-color: #fff;
+		padding:0px 20px;
+		overflow: hidden;
+	}
+	.div-list{
+		border-bottom: 1px #e7e7e7 solid;
+		overflow: hidden;
+	}
+	.div-list div:nth-child(1){
+		float: left;
+		width: 50%;
+		padding:20px 0px;
+	}
+	.div-list div:nth-child(2){
+		float: left;
+		width: 50%;
+		text-align:right;
+		padding:20px 0px;
+	}
+	.colamp-color{
+		display:block;
+		width: 20px;
+		height: 20px;
+		float: right;
+	}
+	
+	.div-slider{
+		position:relative;
+		width: 60px;
+		height: 30px;
+		background-color: #dcdde0;
+		border-radius:25px;
+		padding: 3px;
+		overflow: hidden;
+	}
+	.div-slider .div-slidering{
+		width: 30px;
+		height: 30px;
+		border-radius:100%;
+		background-color: #fff;
+		float: left;
+	}
+	
+	@media screen and (max-device-width: 350px) {
+		.colamp-view-box{width: 180px;height: 180px;}
+		.colamp-view-box i{font-size: 10em;}
+	}
+	.item{
+	  font-size:1.25em;
+	}
+	.coloritem{
+	  margin:10px;height:20px;border:solid 1px #303030;
+	}
+</style>
+
+<script id="ehome_Lamp_Template" type="text/x-underscore-template">
+	<div class="div-list"><div><%=brightness%></div><div class="div-light">70%</div></div>
+	<div class="div-list"><div><%=color%></div><div><span class="colamp-color"></span></div></div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+
+</header>
+
+<div class="content">
+	<div class="main-box">
+		<div class="colamp-top-box">
+			<div class="colamp-view-box">
+				<i class="icon iconfont"></i>
+			</div>
+			<br><br>
+			<div class="div-slider marg">
+				<div class="div-slidering"></div>
+			</div>
+		</div>
+		<div class="colamp-bottom-box">
+			<div class="table-rg">
+				
+			</div>
+		</div>
+	</div>
+</div>

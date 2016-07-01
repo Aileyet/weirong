@@ -1,0 +1,124 @@
+<style type="text/css" media="all">
+	.div-main{
+		display: box;
+		display: -webkit-box;
+		height: 100%;
+		box-orient: vertical;
+		-webkit-box-orient: vertical;
+	}
+	.div-top{
+		box-flex:1;
+		-webkit-box-flex:1;
+		height:50%;
+		background-color: #fff;
+		display: box;
+		display: -webkit-box;
+		box-orient: vertical;
+		-webkit-box-orient: vertical;
+	}
+	.div-top .div-list{
+		box-flex:1;
+		-webkit-box-flex:1;
+		display:box;
+		display:-webkit-box;
+		box-orient: horizontal;
+		-webkit-box-orient: horizontal;
+		border-bottom: 1px #e7e7e7 solid;
+		color: #585c64;
+	}
+	.div-top .div-list div{
+		box-flex:1;
+		-webkit-box-flex:1;
+		width:33%;
+		border-right: 1px #e7e7e7 solid;
+		text-align: center;
+		overflow: hidden;
+		position: relative;
+	}
+	.div-top .div-list div span{
+		display: block;
+	}
+	
+	.div-top .div-list div i:nth-child(1){
+		font-size: 1rem;
+	}
+	.right{
+		position:absolute;
+		font-size: 0.5rem;
+		color: #de3d96;
+		top: 0px;
+		right: 5px;
+	}
+	
+	.div-bottom{
+		box-flex:1;
+		-webkit-box-flex:1;
+		height:50%;
+		padding: 0px 20px;
+	}
+	.div-bottom div:nth-child(1),.div-bottom div:nth-child(3){
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		color: #585c64;
+		margin-top: 10px;
+	}
+	.div-bottom div:nth-child(2),.div-bottom div:nth-child(4){
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		color: #fff;
+		
+	}
+	.div-bottom div:nth-child(2){
+		background-color: #de3d96;
+	}
+	.div-bottom div:nth-child(4){
+		background-color: #c8c7cc;
+	}
+</style>
+
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 20px;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">快捷操作</span>
+</header>
+
+
+<!-- content -->
+<div class="content">
+	<div class="div-main">
+		<div class="div-top">
+			<div class="div-list">
+				<div><i class="icon iconfont">&#xe63f;</i><span>微波炉</span><i class="icon iconfont right">&#xe64d;</i></div>
+				<div><i class="icon iconfont">&#xe64b;</i><span>冰箱</span></div>
+				<div><i class="icon iconfont">&#xe645;</i><span>烤箱</span><i class="icon iconfont right">&#xe64d;</i></div>
+			</div>
+			<div class="div-list">
+				<div><i class="icon iconfont">&#xe64c;</i><span>吸油烟机</span></div>
+				<div><i class="icon iconfont">&#xe645;</i><span>消毒柜</span><i class="icon iconfont right">&#xe64d;</i></div>
+				<div><i class="icon iconfont">&#xe64a;</i><span>灶具</span></div>
+			</div>
+			<div class="div-list">
+				<div><i class="icon iconfont">&#xe63d;</i><span>电饭煲</span></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<div class="div-bottom">
+			<div>所有设备进入童锁状态</div>
+			<div>一键童锁</div>
+			<div>所有设备进入省电状态</div>
+			<div>一键省电</div>
+		</div>
+	</div>
+</div>
+<footer class="footer-menu" bgcolor="gray" data-value="ehome" data-page=""></footer>

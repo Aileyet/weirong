@@ -1,0 +1,268 @@
+<style type="text/css" media="all">
+	.main{
+		height: calc(100% - 90px);
+		width: 100%;
+		background-color: #fff;
+		display: -webkit-box;
+		display: box;
+		-webkit-box-orient: vertical;
+		box-orient: vertical;
+	}
+	.main-box{
+		width:100%;
+		-webkit-box-flex: 1;
+		box-flex: 1;
+		border-bottom: 1px #e7e7e7 solid;
+		display: -webkit-box;
+		display: box;
+		-webkit-box-orient: horizontal;
+		box-orient: horizontal;
+	}
+	.top{
+		height: 40%;
+		background: -webkit-gradient(linear, left top, right bottom, color-stop(0,#d96a70), color-stop(0.6,#7482c2),color-stop(1,#7482c2));
+
+	}
+	.div-top{
+		width:100%;
+		overflow: hidden;
+		height: 15%;
+		color: #fff;
+	}
+	.div-top div:nth-child(1){
+		float: left;
+		padding:10px 10px;
+	}
+	.div-top div:nth-child(2){
+		float: right;
+		text-align:right;
+		padding:7px 20px;
+	}
+	.div-middle div:nth-child(2){
+		float: right;
+		text-align:right;
+		width: 55%;
+	}
+	.div-middle{
+		width:100%;
+		overflow: hidden;
+		height: 65%;
+		font-size: 10px;
+		color: #fff;
+	}
+	.div-bottom{
+		width:100%;
+		overflow: hidden;
+		height: 20%;
+		font-size: 0.01em;
+	/*	background: -webkit-gradient(linear, 0 0, 0 100%, from(#86265f), to(#3c4c98));*/
+		background: -webkit-gradient(linear, left top, right bottom, color-stop(0,#d96a70), color-stop(0.6,#7482c2),color-stop(1,#7482c2));
+		line-height: 40px;
+		color: #fff;
+		text-align: center;
+	}
+	.div-circle{
+		width: 105px;
+		height: 105px;
+		border-radius:100%;
+		border: 3px dotted  #C48FAB;
+		margin: auto;
+		clear: both;
+		margin-top: 5px;
+	}
+	.div-circle .div-list:nth-child(1){
+		height: 40%;
+		text-align: center;
+		line-height: 44px;
+	}
+	.div-circle .div-list:nth-child(2){
+		height: 60%;
+		width: 100%;
+		text-align: center;
+		line-height: 40px;
+		font-size: 50px;
+	}
+	.div-circle .div-list:nth-child(2) span{
+		font-size: 15px;
+	}
+	.div-menu{
+		position: absolute;
+		width: 100%;
+		height: 35%;
+		
+	}
+	.div-control{
+		position: absolute;
+		width: 100%;
+		height: 5%;
+		top:80%;
+		background-color: #fff;
+		display: box;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+	}
+
+
+
+
+	.menu-box{
+		display: inline-block;
+		float:left;
+		width: 33%;
+		vertical-align: middle;
+		background-color: #fff;
+		border-bottom: 1px #e7e7e7 solid;
+		border-right: 1px #e7e7e7 solid;
+	}
+	.menu-box:BEFORE {
+		content: "";
+		display: inline-block;
+		padding-bottom: 100%;
+		vertical-align: middle;
+	}
+	.menu-view{
+		position:absolute;
+		transition: all 100ms;
+		display:inline-block;
+		text-align: center;
+	}
+	.menu-view i{
+		display: block;
+		vertical-align: middle;
+		font-size: 3em;
+		pointer-events:none;
+		color: #585c64;
+	}
+	.menu-view div{
+		display: block;
+		vertical-align: middle;
+		pointer-events:none;
+		color: #222222;
+	}
+
+
+	/* module: active */ 
+	#activeM{ 
+		position:absolute;
+		width: 100%; 
+		text-align: center; 
+	} 
+	#activeM label{ 
+		display: inline-block; 
+		width: 5px; 
+		height: 5px; 
+		border-radius: 100%; 
+		background: #cacaca; 
+	}
+	#temperature{
+		float:left; 
+		width:25%; 
+		height:40px;
+		text-align:left;
+		border-right:1px solid #ae8bb2;
+		line-height:23px;
+	}
+	#humidity{
+		float:left;
+		 width:30%;
+		 height:40px;
+		 text-align:center;
+		 line-height:23px;
+		 border-right:1px solid #ae8bb2;
+	}
+	#quantized{
+		float:left;
+		 width:70%;
+		 height:40px;
+		 text-align:center;
+		 line-height:23px;
+		 margin-top:25px;
+	}
+	#chemicalPollutants{
+		float:left;
+		 width:48%;
+		 height:40px;
+		 text-align:center;
+		 line-height:23px;
+		 margin-top:25px;
+	}
+	.zhishu{
+		float: left;
+		width: 25%;
+	}
+	@media screen and (max-device-width: 350px) {
+		.top{
+			height: 47%;
+		}
+		.div-control{
+			top:83%;
+		}
+	}
+</style>
+
+<script type="text/x-underscore-template" id="menuTemplate">
+	<div class="menu-box">
+		<div class="menu-view" draggable="true" data-module="<%=data_module%>" data-view="<%=data_view%>">
+			<i class="icon iconfont"><%=icon%></i>
+			<div><%=name%></div>
+		</div>
+	</div>
+</script>
+<script type="text/x-underscore-template" id="stMBMainTopTemplate">
+	<div class="div-top"><div><span id="city">成都市</span>：<span id="spWeather"></span>℃&nbsp; ></div><div><i class="icon iconfont"><%=refresh%></i></div></div>
+			<div class="div-middle" >
+				<div style="height:100%;width:45%;float: left;">
+					<div class='div-circle'>
+						<div class="div-list"><%=comfortableDegree%></div>
+						<div class="div-list"><span id="comfort">舒适</span></div>
+					</div>
+				</div>
+				<div style="height:100%;padding-top:10px;float: left;">
+					<div id="temperature"><%=temperature%><br/><span id="temperatureValue">28</span>℃</div>
+					<div id="humidity"><%=humidity%><br/><span id="humidityValue">30</span>%RH</div>
+					<div style="float:left; width:30%;height:40px;text-align:center;line-height:23px;">
+						<span id="mainPollutant">
+							PM2.5
+						</span><br/><span id="pm25Value"></sapn></div>
+					<div id="quantized"><%=quantized%><br/><span id="quantizedValue">优</span></div>
+				
+				</div>
+			</div>
+			<div class="div-bottom" >
+				<div class="zhishu">
+					<span><i class="icon iconfont"><%=outdoorSportIcon%></i><span id="outdoorSport">事宜户外运动</span></span>
+				</div>
+				<div class="zhishu">
+					<span><i class="icon iconfont"><%=openWindowIcon%></i> <span id="openWindow">事宜开窗通风</span></span>
+				</div>
+				<div class="zhishu">
+					<span><i class="icon iconfont"><%=wearMasksIcon%></i> <span id="wearMasks">无需佩戴口罩</span></span>
+				</div>
+				<div class="zhishu">
+					<span><i class="icon iconfont"><%=openPurifierIcon%></i> <span id="openPurifier">无需开净化器</span></span>
+				</div>
+			</div>
+</script>
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	
+</header>
+
+
+<!-- content -->
+<div class="content">
+	<div class="main">
+		<div class="top" id="top">
+		
+		</div>
+		<div id="menu-container">
+			
+		</div>
+	 	<div class="div-control">
+	 		<div id="activeM"> 
+			
+			</div> 
+	 	</div>
+	</div>
+</div>
+<footer class="footer-menu" bgcolor="gray" data-value="ehome" data-page=""></footer>

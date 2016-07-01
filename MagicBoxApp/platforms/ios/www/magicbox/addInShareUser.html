@@ -1,0 +1,182 @@
+<style type="text/css" media="all">
+	.div-main{
+		display: box;
+		display: -webkit-box;
+		box-orient: vertical;
+		-webkit-box-orient: vertical;
+		height: 100%;
+		overflow: auto;
+	}
+	.div-bottom{
+		box-flex:1;
+		-webkit-box-flex:1;
+		height:50%;
+		padding: 12px 20px;
+	}
+	
+	.div-cont{
+		height:50px;
+		background-color: #ffffff;
+		padding-left: 20px;
+	}
+	.div-cont2{
+		height:50px;
+		background-color: #ffffff;
+	}
+	.div-label{
+		line-height:50px;
+		width:70px;
+		float: left;
+	}
+	.div-input{
+		line-height:50px;
+		width:calc(100% - 70px); 
+		float: left;
+	}
+	.div-input input{
+		width: 80%;
+		border: none;
+	}
+	.div-label3{
+		line-height: 50px;
+		width: 100%;
+		float: left;
+		text-align: center;
+	}
+	.div-marg20{
+		margin-top: 12px;
+	}
+	.border-bottom{
+		border-bottom:1px solid #e7e7e7;
+	}
+	.div-marg40{
+			margin-top: 0.5rem;
+		}
+
+	.div-btn-bg{
+		height:40px;
+		line-height: 40px;
+		width: calc(100% - 30px);
+		margin-left: 15px;
+		border-radius:3px;
+		color: #ffffff;
+		text-align: center;
+	}
+	.div-type{
+		height: 100%;
+		width: 33%;
+		float: left;
+		text-align: center;
+		line-height: 50px;
+		font-size: 21px;
+	}
+	.div-type i{
+		font-size: 40px;
+		line-height: 45px;
+		color: #e0e0e2;
+	}
+	.div-time{
+		width: 80%;
+		height: 150px;
+		background-color: #666666;
+		position: absolute;
+		top: 20%;
+		left: 10%;
+		text-align: center;
+		padding: 10px 0px;
+		display: none;
+	}
+	.div-time input{
+		text-align: center;
+		margin:10px 0px;
+	}
+	.div-time span{
+		color: #ffffff;
+	}
+	.sp-timeBtn{
+		padding: 5px 15px;
+
+		border-radius:3px;
+		margin-top: 10px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	.btn-list{
+		width: 100%;
+		height: 50px;
+		line-height: 50px;
+	}
+	.tip{
+		position: absolute;
+		top:10px;
+		z-index: 100;
+	}
+</style>
+
+<script type="text/x-underscore-template" id="addInShareUserTemplate">
+	<div class="div-main magicbox_addInShareUser_backgroundColor">
+		<div class="div-bottom">
+			<div class="div-cont2 border-bottom inputColor">
+			<div class="div-label3" id="selectTimeL"><%=choiceTime%></div>
+			</div>
+			<div class="div-cont border-bottom div-marg20 inputColor">
+			<div class="div-label"><%=loginName%>:</div>
+
+			<div class="div-input"><span class="tip"></span><input id="shareUserName" class="inputColor"></div>
+			</div>
+
+			<div class="div-cont2 border-bottom div-marg20 inputColor">
+				<div class="div-type">
+					<i thirdPartyType='QQ' class="icon iconfont"><%=QQIcon%></i>
+					<span>QQ</span>
+				</div>
+				<div class="div-type">
+					<i thirdPartyType='WEIXIN' class="icon iconfont"><%=weiXinIcon%></i>
+					<%=weiXin%>
+				</div>
+				<div class="div-type">
+					<i thirdPartyType='WEIBO' class="icon iconfont"><%=weiBoIcon%></i>
+					<%=weiBo%>
+				</div>
+			</div>
+
+			<div class="div-cont border-bottom div-marg20 inputColor">
+			<div class="div-label"><%=remarks%>:</div>
+			<div class="div-input"><input id="remarks" class="inputColor"></div>
+			</div>
+			<div class=" btnColor div-btn-bg div-marg40 " id="addShareSuser">
+				<%=save%>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="div-time">
+	<div>
+		<input id="beginTime" />
+	</div>
+	<span>至<%=to%></span>
+	<div>
+		<input id="endTime" />
+	</div>
+
+	<div class="btn-list">
+		<span class='sp-timeBtn btnColor' id="btnSave">
+			确定
+		</span>
+		<span class='sp-timeBtn btnColor' id="btnClose">
+			取消
+		</span>
+	</div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+
+</header>
+
+
+<!-- content -->
+<div class="content" id="content">
+
+		
+</div>

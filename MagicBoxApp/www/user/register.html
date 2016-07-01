@@ -1,0 +1,157 @@
+<style type="text/css">
+.content{
+	padding-top : .2rem;
+}
+/*form styles*/
+#msform {
+	margin: 0 auto;
+	margin-top: .15rem;
+	margin-bottom: 6rem;
+	text-align: center;
+	position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 1em;	
+	box-sizing: border-box;
+	width: 100%;
+	margin-top: 40px;	
+	/*stacking fieldsets above each other*/
+	position: absolute;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}	
+/*buttons*/
+#msform .action-button {
+	width: 40%;
+	background: #18B9F5;	
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #2372A7;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: #666;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #666;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: grey;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #18B9F5;
+	color: white;
+}
+
+.check_span{	
+	top:0px;
+	right:0px;
+	height:33px;
+	line-height:33px;
+	color:#ba7d00;
+	background:#efd7a6;
+	border-radius:3px;
+	margin:1px;
+	width:60px;
+}
+</style>
+<header class="navbar">
+	<div class="nav-wrap-left">
+		<a class="react back"><i class="text-icon icon-back"></i></a>
+	</div>
+	<span class="nav-header h1 adjust">注册</span>
+	<div class="nav-wrap-right"></div>
+</header>
+<div class="content">
+<form id="msform">
+	<ul id="progressbar">
+		<li class="active">输入手机号</li>
+		<li>输入验证码</li>
+		<li>设置密码</li>
+	</ul>
+	<!-- fieldsets -->
+	<fieldset>		
+		<input type="text" id="register_phoneNO" name="phone" placeholder="手机号"/>		
+		<input type="button" id="submit_phone" name="next" class="next action-button" value="获取验证码" />
+	</fieldset>
+	<fieldset>		
+		<h3 class="fs-subtitle"></h3>
+		<div style="position:relative;">
+			<input type="text" id="register_captcha" name="captcha" placeholder="验证码"/>		
+			<span class="check_span" id="time_CAPTCHA" style="position:absolute;">剩余60秒</span>
+		</div>
+		<input type="button" id="back_phone" name="previous" class="previous action-button" value="上一步" />
+		<input type="button" id="submit_CAPTCHA" name="next" class="next action-button" value="提交验证码" />
+	</fieldset>
+	<fieldset>		
+		<input type="text" name="nickName" placeholder="昵称" hidden="hidden"/>
+		<input type="password" id="register_password" name="password" placeholder="登录密码" required="required"/>
+		<input type="password" id="register_password_confirm" name="confirm-password" placeholder="确认密码" required="required"/>		
+		<input type="button" id="back_CAPTCHA" name="previous" class="previous action-button" value="上一步" />
+		<input type="button" id="submit_register_info" name="submit" class="submit action-button" value="注册" />
+	</fieldset>
+</form>
+</div>
+<footer class="footer-menu" bgcolor="gray" data-value="user" data-page="/register"></footer>

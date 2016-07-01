@@ -1,0 +1,132 @@
+<style type="text/css" media="all">
+.main-box {
+	height: 100%;
+	width: 100%;
+	display: box;
+	display: -webkit-box;
+	box-orient: vertical;
+	-webkit-box-orient: vertical;
+}
+
+.bottom-box {
+	height: 50%;
+	color: #585c64;
+}
+
+.table-rg {
+
+	overflow: hidden;
+}
+
+.div-list {
+	border-bottom: 1px #e7e7e7 solid;
+	overflow: hidden;
+	padding: 0px 10px;
+	height: 52px;
+}
+
+.div-list div:nth-child(1) {
+	float: left;
+	width: 50%;
+	line-height: 52px;
+	pointer-events:none;
+}
+
+.div-list div:nth-child(2) {
+	float: left;
+	width: 50%;
+	text-align: right;
+	line-height: 52px;
+	pointer-events:none;
+}
+
+.table-rg .div-list:nth-child(1) {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-bottom: 1px #e7e7e7 solid;
+}
+
+.table-rg .div-list:nth-child(1) span {
+	color: #fff;
+	padding: 6px 9px 6px 9px;
+	margin-right: 8px;
+
+	font-size: 11px;
+}
+
+@media screen and (max-device-width: 350px) {
+		.div-list{
+			height: 40px;
+		}
+		.div-list div:nth-child(1),.div-list div:nth-child(2) {
+			line-height: 40px;
+		}
+
+	}
+</style>
+
+<script type="text/x-underscore-template" id="inMBSetupTemplate">
+	<div class="main-box backgroundColor">
+		<div class="bottom-box">
+			<div class="table-rg magicbox_Setup_table-rg">
+				<div class="div-list" data-module="devicemanage" data-view="SeAddDev">
+					<div><%=SeAddDev%></div>
+					<div>
+						<span class="add magicbox_Setup_addColor"><%=add%></span><i class="icon iconfont"><%=icon%></i>
+					</div>
+				</div>
+				<div class="div-list" data-module="magicbox" data-view="InNetSetup">
+					<div><%=NetSetup%></div>
+					<div>
+						<i class="icon iconfont"><%=icon%></i>
+					</div>
+				</div>
+				<div class="div-list" data-module="magicbox" data-view="SeSubscribe">
+					<div><%=msgSub%></div>
+					<div>
+						<i class="icon iconfont"><%=icon%></i>
+					</div>
+				</div>
+				<div class="div-list" data-module="magicbox" data-view="CoBTSetup">
+					<div><%=BluSet%></div>
+					<div>
+						<i class="icon iconfont"><%=icon%></i>
+					</div>
+				</div>
+                <div class="div-list" data-module="devicemanage" data-view="Ehome?prePage=magicbox/InMBSetup">
+                    <div><%=EquDetails%></div>
+                    <div>
+                        <i class="icon iconfont"><%=icon%></i>
+                    </div>
+                </div>
+				<div class="div-list" data-module="magicbox" data-view="InUpgrade">
+					<div><%=upgrade%></div>
+					<div>
+						<i class="icon iconfont"><%=icon%></i>
+					</div>
+				</div>
+				<div class="div-list" data-module="magicbox" data-view="InMBRestart">
+					<div><%=DeviceRestart%></div>
+					<div>
+						<i class="icon iconfont"><%=icon%></i>
+					</div>
+				</div>
+				<div class="div-list" data-module="magicbox" data-view="InAboutMB">
+					<div><%=about%></div>
+					<div>
+						<i class="icon iconfont"><%=icon%></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+</header>
+
+
+<!-- content -->
+<div class="content" id="content">
+</div>

@@ -1,0 +1,169 @@
+<style type="text/css" media="all">
+   #loginContent{
+      position: fixed !important;
+      top: 20px;
+      z-index: 1100;
+   }
+   
+   #loginContentMasker{
+      z-index: 900;
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.5);
+      display: none;
+   }
+
+   .form-container {
+   border: 1px solid #001938;
+   background: #e8e8e8;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e8e8e8));
+   background: -webkit-linear-gradient(top, #ffffff, #e8e8e8);
+   background: -moz-linear-gradient(top, #ffffff, #e8e8e8);
+   background: -ms-linear-gradient(top, #ffffff, #e8e8e8);
+   background: -o-linear-gradient(top, #ffffff, #e8e8e8);
+   background-image: -ms-linear-gradient(top, #ffffff 0%, #e8e8e8 100%);
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   -moz-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   font-family: 'Helvetica Neue',Helvetica,sans-serif;
+   text-decoration: none;
+   vertical-align: middle;
+  padding: 14px 0px 10px 26px;
+ }
+
+
+   .form-field {
+	   border: 1px solid #bfbfbf;
+	   background: #ffffff;
+	   -webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	   border-radius: 4px;
+	   color: #999999;
+	   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+	   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+	   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+	   padding:8px;
+	   margin-bottom:20px;
+	   width: 62% !important;
+ }
+.form-field:focus {
+   background: #fff;
+   color: #cfcfcf;
+   }
+.form-container h2 {
+   text-shadow: #ffffff 0 1px 0;
+   font-size:18px;
+   margin: 0 0 10px 0;
+   font-weight:bold;
+   text-align:center;
+    }
+.form-title {
+   margin-bottom:10px;
+   margin-right: 10px;
+   line-height: 40px;
+   color: #355c93;
+   text-shadow: #ffffff 0 1px 0;
+ }
+
+   .submit-container {
+   margin:8px 0;
+   text-align:left;
+   }
+.submit-button {
+   border: 1px solid #636363;
+   background: #355c93;
+   background: -webkit-gradient(linear, left top, left bottom, from(#18B9F5), to(#2372A7));
+   background: -webkit-linear-gradient(top, #18B9F5, #2372A7);
+   background: -moz-linear-gradient(top, #18B9F5, #2372A7);
+   background: -ms-linear-gradient(top, #18B9F5, #2372A7);
+   background: -o-linear-gradient(top, #18B9F5, #2372A7);
+   background-image: -ms-linear-gradient(top, #18B9F5, #2372A7 100%);
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #8f8f8f 0 1px 0;
+   color: #ffffff;
+   font-family: helvetica, serif;
+   padding: 7.5px 18px;
+   font-size: 14px;
+   text-decoration: none;
+   vertical-align: middle;
+   border:none;
+   width: 39%;
+   }
+.submit-button:hover {
+   border: 1px solid #447314;
+   text-shadow: #31540c 0 1px 0;
+   background: #6aa436;
+   background: -webkit-gradient(linear, left top, left bottom, from(#8dc059), to(#6aa436));
+   background: -webkit-linear-gradient(top, #8dc059, #6aa436);
+   background: -moz-linear-gradient(top, #8dc059, #6aa436);
+   background: -ms-linear-gradient(top, #8dc059, #6aa436);
+   background: -o-linear-gradient(top, #8dc059, #6aa436);
+   background-image: -ms-linear-gradient(top, #8dc059 0%, #6aa436 100%);
+   color: #fff;
+   }
+.submit-button:active {
+   text-shadow: #31540c 0 1px 0;
+   border: 1px solid #447314;
+   background: #8dc059;
+   background: -webkit-gradient(linear, left top, left bottom, from(#6aa436), to(#6aa436));
+   background: -webkit-linear-gradient(top, #6aa436, #8dc059);
+   background: -moz-linear-gradient(top, #6aa436, #8dc059);
+   background: -ms-linear-gradient(top, #6aa436, #8dc059);
+   background: -o-linear-gradient(top, #6aa436, #8dc059);
+   background-image: -ms-linear-gradient(top, #6aa436 0%, #8dc059 100%);
+   color: #fff;
+   }
+.removeImg{
+   float: right;
+   position: relative;
+   bottom: 15px;
+   left: 15px;
+}
+
+.form-group>input[type=text],.form-group>input[type=password] {
+   text-indent: 10px;
+}
+.form-group>div {
+   float:left;
+}
+</style>
+
+<div id="loginContent">
+   <div class="removeImg">
+      <span class="icon-remove-sign icon-2x "></span>
+   </div>
+   <form class="form-container">
+      <div class="form-title">
+         <h2></h2>
+      </div>
+      <div class="form-group">
+      <div class="form-title form-frist" >账号</div>
+      <input id="loginUserName" class="form-field" type="text"  placeholder="输入手机 / 邮箱"/>
+      </div>
+      <div style="clear:both"></div>
+      <div class="form-group">
+      <div class="form-title" >密码</div>
+      <input id="loginPassword" class="form-field" type="password"  placeholder="输入密码" />
+      </div>
+      <div style="clear:both"></div>
+      <input type="checkbox" class="rememberPassword"><span style="color:#355c93">记住密码</span>
+      <div class="submit-container">
+         <input id="loginSubmitBtn"  class="submit-button" type="button" value="登  录" />
+		 <input id="loginRegisterBtn"  class="submit-button" type="button" value="注  册" />
+      </div>
+   </form>
+</div>
+
+<div id="loginContentMasker"></div>
+

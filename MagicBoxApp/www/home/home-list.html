@@ -1,0 +1,209 @@
+<style type="text/css" media="all">
+.geo-selected{
+ 		background-color:#e5e5e5;
+ 	}
+	.bs-top-input{
+		border-radius:4px 0 0 4px; float: left;
+		padding:2px 2px 2px 5px;
+	}
+	.bs-top-search-bt{border-radius: 0 4px 4px 0; 
+	    height: 28px;float: left;
+	    background-color: #f6f6f6;width:15%;text-align: center;
+    }
+    .bs-top-menue-item{
+    	border-color: #bbd7ff;border-style: solid;border-width: 0px 1px 0px 1px; 
+    }
+    .selected-bs-top-menue{
+    	background-color:#8AD1EB;
+    	border-radius: 100px;
+    }
+    .condFilterItem{
+		width:50%; float:left; text-align: center;
+	}
+   	.condFilterItem a{
+		padding: 0.5em;
+	    margin: 0.5em;
+	    border-style: solid;
+	    border-width: 1px;
+	    border-radius: 0.5em;
+	    border-color: #BABAC0;
+	    display:block;
+	    color: #000;
+	}
+	.one_search_rs_ul{
+		padding: 0.5em 0.8em 0 0.8em;
+		font-size:11;
+	}
+    .one_search_rs_ul .list_title{
+    	font-size: 1em;
+   		font-weight: bolder;
+	}
+	.one_search_rs_ul div{
+		padding: 2px 0;
+	}
+	.one_search_rs_ul_bottom{
+	    float: left;
+	    width: 49.5%;
+	    height: 2em;
+	    line-height: 2em;
+	    text-align: center;
+	}
+	.right-border{
+		border-right-width: 1px;
+	    border-right-style: solid;
+	    border-right-color: #bbd7ff;
+	}
+	.top-border{
+		border-top-width: 1px;
+	    border-top-style: solid;
+	    border-top-color: #DEDBDB;
+	}
+	.back-color{
+		background-color:#fff;
+	}
+	.header_left{
+	
+    }
+    .header_middle{
+    	width:60%; 
+    	padding: 5px 0px 5px 0px;
+    	text-align: center;
+    }
+    .header_right{
+    }
+    .header_right img{
+    	height: 15px; 
+    	width: 15px; 
+    }
+    .header_right span{
+    	margin-top:5px;font-size:5px;line-height:5px;
+    }
+    .header_font_color{
+    	color: #fff;
+    }
+    .input-search-div span{
+    	border-radius: 0 4px 4px 0;
+	    height: 35px;
+	    float: left;
+	    background-color: #5FBEF5;
+	    width: 20%;
+	    text-align: center;
+    }
+    .input-search-div{
+    	padding-top: 0.7rem;
+	    width: 100%;
+    }
+    .input-search-div i{
+    	font-size: 25px;
+	    color: #fff;
+	    padding-top: 4px;
+	    display: block;
+    }
+    .input-search-div input{
+    	border-radius: 4px 0 0 4px;
+	    float: left;
+	    padding: 2px 2px 2px 5px;
+	    display: block;
+	    width: 70%;
+	    height: 27.7px;
+	    background-color: #fff;
+    }
+    .input-search-parent{
+    	margin-left: 15%;
+    	width:70%;
+    	height:35px;
+    }
+    .div_background{
+    	background-color: #fff;
+	    border-width: 1px 0px;
+	    border-style: solid;
+	    margin-top: 10px;
+	    border-color: #ccc;
+    }
+    .mid_label{
+        padding: 10px;
+	    background-color: #5FBEF5;
+	    color: #fff;
+	    font-weight: bold;
+    }
+    .react{
+		margin-left:.2rem;    
+    }
+</style>
+
+
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+			<a class="react" gaevent="imt/hd/home">
+			<span id="homelist_city_name">北京</span>
+                    
+                        <div class="text-icon icon-chevron-down"></div>
+          	</a>
+	</div>
+	   <span class="nav-header h1">智能魔方</span>
+	<div id="scanBarCode" class="nav-wrap-right">
+			<a class="react" gaevent="imt/hd/home" href="#home/home-list">
+                     <span class="nav-btn">
+                         <div class="text-icon icon-qrcode"></div>扫一扫
+                     </span>
+           	</a>
+	</div>
+</header>
+
+<div class="content">
+	<div class="div_background" style="height: 2rem;">
+		<div class="input-search-div">
+			 <div id="homelist_input_div" class="input-search-parent">
+				<input id="homelist_input_search" readonly="readonly"
+				 	placeholder="请输入银行名称关键字" > </input>
+				 <span>
+				 	<i class="icon-search"></i>
+				 </span>
+			 </div>
+		</div>
+	</div>
+	<div style="">
+		<script id="homelist_search_rs_tmpl" type="text/x-jquery-tmpl">
+ 			<div class="top-border" style="width:100%; background-color:#fff; margin-top:10px;">
+			<div>
+ 				<div class="one_search_rs_ul">
+ 					<div class="list_title"><%=bankPointName%></div>
+ 					<div>距离<%=(distance/1000).toFixed(2)%>km，有<%=waittingNum%>人在排队</div>
+ 					<div>地址：<%=bankPointAddr%></div>
+ 					<div class="papraise-star">服务评价：
+						<%for(var i=1;i<=appraiseScore;i++){%>
+                			<span class="icon-star"></span>
+            			<%}%>
+						<%for(var i=appraiseScore+1;i<=5;i++){%>
+                			<span class="icon-star-empty"></span>
+            			<%}%>
+					</div>
+ 				</div>
+ 			</div>
+ 			<div class="top-border" style="height:2em; padding:2px 0 2px 0; margin-top: 7px;">
+ 				<div class="one_search_rs_ul_bottom right-border bank_item_bt_go">
+ 					<span class="icon-signin"></span><span>到这去</span>
+ 				</div>
+ 				<div class="one_search_rs_ul_bottom bank_item_bt_subscribe">
+ 					<span class="icon-download-alt"></span><span>预约</span>
+ 				</div>
+ 			</div>
+			</div>
+		</script>
+		<div class="div_background mid_label">
+			<span>周边网点：</span>
+		</div>
+		<div style="width:100%;padding:0px; background-color:#f6f6f6;">
+			<list id="id_bs_rs_search_rs_detail" 
+			    autoLoad="false"
+			    isPullDownRefresh="true"  
+			    jsonRoot="dataList",
+			    bundle="fs"
+			    paging="true"
+			    iScroll="true"
+			    _itemTemplate="homelist_search_rs_tmpl">
+			</list>
+		</div>
+	</div>
+</div>
+<footer class="footer-menu" data-value="home" data-page="/home-list"></footer>

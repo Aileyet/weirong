@@ -1,0 +1,70 @@
+<style type="text/css" media="all">
+.content {
+    padding: 0;
+    margin: 0;
+    font-family: 'Microsoft YaHei',Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    color: #222;
+    line-height:180%;
+}
+.header {
+    font-size: 1.2em;
+    text-align: center;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.5em 0;
+}
+.header-add {
+    position: absolute;
+    right: 0;
+    padding: 0.7em 0.9em;
+    top: 0;
+    font-size: 0.78em;
+}
+.relative {
+    position:relative;
+}
+.back {
+    position: absolute;
+    padding: 0.7em;
+    width: 9px;
+    top: 0;
+    display: inline-block;
+    height: 19px;
+    left: 0px;
+    background: url("../images/left-arrow.png") no-repeat 50% 50%;
+    text-indent: -9999px;
+}
+.my-E-home-box{
+  width:70%;
+   margin:0 auto;
+   margin-top:50px;
+   margin-bottom:50px;
+}
+.inner-border{
+ text-align:center;
+}
+.inner-border input{
+ text-indent:5px;
+}
+</style>
+
+
+<header id="homelist_header" class="navbar header_font_color">
+
+</header>
+
+
+<div class="content">
+       <div class="my-E-home-box">
+            <div class="inner-border">
+                <input type="text" id="sbm" value="" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"/>
+            </div>
+       <br><br>
+            <div class="inner-border" >
+                <a id="scan" class="equip" >
+                    <i class="icon iconfont" style="font-size: 20px;"></i>
+                    <span class="my-E-home-name"></span>
+                </a>
+            </div>
+    </div>
+</div>

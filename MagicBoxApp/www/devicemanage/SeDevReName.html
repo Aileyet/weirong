@@ -1,0 +1,93 @@
+<style type="text/css" media="all">
+/** 弹出提示框 **/
+.covering-layer{display: none;}
+.covering-layer .covering{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	background-color: #000000;
+	z-index: 100;
+	filter:alpha(opacity:30);
+	opacity:0.3;
+}
+.covering-layer .over-mag{
+	position:absolute;
+	top:calc(50% - 150px);
+	left:calc(50% - 270px / 2);
+	background-color: #ffffff;
+	width:270px;
+	min-height: 100px; 
+	margin: auto;
+	color: #000000;
+	z-index: 101;
+	border-radius:10px;
+}
+.covering-layer .title-mag{
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px #e7e7e7 solid;
+	text-align: center;
+	color: #222222;
+	font-size: 0.35rem;
+	font-weight:bold;
+}
+.covering-layer .covering-btn{
+	position: relative;
+	bottom: 0px;
+	height: 40px;
+	width: 100%;
+	display: table;
+	border-top: 1px #e7e7e7 solid;
+}
+.covering-layer .covering-btn div{
+	display: table-cell;
+	color: #0177e5;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 0.3rem;
+}
+.covering-layer .covering-btn div:nth-child(1){border-right: 1px #e7e7e7 solid;}
+.covering-layer .covering-content{
+	padding: 5px;
+	color: #696c71;
+	font-size: 0.3rem;
+}
+.covering-layer .covering-content div{
+	padding: 5px;
+}
+.covering-layer .covering-content div:nth-child(3){color: #222222;}
+
+.close-bt{
+font-size: 0.2rem;
+}
+</style>
+<div class="covering-layer">
+<div class="covering"></div>
+	<div class="over-mag">
+		<div class="title-mag"></div>
+		<div class="covering-content">
+		  <input type="text" id="DeviceName" value="请输入名称" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999">
+			</input>
+		</div>
+		<div class="covering-btn">
+			<div id="covering-btn-determine">确定</div>
+			<div id="covering-btn-cancle">取消</div>
+		</div>
+	</div>
+</div>
+<script id="SeDevReNameTemplate" type="text/x-jquery-tmpl">
+	<div class="covering"></div>
+	<div class="over-mag" >
+		<div class="title-mag"><%=title%></div>
+		<div class="covering-content">
+			 <input type="text" id="DeviceName" value="<%=inputMsg%>" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999">
+			</input>
+		</div>
+		<div class="covering-btn">
+			<div id="covering-btn-cancle"><%=cancel%></div>
+			<div id="covering-btn-determine"><%=sure%></div>
+		</div>
+	</div>
+</script>

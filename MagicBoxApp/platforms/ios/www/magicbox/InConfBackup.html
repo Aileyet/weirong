@@ -1,0 +1,60 @@
+<style type="text/css" media="all">
+	.remark{
+		height:100px;
+		margin:30px;
+	}
+	.remark span{
+		font-size: 1.5em;
+		color: #6E6C6C;
+		display: block;
+	}
+	textarea{
+		background-color: #e7e7e7;
+		color: #585c64;
+		padding: 5px;
+	}
+</style>
+
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left">
+		<a class="react" gaevent="imt/hd/home"> 
+			<i class="icon iconfont" style="font-size: 20px;">&#xe601;</i>
+		</a>
+	</div>
+	<span class="nav-header h1">配置备份</span>
+	<div id="homelist_city_name_div" class="nav-wrap-right header_right">
+		<a id="btnSave" class="react" gaevent="imt/hd/home"> 
+			<i class="icon iconfont" style="font-size: 1.5em;color: green;">&#xe64d;</i>
+		</a>
+	</div>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content">
+	<div class="remark">
+		<span>备注：</span>
+		<div>
+			<textarea rows="10" cols="10"></textarea>
+		</div>
+	</div>
+</div>
+<script type="text/x-underscore-template" id="InConfBackupTemplate">
+	<div class="remark">
+		<span><%=remark_text%></span>
+		<div>
+			<textarea rows="10" cols="10"></textarea>
+		</div>
+	</div>
+</script>

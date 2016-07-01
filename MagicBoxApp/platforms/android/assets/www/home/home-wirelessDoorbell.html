@@ -1,0 +1,69 @@
+<style type="text/css" media="all">
+	.doorbell-icon{
+		width: 100%;
+		height: 52%;
+		border-bottom: 1px solid #e7e7e7;
+		overflow: hidden;
+	}
+	.icon-container{
+		position:absolute;
+		width: 4rem;
+		height: 4rem;
+		line-height:4rem;
+		text-align:center;
+		background-color: #dcdde0;
+		display: block;
+		top:calc((100% - 4.3rem) / 2);
+		left: calc((100% - 4rem) / 2);
+		border-radius:100%;
+		overflow: hidden;
+	}
+	.doorbell-control{
+		width: 100%;
+		height: 48%;
+		background-color: #ffffff;
+	}	
+	.doorbell-control div{
+		position: absolute;
+		top: 45%;
+		left: calc((100% - 200px) / 2);
+	}
+</style>
+
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 20px;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">无线门铃</span>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content">
+	<div class="doorbell-icon">
+		<div class="icon-container">
+			<img alt="" src="../images/doorbell.png" width="100px">
+			<div style="position: absolute;top: 75px;left: 70px;color: #a3a5a9;">启动中</div>
+		</div>
+	</div>
+	<div class="doorbell-control">
+		<div>
+			<i class="icon iconfont" style="font-size: 58px;margin-left: 5px;">&#xe602;</i>
+			<i class="icon iconfont" style="font-size: 55px;margin-left: 5px;color: #de3d96;">&#xe60a;</i>
+			<i class="icon iconfont" style="font-size: 55px;margin-left: 5px;">&#xe60d;</i>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,124 @@
+<style type="text/css" media="all">
+	.cosocket-main-box{
+		height:100%;
+		width:100%;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient:vertical;
+	}
+	.cosocket-top-box{
+		text-align: -webkit-center;
+		border-bottom: 1px #e7e7e7 solid;
+		padding: 40px 0px 20px 0px;
+	}
+	.cosocket-top-box .cosocket-view-box{
+		position:relative;
+		display:inline-block;
+		vertical-align:middle;
+		width: 50%;
+		border-radius:100%;
+		overflow: hidden;
+		color: #de3d96;
+		margin-bottom: 10px;
+		overflow: hidden;
+		text-align: center;
+	}
+	.cosocket-top-box .cosocket-view-box:BEFORE{
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		padding-bottom: 100%;
+		margin-right: -7px;
+	}
+	.cosocket-view-box i{
+		display:inline-block;
+		vertical-align:middle;
+		font-size: 2.2rem;
+	}
+	.bottom-box{
+		background-color: #fff;
+		padding: 0px 15px;
+	}
+	.bottom-box .div-list{
+		position:relative;
+		width: 100%;
+		height: auto;
+		border-bottom: 1px #e7e7e7 solid;
+		padding: 15px 0px;
+	}
+	.div-list:nth-child(1){
+		width: 100%;
+	}
+	.div-p{
+		
+	}
+	.div-p:nth-child(1){
+		color: #585c64;
+	}
+	.div-p:nth-child(2){
+		color: #d3d3d3;
+		font-size: 12px;
+	}
+	
+	.contain-slider{
+		position: absolute;
+		right: 18px;
+		bottom: 11px;
+	}
+	.div-slider{
+		position:relative;
+		width: 60px;
+		height: 30px;
+		background-color: #CACACA;
+		border-radius:25px;
+		padding: 3px;
+		overflow: hidden;
+	}
+	.div-slider .div-slidering{
+		width: 30px;
+		height: 30px;
+		border-radius:100%;
+		float: left;
+		transition: float 500ms ease-out 0s; 
+		-webkit-transition: float 500ms ease-out 0s; 
+	}
+	
+	 @media screen and (max-device-width: 320px) {
+		.cosocket-view-box i{font-size: 2rem;}
+	 } 
+</style>
+
+<script id="ehome_CoSocket_Template" type="text/x-underscore-template">
+	<p class="div-p"><%=startTime%> <span class="spanTime">17:10</span></p>
+	<p class="div-p"><%=times%></p>
+</script>
+
+<header id="homelist_header" class="navbar header_font_color">
+</header>
+
+<div class="content">
+	<div class="cosocket-main-box">
+		<div class="cosocket-top-box">
+			<div class="cosocket-view-box">
+				<i class="icon iconfont"></i>
+			</div>
+			<div class="div-slider marg">
+				<div class="div-slidering"></div>
+			</div>
+		</div>
+		<div class="bottom-box">
+			<div class="div-list">
+				<div>
+
+				</div>
+				<div class="contain-slider">
+					<div class="div-slider">
+						<div class="div-slidering"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="footer-menu" bgcolor="gray" data-value="ehome" data-page=""></footer>

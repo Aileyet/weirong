@@ -1,0 +1,78 @@
+<style type="text/css" media="all">
+	.main-box{
+		height: 90px;
+		background-color: #ffffff;
+		display: box;
+		display: -webkit-box;
+		box-orient:horizontal;
+		-webkit-box-orient: horizontal;
+	}
+	.b-flex-1{
+		width:40%;
+		height:100%;
+		border: 1px #e7e7e7 solid;
+		border-top: none;
+		text-align: center;
+		font-size: 0.9em;
+		color: #575b64;
+		display: table;
+	}
+	.b-flex-1 i,.b-flex-2 i{
+		font-size: 2em;
+		color: #575b64;
+	}
+	.b-flex-1>div,.b-flex-2>div{display: table-cell;vertical-align: middle;}
+	.b-flex-2{
+		width:60%;
+		height:100%;
+		border: 1px #e7e7e7 solid;
+		border-left: none;
+		border-top: none;
+		text-align: center;
+		font-size: 1.2em;
+		color: #575b64;
+		display: table;
+	}
+	.main-box:nth-child(1){margin-top: 10px;}
+	.main-box:nth-child(1) .b-flex-1,.main-box:nth-child(1) .b-flex-2{border-top: 1px #e7e7e7 solid;}
+	.b-flex-2 .open-color{color: #de3d96;}
+</style>
+
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react back" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 1.5em;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">回家模式</span>
+	<div id="homelist_city_name_div" class="nav-wrap-right header_right" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 1.5em;">&#xe674;</i>
+       	</a>
+	</div>
+</header>
+
+<!-- content -->
+<div class="content">
+	<div class="main-box">
+		<div class="b-flex-1"><div><i class="icon iconfont">&#xe621;</i><div>空调</div></div></div>
+		<div class="b-flex-2"><div><i class="icon iconfont open-color">&#xe646;</i><div><span>20℃</span><span>制热</span></div></div></div>
+	</div>
+	<div class="main-box">
+		<div class="b-flex-1"><div><i class="icon iconfont">&#xe622;</i><div>电视机</div></div></div>
+		<div class="b-flex-2"><div><i class="icon iconfont open-color">&#xe646;</i><div>开</div></div></div>
+	</div>
+	<div class="main-box">
+		<div class="b-flex-1"><div><i class="icon iconfont">&#xe62a;</i><div>摄像头</div></div></div>
+		<div class="b-flex-2"><div><i class="icon iconfont">&#xe646;</i><div>关</div></div></div>
+	</div>
+	<div class="main-box">
+		<div class="b-flex-1"><div><i class="icon iconfont">&#xe647;</i><div>添加</div></div></div>
+		<div class="b-flex-2"><div></div></div>
+	</div>
+</div>

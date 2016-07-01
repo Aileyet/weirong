@@ -1,0 +1,139 @@
+<style type="text/css" media="all">
+	.costb-top-view,.bottom-view{
+		display: box;
+		display: -webkit-box;
+		box-orient:horizontal;
+		-webkit-box-orient:horizontal;
+		margin-top: 30px;
+	}
+	.b-flex{
+		box-flex:1;
+		-webkit-box-flex:1;
+	}
+	.div-btn{
+		
+	}
+	.costb-text-label{
+		text-align: center;
+		font-size: 1.2em;
+		margin-top: 7px;
+	}
+	.costb-top-view .div-btn i{
+		font-size: 0.5rem;
+	}
+	.costb-top-view div:nth-child(1) .div-btn i{}
+	.costb-top-view div:nth-child(3) .div-btn{background-color:#de3d96; border: none;}
+	.costb-top-view div:nth-child(3) .div-btn i{color: #ffffff;}
+	
+	.center-view{
+		text-align: center;
+		margin-top: 20px;
+	}
+	.costb-outer-circle{
+		display: inline-block;
+		width:65%;
+		vertical-align: middle;
+		border-radius:100%;
+	}
+	.costb-fillet{
+		position:relative;
+		display: inline-block;
+		width:95%;
+		vertical-align: middle;
+		border-radius:100%;
+		overflow: hidden;
+	}
+	.costb-chassis{
+		position:relative;
+		left:-2px;
+		display: inline-block;
+		vertical-align: middle;
+		width: 40%;
+		border-radius:100%;
+		text-align: center;
+	}
+	.costb-chassis i{font-size: 3em;display: inline-block;vertical-align: middle;-webkit-transform: rotate(180deg)}
+	.costb-chassis:BEFORE,.costb-outer-circle:BEFORE,.costb-fillet:BEFORE {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		padding-bottom: 100%;
+		margin-right: 2px;
+	}
+	
+	.costb-fillet div:nth-child(1),.costb-fillet div:nth-child(2),.costb-fillet div:nth-child(3),.costb-fillet div:nth-child(4){
+		position:absolute;
+		left: calc(50% - 28px / 2);
+		top: calc(50% - 35px / 2);
+	}
+	.costb-fillet div:nth-child(1) i,
+	.costb-fillet div:nth-child(2) i,
+	.costb-fillet div:nth-child(3) i,
+	.costb-fillet div:nth-child(4) i{
+		font-size: 2em;
+	}
+	.costb-fillet div:nth-child(1){-webkit-transform: rotate(0deg) translate(-310%);}
+	.costb-fillet div:nth-child(1) i{-webkit-transform: rotate(180deg);display: inline-block;}
+	.costb-fillet div:nth-child(2){-webkit-transform: rotate(90deg) translate(-310%);}
+	.costb-fillet div:nth-child(3){-webkit-transform: rotate(180deg) translate(-310%);}
+	.costb-fillet div:nth-child(3) i{-webkit-transform: rotate(180deg);display: inline-block;}
+	.costb-fillet div:nth-child(4){-webkit-transform: rotate(270deg) translate(-310%);}
+	
+	
+	.bottom-view{margin-top: 50px;color: #585c64;}
+	.bottom-view>div:nth-child(1) i{font-size: 0.7rem;}
+	.bottom-view>div:nth-child(2) i{font-size: 0.7rem;}
+	.bottom-view>div:nth-child(3) i{font-size: 0.7rem;}
+	
+	
+	 @media screen and (max-device-width: 350px) {
+	 	.costb-fillet div:nth-child(1) i,
+		.costb-fillet div:nth-child(2) i,
+		.costb-fillet div:nth-child(3) i,
+		.costb-fillet div:nth-child(4) i{
+			font-size: 1.5em;
+		}
+		.costb-fillet div:nth-child(1),.costb-fillet div:nth-child(2),.costb-fillet div:nth-child(3),.costb-fillet div:nth-child(4){
+			left: calc(50% - 21px / 2);
+			top: calc(50% - 21px / 2);
+		}
+	 	.costb-fillet div:nth-child(1){-webkit-transform: rotate(0deg) translate(-350%);}
+		.costb-fillet div:nth-child(2){-webkit-transform: rotate(90deg) translate(-350%);}
+		.costb-fillet div:nth-child(3){-webkit-transform: rotate(180deg) translate(-350%);}
+		.costb-fillet div:nth-child(4){-webkit-transform: rotate(270deg) translate(-350%);}
+		
+		.costb-chassis i{font-size: 2em;}
+	 }
+</style>
+
+<script id="ehome_CoSTB_Template" type="text/x-underscore-template">
+	<div class="costb-top-view">
+		<div class="b-flex"><div class="div-btn costb-div-btn" id="power"><i class="icon iconfont"><%=power_icon%></i></div></div>
+		<div class="b-flex"><div class="div-btn costb-div-btn" id="return"><i class="icon iconfont"><%=return_icon%></i></div></div>
+		<div class="b-flex"><div class="div-btn costb-div-btn" id=""><i class="icon iconfont"><%=power_icon%></i></div><div class="costb-text-label"><%=tv%></div></div>
+	</div>
+	<div class="center-view">
+		<div class="costb-outer-circle"><div class="costb-fillet">
+			<div id="left"><i class="icon iconfont"><%=left_icon_2%></i></div>
+			<div id="up"><i class="icon iconfont"><%=left_icon_1%></i></div>
+			<div id="right"><i class="icon iconfont"><%=left_icon_2%></i></div>
+			<div id="down"><i class="icon iconfont"><%=left_icon_1%></i></div>
+			<div id="ok" class="costb-chassis"><i class="icon iconfont"><%=play_icon%></i></div>
+		</div></div>
+	</div>
+	<div class="bottom-view">
+		<div class="b-flex"><div class="div-btn costb-div-btn" id="volUp"><i class="icon iconfont"><%=volume_up_icon%></i></div></div>
+		<div class="b-flex"><div class="div-btn costb-div-btn" id="mute"><i class="icon iconfont"><%=mute_icon%></i></div></div>
+		<div class="b-flex"><div class="div-btn costb-div-btn" id="volDown"><i class="icon iconfont"><%=volume_down_icon%></i></div></div>
+	</div>
+</script>
+
+
+<header id="homelist_header" class="navbar header_font_color">
+
+</header>
+
+
+<div class="content">
+
+</div>

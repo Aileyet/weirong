@@ -1,0 +1,271 @@
+<style type="text/css" media="all">
+	/*图片轮换*/
+	.picture-browse{
+		height: 30%;
+		overflow: hidden;
+		position: relative;	
+		border-bottom: 1px #e7e7e7 solid;	
+	}
+	/* module: sliders */ 
+	#sliders{ 
+		height:100%;
+		overflow: hidden;
+	} 
+	#overflow{ 
+		width: 100%; 
+		height:100%;
+		overflow: hidden; 
+	} 
+	#sliders .inner{ 
+		width: 500%; 
+		height:100%;
+		transiton: all 1s linear; 
+		-webkit-transition: all 1s linear; 
+	} 
+	#sliders article{ 
+		float: left; 
+		width: 20%; 
+		height:100%;
+		background-position:90% center;
+		background-repeat: no-repeat;
+		background-size:auto 100%; 
+	}
+	#sliders article:nth-child(1){
+		background-image: url("../images/img/c-12.png");
+	}
+	#sliders article:nth-child(2){
+		background-image: url("../images/img/pic1.jpg");
+	}
+	#sliders article:nth-child(3){
+		background-image: url("../images/img/pic2.jpg");
+	}
+	#sliders article:nth-child(4){
+		background-image: url("../images/img/pic3.jpg");
+	}
+	#sliders article:nth-child(5){
+		background-image: url("../images/img/pic4.jpg");
+	}
+	#sliders article .info{ 
+		position: absolute; 
+		right:0px;
+		opacity: 0; 
+		padding: 20px 20px 20px 20px; 
+		color: #666; 
+		font-family: Arial; 
+		transition: opacity 0.1s ease-out; 
+		-webkit-transform: translateZ(0); 
+		-webkit-transition: opacity 0.1s ease-out; 
+		text-align: center;
+	} 
+	#sliders article .info h1{ 
+		font-size: 22px; 
+		font-weight: bold; 
+		margin: 0 0 5px; 
+	} 
+	#sliders article .info a{ 
+		color: #666; 
+		text-decoration: none; 
+	} 
+	/* module: text*/
+	#sliders article:nth-child(1) .info span{display: block;}
+	#sliders article:nth-child(1) .info span:nth-child(1){font-size: 1.5em;color: #0194e9;text-align: left;}
+	#sliders article:nth-child(1) .info span:nth-child(2){font-size: 1em;color: #898989;text-align: left;}
+	#sliders article:nth-child(1) .info span:nth-child(3),
+	#sliders article:nth-child(1) .info span:nth-child(4){font-size: 0.5m;color: #b0b0ae;text-align: left;}
+	#sliders article:nth-child(1) .info a{
+		display:inline-block;
+		background-color: #00b4fd;
+		color: #fff;
+		padding: 4px 9px;
+		border-radius:4px;
+		font-size: 0.8em; 
+		margin-top: 5px;
+		
+	}
+	/* module: active */ 
+	#active{ 
+		position:absolute;
+		width: 100%; 
+		text-align: center; 
+		bottom: 3px;
+	} 
+	#active label{ 
+		display: inline-block; 
+		width: 5px; 
+		height: 5px; 
+		border-radius: 100%; 
+		background: #cacaca; 
+	}
+	/* 图片轮播 */
+	#sliders article .text-browse{ 
+		opacity: 1; 
+		transition: all 0.6s ease-out 1s; 
+		-webkit-transition: all 0.6s ease-out 1s; 
+	} 
+	.move1{ 
+		margin-left: 0; 
+	} 
+	.move2{ 
+		margin-left: -100%; 
+	} 
+	.move3{ 
+		margin-left: -200%; 
+	} 
+	.move4{ 
+		margin-left: -300%; 
+	} 
+	.move5{ 
+		margin-left: -400%; 
+	}
+	
+	/* 菜单部门 */
+	.menus{
+		height: 70%;
+	}
+	.menu-box{
+		display: inline-block;
+		float:left;
+		width: 33%;
+		vertical-align: middle;
+		background-color: #fff;
+		border-bottom: 1px #e7e7e7 solid;
+		border-right: 1px #e7e7e7 solid;
+	}
+	.menu-box:BEFORE {
+		content: "";
+		display: inline-block;
+		padding-bottom: 100%;
+		vertical-align: middle;
+	}
+	.menu-view{
+		position:absolute;
+		transition: all 100ms;
+		display:inline-block;
+		text-align: center;
+	}
+	.menu-view i{
+		display: block;
+		vertical-align: middle;
+		font-size: 3em;
+		pointer-events:none;
+		color: #585c64;
+	}
+	.menu-view div{
+		display: block;
+		vertical-align: middle;
+		pointer-events:none;
+		color: #585c64;
+		padding-top: 5px;
+	}
+</style>
+
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 20px;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">美食谱</span>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content">
+	<div class="picture-browse">
+		<div id="sliders"> 
+			<div id="overflow"> 
+				<div class="inner"> 
+					<article> 
+						<div class="info text-browse"> 
+							<span>维融智能摄像头</span> 
+							<span>手机远程控制</span>
+							<span>720P高清分辨率 | 111°广角，4倍变焦</span>
+							<span>双向语音通话 | 红外夜视</span>
+							<a href="#">立刻购买</a> 
+						</div> 
+					</article> 
+					<article> 
+						<div class="info"> 
+							<h1>Title2</h1> 
+							<a href="#">Description2</a> 
+						</div> 
+					</article> 
+					<article> 
+						<div class="info"> 
+							<h1>Title3</h1> 
+							<a href="#">Description3</a> 
+						</div> 
+					</article> 
+					<article> 
+						<div class="info"> 
+							<h1>Title4</h1> 
+							<a href="#">Description4</a> 
+						</div> 
+					</article> 
+					<article> 
+						<div class="info"> 
+							<h1>Title5</h1> 
+							<a href="#">Description5</a> 
+						</div> 
+					</article> 
+				</div> 
+			</div> 
+		</div> 
+		<div id="active"> 
+			<label for="slider1" style="background: #e50a86;"></label> 
+			<label for="slider2"></label> 
+			<label for="slider3"></label> 
+			<label for="slider4"></label> 
+			<label for="slider5"></label> 
+		</div> 
+	</div>
+	<div class="menus">
+		<div class="menu-box">
+			<div class="menu-view" draggable="true" data-module="ehome" data-view="Switch">
+				<i class="icon iconfont">&#xe67a;</i>
+				<div>区域菜谱</div>
+			</div>
+		</div>
+		<div class="menu-box">
+			<div class="menu-view" draggable="true" data-module="ehome" data-view="Switch">
+				<i class="icon iconfont">&#xe67b;</i>
+				<div>四季美食</div>
+			</div>
+		</div>
+		<div class="menu-box">
+			<div class="menu-view" draggable="true" data-module="ehome" data-view="Switch">
+				<i class="icon iconfont">&#xe67e;</i>
+				<div>厨房宝典</div>
+			</div>
+		</div>
+		<div class="menu-box">
+			<div class="menu-view" draggable="true" data-module="ehome" data-view="Switch">
+				<i class="icon iconfont">&#xe679;</i>
+				<div>产品菜谱</div>
+			</div>
+		</div>
+		<div class="menu-box">
+			<div class="menu-view" draggable="true" data-module="ehome" data-view="Switch">
+				<i class="icon iconfont">&#xe675;</i>
+				<div>营养搭配</div>
+			</div>
+		</div>
+		<div class="menu-box">
+			<div class="menu-view" draggable="true" data-module="ehome" data-view="Switch">
+				<i class="icon iconfont">&#xe67c;</i>
+				<div>我的菜谱</div>
+			</div>
+		</div>
+	</div>
+</div>

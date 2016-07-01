@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="wbample.cordova.weiboLogin" version="0.1.0">
+    <name>WeiboLogin</name>
+    <description>weiboLogin Plugin for Phonegap</description>
+    <license>MIT</license>
+    <keywords>weibo, login, phonegap</keywords>
+ 
+    <!-- android -->
+    <platform name="android">
+        <js-module src="www/weiboLogin.js" name="WeiboLogin">
+            <clobbers target="window.WeiboLogin" />
+        </js-module>
+ 
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="WeiboLogin">
+                <param name="android-package" value="wbample.cordova.weiboLogin.WeiboLogin"/>
+            </feature>
+        </config-file> 
+        
+        <config-file target="AndroidManifest.xml" parent="/*">
+        </config-file>
+        
+        <source-file src="src/android/WeiboLogin.java" target-dir="src/wbample/cordova/weiboLogin" />   
+        <source-file src="src/android/weibosdkcore.jar" target-dir="libs" framework="true"/>      
+    </platform>         
+</plugin>

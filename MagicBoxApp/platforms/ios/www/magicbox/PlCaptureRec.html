@@ -1,0 +1,72 @@
+<style type="text/css" media="all">
+	.main-box{
+		height:auto;
+		width:85%;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient:vertical;
+		float: right;
+		border-left: 3px solid #dcdfe4;
+		margin-bottom: 90px;
+	}
+	.div-lis{
+		width: 100%;
+	}
+	.div-lis span{
+		margin-left: 5px;
+
+	}
+	.div-exhibition{
+		width: calc(100% - 15px);
+		padding-left: 15px;
+		padding-top: 10px;
+	}
+
+	.div-photo{
+		width: 65px;
+		height: 70px;
+		background-color:white;
+		float: left;
+		margin-right: 5px;
+		margin-bottom: 8px;
+	}
+	img{
+		height: 100%;
+		width: 100%;
+	}
+</style>
+
+<script type="text/x-underscore-template" id="delTemplate">
+	<div style="position: fixed;border-radius:100%; bottom:1%;left: 42%;color: #fff;text-align: center; font-size:11px; "><i class="icon iconfont" style="font-size: 60px;color:#df489c;"><%=delIcon%></i></div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+
+</header>
+
+
+<!-- content -->
+<div class="content" id="content">
+	<div class="main-box">
+		<div class="div-lis"> 
+			<div style="position: relative;width: 15px;height: 15px;border-radius:100%; top: 34px;left: -9.5px;background-color: #df489c;"></div>
+			<span>2015-12-10</span>
+			<div class="div-exhibition">
+				<div class="div-photo">
+					<img src="../images/ehome-temp.jpg" data-module="magicbox" data-view="PhotoDetail"/>
+					<div style="position: relative;width: 21px;height: 21px;border-radius:100%; top: -25px;left: 38px;color: #fff;line-height: 15px;text-align: center; font-size:11px; "><i class="icon iconfont" style="font-size: 20px;color:#df489c;">&#xe63c;</i></div>
+				</div>
+				<div class="div-photo">
+					<img src="../images/doorbell.png" data-module="magicbox" data-view="PhotoDetail"/>
+					<div style="position: relative;width: 21px;height: 21px;border-radius:100%; top: -25px;left: 38px;color: #fff;line-height: 15px;text-align: center; font-size:11px; "><i class="icon iconfont" style="font-size: 20px;color:#df489c;">&#xe63c;</i></div>
+				</div>
+				<div class="div-photo"><img src="../images/ehome-temp.jpg" data-module="magicbox" data-view="PhotoDetail"/></div>
+				<div class="div-photo"><img src="../images/ehome-temp.jpg" data-module="magicbox" data-view="PhotoDetail"/></div>
+			</div>
+		</div>
+	</div>
+
+</div>
+	

@@ -1,0 +1,259 @@
+<style type="text/css" media="all">
+	.div-top{
+		position: relative;
+		padding: 0px 20px;
+		top: 50px;
+		overflow: hidden;
+		padding-bottom: 5px;
+	}
+	.div-top div:nth-child(1){
+		float: left;
+	}
+	.div-top div:nth-child(2){
+		float: right;
+	}
+	.div-btn{
+	}
+	.div-top .div-btn i{
+		font-size: 0.5rem;
+	}
+	.div-top .div-btn span{
+		font-size: 18px;
+		color: #585c64;
+	}
+	.div-control{
+		position: relative;
+		width: 300px;
+		height: 300px;
+		border-radius:100%;
+		background: gradient(linear,0 0,0 100%,from(#E2E2E2),to(#f3f4f5));
+		background: -webkit-gradient(linear,0 0,0 100%,from(#E2E2E2),to(#f3f4f5));
+		box-shadow: inset 0px 4px 5px 5px #dddddd;
+		margin: auto;
+		top: 20px;
+
+	}
+	.div-control-disabled{
+	    position: relative;
+		width: 300px;
+		height: 300px;
+		border-radius:100%;
+	    background: gradient(linear,0 0,0 100%,from(#E2E2E2),to(#f3f4f5));
+		background: -webkit-gradient(linear,0 0,0 100%,from(#E2E2E2),to(#f3f4f5));
+		box-shadow: inset 0px 4px 5px 5px #dddddd;
+		margin: auto;
+		top: 20px; 
+		background-color:gray;
+	}
+
+	.reticle{
+		position: relative;
+		width: 15px;
+		height: 4px;
+		background-color: #f3f3f3;
+		box-shadow: inset 0px 1px 2px 1px #dddddd;
+		margin: auto;
+		top: 50%;
+	}
+	.reticle-1{-webkit-transform: translate(125px);}
+	.reticle-2{-webkit-transform: translate(-125px);}
+	.reticle-3{-webkit-transform: rotate(30deg) translate(-125px);}
+	.reticle-4{-webkit-transform: rotate(60deg) translate(-125px);}
+	.reticle-5{-webkit-transform: rotate(90deg) translate(-130px);}
+	.reticle-6{-webkit-transform: rotate(120deg) translate(-135px);}
+	.reticle-7{-webkit-transform: rotate(145deg) translate(-130px);}
+	.temperature{
+		position: absolute;
+		width:40px;
+		height:40px;
+		left: 50%;
+		top: 50%;
+		color: #585c64;
+	}
+	.temperature>span{font-size: 1.3em;display: inline-block;}
+	.temperature>span>span{font-size: 0.5em;display: inline-block;}
+	
+	.temperature-1{-webkit-transform: rotate(-10deg) translate(-130px);}
+	.temperature-1>span{-webkit-transform:rotate(10deg);}
+	.temperature-2{-webkit-transform: rotate(15deg) translate(-140px);}
+	.temperature-2>span{-webkit-transform:rotate(-15deg);}
+	.temperature-3{-webkit-transform: rotate(40deg) translate(-140px);}
+	.temperature-3>span{-webkit-transform:rotate(-40deg);}
+	.temperature-4{-webkit-transform: rotate(65deg) translate(-130px);}
+	.temperature-4>span{-webkit-transform:rotate(-65deg);}
+	.temperature-5{-webkit-transform: rotate(95deg) translate(-125px);}
+	.temperature-5>span{-webkit-transform:rotate(-95deg);}
+	.temperature-6{-webkit-transform: rotate(125deg) translate(-115px);}
+	.temperature-6>span{-webkit-transform:rotate(-125deg);}
+	.temperature-7{-webkit-transform: rotate(152deg) translate(-110px);}
+	.temperature-7>span{-webkit-transform:rotate(-152deg);}
+	.temperature-8{-webkit-transform: rotate(181deg) translate(-100px);}
+	.temperature-8>span{-webkit-transform:rotate(-181deg);}
+	
+	.chassis{
+		position:relative;
+		width:180px;
+		height:180px;
+		border-radius:100%;
+		background: -webkit-gradient(linear,100% 100%,0 0,from(#dc007b),to(#484f5d));
+		margin: auto;
+		top:35px;
+	}
+	.text-chassis{
+		position: relative;
+		width: 150px;
+		height: 150px;
+		border-radius:100%;
+		background-color: #efefef;
+		margin: auto;
+		top: 15px;
+		box-shadow: 1px 2px 10px 7px #7f064b;
+		
+	}
+	.text-chassis > div:nth-child(1){
+		position: relative;
+		width: 25px;
+		height: 25px;
+		border-radius:100%;
+		/*background-color: #e21a89;*/
+		margin: auto;
+		top:calc(50% - 15px);
+		transform:rotate(60deg) translate(-50px);
+		-webkit-transform: rotate(60deg) translate(-50px);
+		
+		/* transition: transform 500ms ease-out 0s; 
+		-webkit-transition: -webkit-transform 500ms ease-out 0s;  */
+	}
+	.text-chassis > div:nth-child(2){
+		position: relative;
+		text-align: center;
+		color: #999999;
+		top: 15px;
+	}
+	.text-chassis > div:nth-child(2) span:nth-child(1){
+		font-size: 4.5em;
+	}
+	.text-chassis > div:nth-child(2) span:nth-child(2){
+		position:absolute;
+		display:inline-block;
+		font-size: 2em;
+	}
+	
+	.control-btn{
+		position:absolute;
+		display: -webkit-box;
+		display: box;
+		-webkit-box-orient: vertical;
+		box-orient: vertical;
+		width: 100%;
+	 }
+	 .control-btn-container{
+	 	display: -webkit-box;
+		display: box;
+		-webkit-box-orient: horizontal;
+		box-orient: horizontal;
+		width: 100%;
+		margin-top: 50px;
+	 }
+	 .box-flex{
+	 	position: relative;
+	 	box-flex:1;
+	 	-webkit-box-flex:1;
+		padding-top:10px;
+	 }
+	 .control-btn .div-btn i{
+		font-size: 0.5rem;
+	 }
+	 
+	 @media screen and (max-device-width: 350px) {
+	 	.div-control{width: 230px;height: 230px;}
+	 	.reticle-1{-webkit-transform: translate(95px);}
+		.reticle-2{-webkit-transform: translate(-95px);}
+		.reticle-3{-webkit-transform: rotate(30deg) translate(-95px);}
+		.reticle-4{-webkit-transform: rotate(60deg) translate(-95px);}
+		.reticle-5{-webkit-transform: rotate(90deg) translate(-100px);}
+		.reticle-6{-webkit-transform: rotate(120deg) translate(-105px);}
+		.reticle-7{-webkit-transform: rotate(145deg) translate(-100px);}
+		
+		.temperature-1{-webkit-transform: rotate(-10deg) translate(-100px);}
+		.temperature-2{-webkit-transform: rotate(15deg) translate(-105px);}
+		.temperature-3{-webkit-transform: rotate(37deg) translate(-105px);}
+		.temperature-4{-webkit-transform: rotate(62deg) translate(-105px);}
+		.temperature-5{-webkit-transform: rotate(92deg) translate(-100px);}
+		.temperature-6{-webkit-transform: rotate(120deg) translate(-85px);}
+		.temperature-7{-webkit-transform: rotate(150deg) translate(-80px);}
+		.temperature-8{-webkit-transform: rotate(176deg) translate(-70px);}
+		
+		.chassis{width: 130px;height: 130px;top:25px;}
+		.text-chassis{width: 110px;height: 110px;top:10px;}
+		.text-chassis > div:nth-child(1){width: 20px;height: 20px;top:calc(50% - 10px);-webkit-transform: rotate(60deg) translate(-40px);}
+	 	.text-chassis > div:nth-child(2) span:nth-child(1){font-size: 3em;}
+		.text-chassis > div:nth-child(2) span:nth-child(2){font-size: 1em;}
+	 }
+ .btnName {
+    display:inline-block;
+    width:100%;
+    text-align:center;
+	padding-top:4px;
+}
+</style>
+
+<script id="ehome_Air_Template" type="text/x-underscore-template">
+	<div class="div-btn coair-div-btn" id="<%=id%>" <%if(id=="power" || id=="autoDir"){%> state="off" <%}%>>
+		<i class="icon iconfont"><%=icon%></i>
+	</div>
+	<%
+	if(name!=""){
+	%>
+		<span class="btnName" <%if(style!=""){%>style="<%=style%>"<%}%>><%=name%></span>
+	<%
+	}
+	%>
+	
+</script>
+
+
+<header id="homelist_header" class="navbar header_font_color">
+
+</header>
+
+<div class="content coair-content-bgcolor">
+	<div class="div-top">
+		<div class="box-flex"></div>
+		<div class="box-flex"></div>
+	</div>
+	<div id="tempControl" class="div-control" >
+		<div class="reticle reticle-1"></div>
+		<div class="reticle reticle-2"></div>
+		<div class="reticle reticle-3"></div>
+		<div class="reticle reticle-4"></div>
+		<div class="reticle reticle-5"></div>
+		<div class="reticle reticle-6"></div>
+		<div class="reticle reticle-7"></div>
+		<div class="temperature temperature-1"><span>16<span>℃</span></span></div>
+		<div class="temperature temperature-2"><span>18<span>℃</span></span></div>
+		<div class="temperature temperature-3"><span>20<span>℃</span></span></div>
+		<div class="temperature temperature-4"><span>22<span>℃</span></span></div>
+		<div class="temperature temperature-5"><span>24<span>℃</span></span></div>
+		<div class="temperature temperature-6"><span>26<span>℃</span></span></div>
+		<div class="temperature temperature-7"><span>28<span>℃</span></span></div>
+		<div class="temperature temperature-8"><span>30<span>℃</span></span></div>
+		<div class="chassis">
+			<div class="text-chassis">
+				<div></div>
+				<div class="temp">
+					<span id="temp">26</span>
+					<span>℃</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="control-btn">
+		<div class="control-btn-container box-flex">
+			<div class="box-flex" ></div>
+			<div class="box-flex" ></div>
+			<div class="box-flex" ></div>
+		</div>
+	</div>
+</div>

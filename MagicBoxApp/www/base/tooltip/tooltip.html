@@ -1,0 +1,228 @@
+	<style type="text/css" media="all">
+		/** 弹出提示框 **/
+		.covering-layer{display: none;}
+		.covering-layer .covering{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			bottom: 60px;
+			width: 100%;
+			background-color: #000000;
+			z-index: 100;
+			filter:alpha(opacity:30);
+			opacity:0.3;
+		}
+		.covering-layer .over-mag{
+			position:absolute;
+			top:calc(50% - 150px);
+			left:calc(50% - 270px / 2);
+			background-color: #ffffff;
+			width:270px;
+			min-height: 200px; 
+			margin: auto;
+			color: #000000;
+			z-index: 101;
+			border-radius:10px;
+		}
+		.covering-layer .title-mag{
+			height: 50px;
+			line-height: 50px;
+			border-bottom: 1px #e7e7e7 solid;
+			text-align: center;
+			color: #222222;
+			font-size: 0.4rem;
+		}
+		.covering-layer .covering-btn{
+			position: relative;
+			bottom: 0px;
+			height: 40px;
+			width: 100%;
+			display: table;
+			border-top: 1px #e7e7e7 solid;
+		}
+		.covering-layer .covering-btn div{
+			display: table-cell;
+			color: #0177e5;
+			text-align: center;
+			vertical-align: middle;
+			font-size: 0.3rem;
+		}
+		.covering-layer .covering-btn div:nth-child(1){border-right: 1px #e7e7e7 solid;}
+		.covering-layer .covering-content{
+			padding: 5px;
+			color: #696c71;
+			font-size: 0.3rem;
+		}
+		.covering-layer .covering-content div{
+			padding: 5px;
+		}
+		.covering-layer .covering-content div:nth-child(3){color: #222222;}
+		
+		/* 蓝牙连接 */
+		.bluetooth-connectioning{
+			position: absolute;
+			display:none;
+			width: 100px;
+			height: 100px;
+			top:  calc(50% - 100px);
+			left: calc(50% - 50px);
+			background-color: #4C4C4C;
+			filter:alpha(opacity:80);
+			opacity:0.8; 
+			color: #ffffff;
+			text-align: center;
+			z-index: 101;
+		}
+		.bluetooth-connectioning img{
+			margin-top: 20px;
+			width: 30px;
+		}
+		.bluetooth-connectioning div{
+			margin-top: 20px;
+		}
+		.bluetooth-connectioning .close-btConn{
+			position: absolute;
+			width:20px;
+			height:20px;
+			line-height:20px;
+			top: -28px;
+			right: -8px;
+			background-color: #383838;
+			border: 2px #ffffff solid;
+			border-radius:100%; 
+			color: #ffffff;
+			z-index: 102;
+			text-align: center;
+		}
+	.close-bt{
+		font-size: 0.2rem;
+	}
+	
+	/* 组合菜单css样式 */
+	.misc-menu{
+		position:absolute;
+		display: none;
+		width: 80%;
+		border-radius: 5%;
+		top: 20%;
+		left: 10%;
+		color: #000000;
+		z-index: 101;
+	}
+	.misc-menu .title{
+		font-size: 0.8rem;
+	}
+	.misc-menu .title input{
+		margin-bottom: 0px;
+		height: auto;
+		border: none;
+		text-align: center;
+	}
+	.misc-menu .menu-container{
+		overflow:hidden;
+		background-color: rgba(226, 226, 226, 1);
+		/* box-shadow: 1px 3px 2px 2px rgba(76, 76, 76, 0.5); */
+	}
+	.misc-menu .menu-view{
+		float:left;
+		width: 33%;
+		text-align: center;
+		margin: 10px 0px;
+	}
+	.misc-menu .menu-icon{
+		position:relative;
+		width: 80%;
+		margin: auto;
+		border-radius: 10px;
+		text-align: center;
+	}
+	.misc-menu .menu-icon i{
+		display:inline-block;
+		font-size: 0.9rem;
+		position: absolute;
+		top: calc(50% - 28px);
+		left: calc(50% - 22px);
+	}
+	.misc-menu .menu-icon:BEFORE {
+		content: "";
+		display: inline-block;
+		padding-bottom: 100%;
+		vertical-align: middle;
+	}
+	.misc-menu .menu-text{
+		margin-top: 7px;
+	}
+	</style>
+<div class="covering-layer">
+	<div class="covering"></div>
+	<div class="over-mag" style="display: none;">
+		<div class="title-mag">按键学习提示</div>
+		<div class="covering-content">
+			<div>1.将遥控器发射处对准备手机顶部的红外接收口，并保持5厘米的距离。</div>
+			<div>2.在学习开始后，再按住遥控器上需要学习的按键保持3秒。</div>
+			<div><i class="icon iconfont">&#xe68d;</i> 不再提示</div>
+		</div>
+		<div class="covering-btn">
+			<div id="covering-btn-determine">确定</div>
+			<div id="covering-btn-cancle">取消</div>
+		</div>
+	</div>
+	<div class="bluetooth-connectioning">
+		<img alt="" src="../images/loading.gif">
+		<div>正在连接...</div>
+		<div class="close-btConn">
+			<i class="icon iconfont close-bt">&#xe69b;</i>
+		</div>
+	</div>
+	<div class="misc-menu">
+		<div class="title"><input type="text" id="misc-menu-title" value="文件夹"></div>
+		<div class="menu-container">
+			<div class="menu-view">
+				<div class="menu-icon">
+					<i class="icon iconfont">&#xe600;</i>
+				</div>
+				<div class="menu-text">多大的</div>
+			</div>
+			<div class="menu-view">
+				<div class="menu-icon">
+					<i class="icon iconfont">&#xe600;</i>
+				</div>
+				<div class="menu-text">多大的</div>
+			</div>
+			<div class="menu-view">
+				<div class="menu-icon">
+					<i class="icon iconfont">&#xe600;</i>
+				</div>
+				<div class="menu-text">多大的</div>
+			</div>
+			<div class="menu-view">
+				<div class="menu-icon">
+					<i class="icon iconfont">&#xe600;</i>
+				</div>
+				<div class="menu-text">多大的</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script id="TooltipTemplate" type="text/x-jquery-tmpl">
+	<div class="covering"></div>
+	<div class="over-mag" style="display: none;">
+		<div class="title-mag"><%=study_title%></div>
+		<div class="covering-content">
+			<div><%=study_content1%></div>
+			<div><%=study_content2%></div>
+			<div><i class="icon iconfont"><%=study_noprompt_icon%></i> <%=study_noprompt%></div>
+		</div>
+		<div class="covering-btn">
+			<div id="covering-btn-determine"><%=study_submit%></div>
+			<div id="covering-btn-cancle"><%=study_cancle%></div>
+		</div>
+	</div>
+	<div class="bluetooth-connectioning">
+		<img alt="" src="../images/loading.gif">
+		<div><%=btcnn_text%></div>
+		<div class="close-btConn">
+			<i class="icon iconfont close-bt"><%=btcnn_icon%></i>
+		</div>
+	</div>
+</script>

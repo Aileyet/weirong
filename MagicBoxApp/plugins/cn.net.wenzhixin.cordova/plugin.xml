@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="cn.net.wenzhixin.cordova" version="0.0.1" 
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>ExtraInfo</name>
+    <description>Description</description>
+    <js-module src="ExtraInfo.js" name="ExtraInfo">
+        <clobbers target="cordova.plugins.ExtraInfo"/>
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="ExtraInfo">
+                <param name="android-package" value="cn.net.wenzhixin.cordova.ExtraInfo"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/ExtraInfo.java" target-dir="src/cn/net/wenzhixin/cordova"/>
+		<source-file src="src/android/subs/JsonParser.java" target-dir="src/cn/weirong/vbank/app/subs"/>
+		<source-file src="src/android/subs/UdpUtil.java" target-dir="src/cn/weirong/vbank/app/subs"/>
+		<source-file src="src/android/Msc.jar" target-dir="libs" framework="true"/> 
+		<source-file src="src/android/Sunflower.jar" target-dir="libs" framework="true"/> 
+    </platform>
+</plugin>

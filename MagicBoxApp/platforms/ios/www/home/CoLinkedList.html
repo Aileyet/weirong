@@ -1,0 +1,164 @@
+<style type="text/css" media="all">
+	.main-conterner{position: relative;}
+	.container{
+		position:relative;
+		background-color: #ffffff;
+		padding: 20px 0px 0px 20px;
+		display: table;
+		width: calc(100% - 20px);
+		margin-right: calc(100% - 100px);
+		right: 0px;
+		transition: right 500ms ease-out 0s; 
+		-webkit-transition: right 500ms ease-out 0s; 
+	}
+	.cont-left{
+		display: table-cell;
+		border-bottom: 1px #e7e7e7 solid;
+		padding-bottom: 20px;
+		pointer-events:none;
+	}
+	.cont-icon{
+	
+	}
+	.icon-1{
+		display:inline-block;
+		width: 30px;
+		height: 30px;
+		line-height:30px;
+		border-radius:6px;
+		color: #ffffff;
+		text-align: center;
+	}
+	.icon-2{
+		display: inline-block;
+		color: #d2d2d2;
+		line-height: 30px;
+		margin: 0px 10px;
+	}
+	.icon-2 i{
+		font-size: 0.5rem;
+	}
+	.icon-4{
+		display: inline-block;
+		color: #df3c95;
+	}
+	.icon-4 i{
+		font-size: 0.58rem;
+	}
+	.title-label{
+		font-size: 0.35rem;
+		color: #686b72;
+		margin-top: 15px;
+	}
+	.mag-label{
+		font-size: 0.2rem;
+		color: #696c71;
+		margin-top: 5px;
+	}
+	
+	.cont-right{
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0px 15px;
+		border-bottom: 1px #e7e7e7 solid;
+	}
+	
+	.div-slider{
+		position:relative;
+		width: 60px;
+		height: 30px;
+		background-color: #dcdde0;
+		border-radius:25px;
+		padding: 3px;
+		overflow: hidden;
+	}
+	
+	.div-slider .div-slidering{
+		width: 30px;
+		height: 30px;
+		border-radius:100%;
+		background-color: #fff;
+		float: left;
+		transition: float 500ms ease-out 0s; 
+		-webkit-transition: float 500ms ease-out 0s; 
+	}
+	
+	.cont-edit{
+		position:absolute;
+		height: 100%;
+		top: 0px;
+		right: -180px;
+		font-size: 0;
+		transition: right 500ms ease-out 0s; 
+		-webkit-transition: right 500ms ease-out 0s; 
+	}
+	.cont-edit>div{
+		display: table;
+		height: 100%;
+	}
+	.cont-edit-1,.cont-edit-2{
+		display:table-cell;
+		height:100%;
+		width: 80px;
+		color: #ffffff;
+		font-size: 0.5rem;
+		text-align: center;
+		font-weight: bold;
+		vertical-align: middle;
+	}
+	.cont-edit-1{background-color: #ff9d00;width: 100px;}
+	.cont-edit-2{background-color: #ff3a30;}
+</style>
+
+<script  id="home_CoLinkedList_Template"  type="text/x-underscore-template">
+	<div class="main-conterner">
+		<div class="container">
+			<div class="cont-left">
+				<div class="cont-icon">
+					<div class="icon-1 iconBarColor"></div>
+					<div class="icon-2"></div>
+				</div>
+				<div class="title-label"></div>
+				<div class="mag-label"></div>
+			</div>
+			<div class="cont-right">
+				<div class="div-slider">
+					<div class="div-slidering"></div>
+				</div>
+			</div>
+		</div>
+		<div class="cont-edit">
+			<div>
+				<div class="cont-edit-2"><%=deleteText%></div>
+			</div>
+		</div>
+	</div>
+
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 1.5em;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">智能联动</span>
+	<div id="homelist_city_name_div" class="nav-wrap-right header_right" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 1.5em;">&#xe647;</i>
+       	</a>
+	</div>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content" id="content">
+	
+</div>

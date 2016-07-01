@@ -1,0 +1,70 @@
+<style type="text/css" media="all">
+	.main{
+		padding-left: 0.2rem;
+		padding-right:0.2rem;
+		margin-top: 0.1rem;
+	}
+	.div-list{
+		height: 40px;
+		line-height:40px;
+		background-color: #ffffff;
+		padding-left: 10px;
+		border-radius:8px;
+		color: #585c64;
+		margin-top: 10px;
+	}
+	.add-btn{
+		width: 16em;
+		height: 2.68em;
+		line-height:2.68em;
+		margin-left:calc((100% - 16em) / 2);
+		background-color: #dd3d95;
+		text-align: center;
+		color: #ffffff;
+		font-weight: bold;
+		margin-top: 20px;
+		
+	}
+	.icon-right{
+		float: right;
+		margin-right: 0.1rem;
+		font-size: 27px;
+		color: #898989;
+	}
+</style>
+
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 20px;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">控制面板</span>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content main">
+	<div style="color: #5a5863;font-size: 12;">设备列表</div>
+	<div>
+		<div class="div-list">长虹电视01<i class="icon iconfont icon-right">&#xe60e;</i></div>
+		<div class="div-list">浙江有线电视<i class="icon iconfont icon-right">&#xe60e;</i></div>
+		<div class="div-list">美的电风扇<i class="icon iconfont icon-right">&#xe60e;</i></div>
+		<div class="div-list">美的空调<i class="icon iconfont icon-right">&#xe60e;</i></div>
+		<div class="div-list">空气净化器<i class="icon iconfont icon-right">&#xe60e;</i></div>
+		<div class="div-list">DVD<i class="icon iconfont icon-right">&#xe60e;</i></div>
+	</div>
+	<div class="add-btn">添加</div>
+</div>
+<footer class="footer-menu" data-value="home" data-page="/home-list"></footer>

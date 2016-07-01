@@ -1,0 +1,331 @@
+<style type="text/css" media="all">
+/*put your style here*/
+.main-box {
+	height: 100%;
+	width: 100%;
+	display: box;
+	display: -webkit-box;
+	box-orient: vertical;
+	-webkit-box-orient: vertical;
+}
+
+.content-box {
+	height: calc(100% - 70px);
+	border-bottom: 1px #e7e7e7 solid;
+	border-top: 1px #e7e7e7 solid;
+	overflow: auto;
+}
+
+.bottom-box {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 70px;
+	background-color: #222;
+	border-bottom: 1px #e7e7e7 solid;
+}
+
+.div-list {
+	overflow: hidden;
+	font-size: 20px;
+	color: rgb(160, 159, 159);
+	background-color: #FFFFFF;
+}
+
+.div-list i {
+	font-size: 0.3rem;
+	color: #e5007f;
+}
+
+.div-list div:nth-child(1) {
+	float: left;
+	width: 15%;
+	text-align: center;
+	padding: 15px 0px;
+}
+
+.div-list div:nth-child(2) {
+	float: left;
+	width: 65%;
+	text-align: left;
+	padding: 15px 0px;
+}
+
+.div-list div:nth-child(3) {
+	float: left;
+	width: 20%;
+	text-align: center;
+	padding: 15px 0px;
+}
+
+.div-list2 {
+	overflow: hidden;
+	font-size: 20px;
+	color: rgb(160, 159, 159);
+	background-color: #EEF0F3;
+}
+
+.div-list2 i {
+	font-size: 0.3rem;
+	color: #e5007f;
+}
+
+.div-list2 div:nth-child(1) {
+	float: left;
+	width: 15%;
+	text-align: center;
+	padding: 15px 0px;
+}
+
+.div-list2 div:nth-child(2) {
+	float: left;
+	width: 65%;
+	text-align: left;
+	padding: 15px 0px;
+}
+
+.div-list2 div:nth-child(3) {
+	float: left;
+	width: 20%;
+	text-align: center;
+	padding: 15px 0px;
+}
+
+.div-bar {
+	overflow: hidden;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	background-color: #222;
+}
+
+.div-bar i {
+	font-size: 0.4rem;
+	color: #e5007f;
+}
+
+.div-bar>div:nth-child(1) {
+	float: left;
+	width: 10%;
+	text-align: center;
+	padding: 25px 0px;
+}
+
+.div-bar>div:nth-child(2) {
+	float: left;
+	width: 10%;
+	text-align: center;
+	padding: 25px 0px;
+}
+
+.div-bar>div:nth-child(3) {
+	float: left;
+	width: 10%;
+	text-align: center;
+	padding: 25px 0px;
+}
+
+.div-bar>div:nth-child(4) {
+	float: left;
+	width: 50%;
+	text-align: center;
+	padding: 35px 0px;
+}
+
+.div-bar>div:nth-child(5) {
+	float: left;
+	width: 10%;
+	text-align: center;
+	padding: 25px 0px;
+}
+
+.div-bar>div:nth-child(6) {
+	float: left;
+	width: 10%;
+	text-align: center;
+	padding: 25px 0px;
+}
+
+.progress-bar {
+	position: relative;
+	width: 85%;
+	height: 7px;
+	background-color: #3d414a;
+	border-radius: 10px;
+	margin: auto;
+}
+
+.pro-point {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	background-color: #ffffff;
+	top: -4px;
+	left: 0%;
+	z-index: 110;
+	transition: left 50ms ease-out 0s;
+	-webkit-transition: left 50ms ease-out 0s;
+}
+
+.progress {
+	position: absolute;
+	width: 0px;
+	height: 7px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	top: 0px;
+	left: 0px;
+	z-index: 100;
+	transition: width 50ms ease-out 0s;
+	-webkit-transition: width 50ms ease-out 0s;
+}
+
+.div-menu {
+	overflow: hidden;
+	font-size: 12px;
+	padding-top: 10px;
+	color: white;
+}
+
+.div-menu>div:nth-child(1) {
+	float: left;
+	width: 50%;
+	text-align: left;
+}
+
+.div-menu>div:nth-child(2) {
+	float: left;
+	width: 50%;
+	text-align: right;
+}
+
+@media screen and (max-device-width: 320px) {
+	.div-list {
+		font-size: 16px;
+	}
+	.div-list div:nth-child(1) {
+		padding: 10px 0px;
+	}
+	.div-list div:nth-child(2) {
+		padding: 10px 0px;
+	}
+	.div-list div:nth-child(3) {
+		padding: 10px 0px;
+	}
+	.div-list2 {
+		font-size: 16px;
+	}
+	.div-list2 div:nth-child(1) {
+		padding: 10px 0px;
+	}
+	.div-list2 div:nth-child(2) {
+		padding: 10px 0px;
+	}
+	.div-list2 div:nth-child(3) {
+		padding: 10px 0px;
+	}
+	.div-bar i {
+		font-size: 0.3rem;
+	}
+}
+</style>
+
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left">
+		<a class="react" gaevent="imt/hd/home"> <i class="icon iconfont">&#xe661;</i>
+		</a>
+	</div>
+	<span class="nav-header h1">音乐文件</span>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content">
+	<div class="main-box">
+		<!-- 音乐列表 开始 -->
+		<div class="content-box"></div>
+		<!-- 音乐列表 结束 -->
+		<!-- 播放条 开始 -->
+		<div class="bottom-box">
+			<div class="div-bar">
+				<div>
+					<span class="back"><i class="icon iconfont i-color">&#xe644;</i>
+				</div>
+				<div>
+					<span class="doPlay"><i class="icon iconfont i-color">&#xe686;</i>
+				</div>
+				<div>
+					<span class="ahead"><span class="custom"><i
+							class="icon iconfont i-color">&#xe646;</i>
+				</div>
+				<div>
+					<div class="progress-bar">
+						<div class="pro-point"></div>
+						<div class="progress"></div>
+						<div class="div-menu">
+							<div class="len_tmp">已唱</div>
+							<div class="len_all">总长</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<span class="type"><i class="icon iconfont i-color">&#xe65d;</i>
+				</div>
+				<div>
+					<span class="mute"><i class="icon iconfont i-color">&#xe642;</i>
+				</div>
+			</div>
+			<!-- 播放条 结束 -->
+		</div>
+	</div>
+</div>
+<script id="PlBTSongListTemplate" type="text/x-jquery-tmpl">
+	<div class="main-box">
+		<!-- 音乐列表 开始 -->
+		<div class="content-box backgroundColor"></div>
+		<!-- 音乐列表 结束 -->
+		<!-- 播放条 开始 -->
+	<div class="bottom-box">
+		<div class="div-bar">
+			<div>
+				<span class="back"><i class="icon iconfont i-color" style="color:<%=back_iconColor%>"><%=back_icon%></i>
+			</div>
+			<div>
+				<span class="doPlay"><i class="icon iconfont i-color" style="color:<%=play_iconColor%>"><%=play_icon%></i>
+			</div>
+			<div>
+				<span class="ahead"><span class="custom"><i
+					class="icon iconfont i-color" style="color:<%=ahead_iconColor%>"><%=ahead_icon%></i>
+			</div>
+			<div>
+				<div class="progress-bar">
+					<div class="pro-point"></div>
+					<div class="progress vol-progressColor"></div>
+					<div class="div-menu">
+						<div class="len_tmp">已唱</div>
+						<div class="len_all">总长</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<span class="type"><i class="icon iconfont i-color" style="color:<%=cycle_iconColor%>"><%=cycle_icon%></i>
+			</div>
+			<div>
+				<span class="mute"><i class="icon iconfont i-color" style="color:<%=vol_iconColor%>"><%=vol_icon%></i>
+			</div>
+		</div>
+		<!-- 播放条 结束 -->
+	</div>
+</div>
+</script>

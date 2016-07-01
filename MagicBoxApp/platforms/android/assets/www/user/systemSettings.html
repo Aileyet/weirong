@@ -1,0 +1,106 @@
+<style type="text/css" media="all">
+#user_systemSettings .bar-title .title {
+	margin-top:0em;
+}
+.setTit{
+	width: 100%;
+	height:auto;
+	padding: 3px 0px 3px 15px;
+	background-color: #18B9F5;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#18B9F5), to(#2372A7));
+	background-image: -webkit-linear-gradient(#18B9F5 0%, #2372A7 100%);
+	background-image: -moz-linear-gradient(#18B9F5 0%, #2372A7 100%);
+	background-image: -o-linear-gradient(#18B9F5 0%, #2372A7 100%);
+	background-image: linear-gradient(#18B9F5 0%, #2372A7 100%);
+	color: white;
+	font-weight: 700;
+	font-size: 16px
+}
+.Setting{
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0px 10px 15px;
+}
+.SettingB{
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0px 10px 15px;
+}
+#sysSet{
+	width: 100%;
+	overflow: hidden;
+	margin-top:.1rem;
+}
+.SettingBr{
+	color:rgb(140,140,140);
+	font-size: 12px
+}
+.SettingFirst{
+	border-bottom: 1px solid #ccc;
+	padding: 20px 0px 20px 15px;
+}
+.SettingFirst span, .SettingFirst div{
+float:left;
+}
+.SettingFirst span{
+	margin-top: -14px;
+}
+.SettingFirst div{
+	margin-top: -6px;
+}
+.checkSet{
+	position: absolute;
+	right: 15px;
+	margin-top: 10px;
+}
+
+.icon-1_5x{
+	margin-right:.2rem;
+}
+</style>
+
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+
+<!-- header -->
+    	<header class="navbar">
+                <div class="nav-wrap-left">
+                    <a class="react back" ><i class="text-icon icon-back"></i></a>
+                </div>
+                <span class="nav-header h1 adjust">系统设置</span>
+
+         		<div class="nav-wrap-right">
+         	   </div>
+        </header>
+
+<!-- content -->
+<div class="content" id="scrollContent">
+
+<div id="sysSet">
+
+<div class="userManagement">
+	<div class="setTit">帐号管理</div>
+	<div class="SettingFirst UserLogin"></div>
+	<div class="SettingB myData"><span class='icon-file-alt icon-1_5x'></span>我的资料 <br> </div>
+	<div class="SettingB myData"><span class='icon-group icon-1_5x'></span>常用联系人 <span class='dataMore icon-angle-right icon-1_5x'></span></div>
+	<div class="SettingB" id="changePwd"><span class='icon-key icon-1_5x'></span>更改密码 </div>
+</div>
+<div class="functionSet">
+	<div class="setTit">功能设置</div>
+	<div class="SettingB">启动检查更新<input type="checkbox" class="checkSet"><br> <span class="SettingBr">启动程序时检查版本更新</span></div>
+	
+</div>
+<div class="CacheSet">
+	<div class="setTit">缓存设置</div>
+	<div class="SettingB clearCache">清除缓存<br> <span class="SettingBr"></span></div>
+	
+</div>
+<div class="other">
+	<div class="setTit">其它</div>
+	<div class="Setting feedback">意见反馈<br> <span class="SettingBr">用户意见反馈</span></div>
+	<div class="Setting">新版本检测<br> <span class="SettingBr">检测是否有新版本</span></div>
+	<div class="SettingB aboutUs">关于我们<br> <span class="SettingBr">关于我们、版权信息</span></div>
+	
+</div>
+	
+</div>
+</div>

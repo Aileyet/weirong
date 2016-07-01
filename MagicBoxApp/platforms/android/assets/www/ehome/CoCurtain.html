@@ -1,0 +1,159 @@
+<style type="text/css" media="all">
+	.cocurtain-main-box{
+		height:100%;
+		width:100%;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient:vertical;
+	}
+	.cocurtain-top-box{
+		text-align: -webkit-center;
+		border-bottom: 1px #e7e7e7 solid;
+		padding: 40px 0px;
+	}
+	
+	.cocurtain-view-box{
+		width: 250px;
+		height: 250px;
+		line-height:250px;
+		border-radius:100%;
+		overflow: hidden;
+	}
+	.cocurtain-view-box i{
+		font-size: 10em;
+	}
+	.bottom-box{
+		color: #585c64;
+	}
+	.table-rg{
+		background-color: #fff;
+		padding:0px 20px;
+		overflow: hidden;
+	}
+	.div-list{
+		width:100%;
+		border-bottom: 1px #e7e7e7 solid;
+		overflow: hidden;
+	}
+	.div-list div:nth-child(1){
+		float: left;
+		width: 50%;
+		padding:20px 0px;
+	}
+	.div-list div:nth-child(2){
+		float: left;
+		width: 50%;
+		text-align:right;
+		padding:20px 0px;
+	}
+	.cocurtain-div-sliders{
+		padding: 8px 10px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 8px;
+	}
+	.cocurtain-div-sliders div:nth-child(1){
+		height: 3px;
+		background-color: #737373;
+		border-radius: 3px;
+	}
+	.cocurtain-div-sliders div:nth-child(1):AFTER {
+		content:"";
+		height: 3px;
+		width: 50%;
+		position: relative;
+		display: block;
+	}
+	.cocurtain-div-sliders div:nth-child(2){
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		border-radius: 100%;
+		background-color: #fff;
+		left: calc(50% - 15px / 2 );
+		bottom: 2px;
+		box-shadow: 0px 3px 10px 1px #C3C1C1;
+	}
+	.div-label{
+		display: box;
+		display: -webkit-box;
+		-webkit-box-orient: horizontal;
+		box-orient: horizontal;
+		padding: 5px 10px;
+	}
+	.div-label span{
+		position: relative;
+		display:block;
+		box-sizing: border-box;
+		-webkit-box-flex: 1;
+		box-flex: 1;
+		font-size: 12px;
+		color: #a0a0a0;
+	}
+	.div-label span:nth-child(2){
+		text-align: center;
+	}
+	.div-label span:nth-child(3){
+		text-align: right;
+	}
+	
+	@media screen and (max-device-width: 350px) {
+		.cocurtain-view-box{width: 180px;height: 180px;line-height: 180px;}
+		.cocurtain-view-box i{font-size: 7em;display: block;}
+	}
+</style>
+
+<script id="ehome_CoCurtain_Template" type="text/x-underscore-template">
+	<div class="cocurtain-main-box">
+		<div class="cocurtain-top-box">
+			<div class="cocurtain-view-box">
+				<i class="icon iconfont"><%=icon%></i>
+			</div>
+		</div>
+		<div class="bottom-box">
+			<div class="table-rg">
+				<div class="div-list"><div><%=opening%></div><div>50%</div></div>
+				<div class="cocurtain-div-sliders"><div></div><div></div></div>
+				<div class="div-label">
+					<span><%=close%></span>
+					<span><%=halfOpen%></span>
+					<span><%=open%></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+
+<!-- header -->
+<header id="homelist_header" class="navbar header_font_color">
+	<div id="homelist_city_name_div" class="nav-wrap-left header_left" >
+		<a class="react" gaevent="imt/hd/home">
+			<i class="icon iconfont" style="font-size: 20px;">&#xe601;</i>
+       	</a>
+	</div>
+	<span class="nav-header h1">窗帘</span>
+</header>
+
+
+<!-- content -->
+<div class="content">
+	<div class="cocurtain-main-box">
+		<div class="cocurtain-top-box">
+			<div class="cocurtain-view-box">
+				<i class="icon iconfont">&#xe620;</i>
+			</div>
+		</div>
+		<div class="bottom-box">
+			<div class="table-rg">
+				<div class="div-list"><div>当前开合度</div><div>50%</div></div>
+				<div class="cocurtain-div-sliders"><div></div><div></div></div>
+				<div class="div-label">
+					<span>关闭</span>
+					<span>半开</span>
+					<span>全开</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

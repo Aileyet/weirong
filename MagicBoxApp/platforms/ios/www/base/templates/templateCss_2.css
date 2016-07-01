@@ -1,0 +1,466 @@
+/* .navbar ~ .content {
+ padding-top: 1.4rem;
+} */
+.checkcss{
+ position: absolute;
+ border-radius:100%; 
+ right:10px;
+ top: 15px;
+ color: #fff;
+ line-height: 15px;
+ text-align: center;
+  font-size:11px; 
+}
+.valign{
+ color: #fff;
+}
+.menu-box{
+ background-color: #616364;
+}
+.golden{
+ color: #FDC85C !important;
+}
+
+
+/*图标颜色*/
+.iconColor{
+	color: #e2b858;
+}
+.iconBarColor{
+	background-color: #e2b858;
+}
+/*字体颜色*/
+.fontColor{
+	color: #fff;
+}
+/*背景颜色*/
+.backgroundColor{
+	background-color: #494949;
+}
+/*菜单项DIV背景颜色*/
+.menuDivColor{
+	background-color: #494949;
+}
+/*标题颜色*/
+.titleColor{
+	color: #e2b858;
+}
+/*充电宝圆圈的颜色*/
+.circleBackground{
+	background-color: black;
+}
+/*文本框颜色*/
+.inputColor{
+	background-color: #464748 !important;
+	color: #fff;
+}
+/*按钮的背景颜色*/
+.btnColor{
+	background-color: #e2b858;
+}
+/*进度条颜色*/
+.vol-progressColor{
+	background-color: #e2b858;
+}
+/*充电宝边框颜色*/
+.circleBorderColor{
+	background: -webkit-gradient(linear, 0 0, 0 40%, from(#e2b858), to(#787879));
+}
+/*充电宝字体颜色*/
+.circleFontColor{
+	color: #e2b858;
+}
+
+.magicbox_PlBTMain_top-box{
+		background-color: #494949;
+}
+.magicbox_PlBTMain_div-play{
+	background-color: black;
+}
+.magicbox_PlBTMain_div-play:AFTER{
+	background: gradient(linear, 50% 100%, 0 50%, from(#e3017f), to(#555e6e));
+	background: -webkit-gradient(linear, 50% 100%, 0 50%, from(#e2b858),
+		to(#494949));
+}
+.magicbox_PlBTMain_gear-1{
+	background-color: black;
+}
+.home_InUserInfoL_fontColor{
+	color: #fff;
+}
+.home_InUserInfoL_btnRegister{
+	color: #e2b858;
+	border: 1px solid #e2b858;
+}
+/*魔方设置列表背景颜色*/
+.magicbox_Setup_table-rg{
+	background-color: #494949;
+}
+/*魔方设置列表字体颜色*/
+.magicbox_Setup_table-rg div{
+	background-color: #434343;
+	color: #fff;
+}
+/*魔方设置添加按钮颜色*/
+.magicbox_Setup_addColor{
+	background-color: #e2b858;
+}
+/*共享用户顶部背景颜色*/
+.magicbox_InShareUser_div-top{
+	background-color: black;
+	color: #fff;
+}
+.magicbox_InShareUser_fontColor{
+		color: #fff;
+}
+/*添加共享背景颜色*/
+.magicbox_addInShareUser_backgroundColor{
+	background-color: #494949;
+}
+.home_MeFuncSet_get-back{
+	background-color: #e2b858;
+}
+/*DVD图标背景颜色*/
+.ehome_CoSDVD_iconColor{
+	background-color: #e2b858;
+	color: #fff;
+	border-left:2px #e2b858 solid; 
+	box-shadow: 1px 2px 1px 1px #e2b858;
+}
+/*DVD图标颜色*/
+.ehome_CoSDVD_iconColor>i{
+	color: #fff !important;
+}
+.network-model .checked-i {
+	color: #e2b858;
+}
+.magicbox_CoBTSetup_div-listColor{
+	background-color: #555759;
+	color: #fff;
+}
+.magicbox_CoBTSetup_div-listColor2{
+	background-color: #555759;
+	color: #fff;
+}
+.magicbox_CoBTSetup_div-slider{
+	background-color: #282828;
+}
+.magicbox_CoBTSetup_div-slidering{
+	background-color: #e2b858;
+}
+.magicbox_SeSubscribe_i-color{
+	color: #e2b858;
+}
+.home_MeFuncSet_div-menu{
+	background-color: #434343;
+}
+.div-menu>div{
+	color: #fff;
+}
+.home_MeFuncSet_normal{
+		color: #fff;
+	}
+.home_MeFuncSet_title-label{
+		color: #fff;
+	}
+/*.main-box{
+		width:100%;
+		display: box;
+		display: -webkit-box;
+		box-orient:vertical;
+		-webkit-box-orient:vertical;
+		background-color: #616364;
+	}
+	.top-box{
+		height:45%;
+		text-align: -webkit-center;
+		padding: 30px 0px;
+	}
+	.view-box{
+		width: 250px;
+		height: 250px;
+		border-radius:100%;
+		background: -webkit-gradient(linear, 0 0, 0 100%, from(#282828), to(#fcf86f));
+	}
+	.view-box .div-circle{
+		position: relative;
+		display: inline-block;
+		width: 230px;
+		height: 230px;
+		border-radius: 100%;
+		background-color: #282828;
+		top: calc(50% - 230px / 2);
+	}
+	.view-box .div-circle .div-list{
+		height: 73px;
+		text-align:center;
+		line-height:73px;   
+	}
+	.view-box .div-circle div:nth-child(1){
+		font-size:18px;  
+	}
+	.view-box .div-circle div:nth-child(2){
+		font-size:89px;
+		color:#34bd3c; 
+		font-weight:bold;
+		font-weight: bold;
+	}
+	.view-box .div-circle div:nth-child(2) span:nth-child(1){
+		font-size:84.5px;
+		font-weight:bold;
+		margin-left: 5px;
+		color: #fff;
+	}
+	.view-box .div-circle div:nth-child(2) span:nth-child(2){
+		font-size:44.5px;
+		font-weight:bold;
+		margin-left: 5px;
+		color: #fff;
+	}
+	#frequency{
+		color: #fcf86f;
+	}
+	.view-box .div-circle div:nth-child(3){
+		font-size:26px;
+		color:#e5007e; 
+	}
+	.bottom-box{
+		height:50%;
+		color: #585c64;
+	}
+	.table-rg{
+		background-color: #fff;
+		padding:0px 20px;
+		overflow: hidden;
+	}
+	.table-rg .div-list{
+		width:100%;
+		border-bottom: 1px #e7e7e7 solid;
+		overflow: hidden;
+		height: 52px;
+	}
+	.table-rg .div-list div:nth-child(1){
+		float: left;
+		width: 50%;
+		line-height: 52px;
+	}
+	.table-rg .div-list div:nth-child(2){
+		float: left;
+		width: 50%;
+		text-align:right;
+		line-height: 52px;
+	}
+	.div-middle{
+		padding:20px 0px;
+		text-align: center;
+		color: #dd3d97;
+	}
+	@media screen and (max-device-width: 350px) {
+		.view-box{
+		width: 170px;
+		height: 170px;
+		}
+		.view-box .div-circle{
+			width: 150px;
+			height: 150px;
+			top: calc(50% - 150px / 2);
+		}
+
+		.table-rg .div-list{
+			height: 40px;
+		}
+		.table-rg .div-list div:nth-child(2),.table-rg .div-list div:nth-child(1) {
+			line-height: 40px;
+		}
+		.view-box .div-circle .div-list{
+			height: 45px;
+			text-align:center;
+			line-height:45px;   
+		}
+		.view-box .div-circle div:nth-child(1){
+			font-size:14px;  
+		}
+		.view-box .div-circle div:nth-child(2){
+			font-size:48px;
+			color:#34bd3c; 
+			font-weight:bold;
+			font-weight: bold;
+		}
+		.top-box{
+			padding:8px 0px 0px 0px;
+		}
+		.view-box .div-circle div:nth-child(2) span{
+			font-size:22.5px;
+			font-weight:bold;
+			margin-left: 5px;
+			color: #222222;
+	}
+	}*/
+	
+	/*首页背景色*/
+	.meindex-menus{background-color: #67696a;color: #ffffff;}
+	/*菜单块 背景颜色*/
+	#ul1 .menu-bg-black{background:-webkit-gradient(linear, 100% 0%, 0% 100%,from(#fae46d), to(#bf793a));color: #ffffff;}
+	#ul1 .menu-bg-pink{background-color: #292929;color: #bf793a;}
+	.meindex-menus-list{background-color: #342835;}
+	.meindex-menus-list ul li:nth-child(1){color: #c89b33;}
+	.meindex-menus-list ul li span div{background-color: #c89b33;}
+	
+	.misc-menu .menu-bg-black{background:-webkit-gradient(linear, 100% 0%, 0% 100%,from(#fae46d), to(#bf793a));color: #ffffff;}
+	.misc-menu .menu-bg-pink{background-color: #292929;color: #bf793a;}
+	
+	/* 
+	* 点灯页面样式
+	*/
+	.colamp-view-box{background-color: #282828;}
+	.colamp-color{background-color: #d39f10;}
+	.colamp-top-box{background-color: #676869}
+	.colamp-bottom-box{background-color: #f3f4f6}
+	/*
+	* 空调页面样式
+	*/
+	.coair-content-bgcolor{background: -webkit-gradient(linear, 100% 0%, 100% 100%,from(#6e7071), to(#3e3e3e));color: #ffffff;}
+	.div-btn {
+		position: relative;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		border-radius: 50px;
+		text-align: center;
+		overflow: hidden;
+		margin: auto;
+	}
+	.coair-div-btn{background-color: #2d2e2e;}
+	.control-btn .div-btn i {color: #ce9547;}
+	/*
+	* 插座页面样式
+	*/
+	.cosocket-main-box{background-color: #ffffff;}
+	.cosocket-top-box{background-color: #676869;}
+	.cosocket-view-box{background-color: #282828;}
+	.cosocket-view-box i{color: #e6c05b;}
+	.div-slider .div-slidering{background-color: #424242;}
+	/*
+	* 电视机页面样式
+	*/
+	.cotv-main{color: #FFFFFF;}
+	.cotv-div-btn{background: -webkit-gradient(linear, 100% 0%, 0% 100%,from(#fae46d), to(#bf793a));}
+	.cotv-volume-bg{background-color: #282828;}
+	.cotv-volume-bg > div{background-color: #282828;color: #FFFFFF;}
+	/*
+	* 净化器页面样式
+	*/
+	.coclean-bor-bottom{border-bottom: 3px #d39f10 solid;}
+	.coclean-content-view{background-color: #5e5f60;}
+	.coclean-content-view>div:nth-child(1){color: #ffffff;}
+	.coclean-content-view .b-flex:nth-child(2){color: #ffffff;}
+	.coclean-content-view .b-flex:nth-child(1){color: #dab866;}
+	.coclean-power{background:-webkit-gradient(linear, 100% 0%, 0% 100%,from(#fae46d), to(#bf793a));}
+	.coclean-text-icon i,.coclean-text-icon div,.coclean-text-icon div span{color: #ffffff;}
+	.coclean-operation{
+		background-color: #262626;
+	}
+	.coclean-operation .b-flex i{color: #ffffff;}
+	/*
+	* 智能厨房页面样式
+	*/
+	.cokitchen-div-bottom{background-color: #464747;}
+	.cokitclen-div-list div:nth-child(1){color: #f9f9fa;}
+	.cokitclen-text-color{color: #e9c55e;}
+	/*
+	* 智能卫生间页面样式
+	*/
+	.cotoilet-main-box{background-color: #666769;}
+	.cotoilet-bottom-box{background-color: #ffffff;}
+	.cotoilet-view-box{background-color: #282828;}
+	.cotoilet-view-box i{color: #d6a44e;}
+	.cotoilet-div-sliders div:nth-child(1):AFTER{background-color: #e59f00;}
+	/*
+	* 窗帘页面样式
+	*/
+	.cocurtain-main-box{background-color: #ffffff;}
+	.cocurtain-top-box{background-color: #67696b;}
+	.cocurtain-view-box{background-color:#282828; color: #d19a49;}
+	.cocurtain-div-sliders div:nth-child(1):AFTER{background-color: #c69344;}
+	/*
+	* 机顶盒页面样式
+	*/
+	.costb-div-btn{background: -webkit-gradient(linear, 100% 0%, 0% 100%,from(#fae46d), to(#bf793a));color: #ffffff;}
+	.costb-top-view .div-btn i{color: #ffffff;}
+	.costb-top-view .b-flex:nth-child(2) .costb-div-btn{background: #282828;}
+	.costb-text-label{color: #ffffff;}
+	.costb-outer-circle,.costb-fillet,.costb-chassis{background-color: #282828;}
+	.costb-chassis{background-color: #595a5b;}
+	.costb-fillet div:nth-child(1) i,
+	.costb-fillet div:nth-child(2) i,
+	.costb-fillet div:nth-child(3) i,
+	.costb-fillet div:nth-child(4) i,.costb-chassis i{
+		color: #ffffff;
+	}
+	/*
+	* DVD页面样式
+	*/
+	.codvd-div-btn{background: -webkit-gradient(linear, 100% 0%, 0% 100%,from(#fae46d), to(#bf793a));}
+	.cosdvd-top-view i,.cosdvd-bottom-view i,.cosdvd-text-label{color: #FFFFFF;}
+	.cosdvd-top-view .b-flex:nth-child(2) .codvd-div-btn{background: #282828;}
+	.cosdvd-div-slider .div-slidering{background:-webkit-gradient(linear, 100% 0%, 0% 100%,from(#fae46d), to(#bf793a));}
+	.cosdvd-outer-circle,.cosdvd-fillet{background-color: #282828;}
+	.cosdvd-chassis{background-color: #595a5b;}
+	.cosdvd-fillet div:nth-child(1) i,
+	.cosdvd-fillet div:nth-child(2) i,
+	.cosdvd-fillet div:nth-child(3) i,
+	.cosdvd-fillet div:nth-child(4) i,.cosdvd-chassis i{
+		color: #FFFFFF;
+	}
+	/*
+	* 投影仪页面样式
+	*/
+	.coprojector-div-btn{background: -webkit-gradient(linear, 100% 0%, 0% 100%,from(#fae46d), to(#bf793a));}
+	.coprojector-power,.coprojector-volume{color: #FFFFFF;}
+	.coprojector-channel-btn{background-color: #282828;color: #FFFFFF;}
+	.coprojector-floor>div,.coprojector-floor-radius,
+	.coprojector-floor-radius>div{background-color: #282828;color: #ffffff;}
+	.coprojector-floor i,.coproject-key{color: #ffffff;}
+	.coprojector-sure{
+		background-color: #58595a;
+		color: #ffffff;
+	}
+	/*
+	* 电风扇页面样式
+	*/
+	.cofansetup-div-btn{background: -webkit-gradient(linear, 100% 0%, 0% 100%,from(#fae46d), to(#bf793a));color: #ffffff;}
+	.coprojector-text-d,.coprojector-text-h{color: #ffffff;}
+	
+	/*
+	* 底部导航栏样式
+	*/
+	footer.bar-tab li.active{color: #e1b858;}
+	footer.bar-tab li{color: #9fa0a0;}
+	.microphone{color: #e8c45d;}
+	
+	
+	/* DVD,机顶盒，电风扇，电视机页面  背景颜色，字体，图标颜色样式*/
+	.RoundBtn-bg-color{
+		background-image: gradient(linear, 100% 0%, 0% 100%, color-stop(0, #f4da68), color-stop(1, #c3813e));
+		background-image: -webkit-gradient(linear, 100% 0%, 0% 100%, color-stop(0, #f4da68), color-stop(1, #c3813e));
+	}
+	.i-font-color-1{color: #ffffff;}
+	.i-font-color-2{color: #ffffff;}
+	.i-font-color-3{color: #ffffff;}
+	.text-font-color{color: #ffffff;}
+	
+	.operating-disk-dot-wai{
+		background-image: gradient(linear, 100% 0%, 0% 100%, color-stop(0, #f4da68), color-stop(1, #c3813e));
+		background-image: -webkit-gradient(linear, 100% 0%, 0% 100%, color-stop(0, #f4da68), color-stop(1, #c3813e));
+	}
+	.operating-disk-dot-nei{background: #282828;}
+	
+	.control-key-wai{
+		background-image: gradient(linear, left top, left bottom, color-stop(0, #282828), color-stop(1, #282828));
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #282828), color-stop(1, #282828));
+	}
+	
+	.switchBin-div{
+		background-image: gradient(linear, 100% 0%, 0% 100%, color-stop(0, #f4da68), color-stop(1, #c3813e));
+		background-image: -webkit-gradient(linear, 100% 0%, 0% 100%, color-stop(0, #f4da68), color-stop(1, #c3813e));
+	}

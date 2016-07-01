@@ -1,0 +1,92 @@
+<nav class="bar-standard bar-header-secondary">
+<ul id="io" class="segmented-controller">
+	<li class="active" data-module="my/my-list">
+		<a href="#">最新动态</a>
+	</li>
+	<li data-module="my/atme-list">
+		<a href="#">@我</a>
+	</li>
+	<li data-module="my/critic-list">
+		<a href="#">评论</a>
+	</li>
+	<li data-module="my/myself-list">
+		<a href="#">我自己</a>
+	</li>
+	<li data-module="my/comment-list">
+		<a href="#">留言</a>
+	</li>
+</ul>
+<span class="criticPrompt promptInformationNav"></span>
+<span class="atmePrompt promptInformationNav"></span>
+<span class="commentPrompt promptInformationNav"></span>
+      	
+</nav>
+
+<style type="text/css">
+		/*critic提示信息样式*/
+	.criticPrompt{
+	text-indent: 2px;
+    color: #0882f0;
+	display: none;
+	position: absolute;
+	left: 53% ;
+	z-index:2 ;
+	bottom: 29px;
+
+   }
+/*comment提示信息样式*/
+	.commentPrompt{
+	text-indent: 2px;
+    color: #0882f0;
+	display: none;
+	position: absolute;
+	left: 91% ;
+	z-index:2 ;
+	bottom: 29px;
+
+   }
+
+/*@me提示信息样式*/
+	.atmePrompt{
+	text-indent: 2px;
+    color: #0882f0;
+	display: none;
+	position: absolute;
+	left: 36% ;
+	z-index:2 ;
+	bottom: 29px;
+
+   }
+    .promptInformationNav{
+      line-height: 1;
+      background-color: #0882f0;
+      color: #fff;
+      height: 11px;
+      font-size: 10px;
+      /*font-weight: 700 !important;*/
+      width: 11px;
+      padding-bottom: 1px;
+      border: solid 2px #ffffff;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+     /* -moz-box-shadow: 1px 1px 8px #cccccc;
+      -webkit-box-shadow: 1px 1px 8px #cccccc;
+      box-shadow: 1px 1px 8px #cccccc;*/
+   }
+  /*我的空间NAV字段太长*/
+ .segmented-controller li>a {
+		display: block;
+		padding: 8px 0px !important ;
+		overflow: hidden;
+		line-height: 15px;
+		color: #333;
+		text-overflow: ellipsis;
+}
+</style>
+
+
+
+
+
+
